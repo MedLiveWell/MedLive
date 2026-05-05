@@ -1,0 +1,375 @@
+export type NavItem = {
+  id: string;
+  label: string;
+  href: string;
+};
+
+export type Category = {
+  id: string;
+  label: string;
+  count: number;
+  desc: string;
+};
+
+export type Product = {
+  code: string;
+  cat: string;
+  name: string;
+  desc: string;
+  specs: string[];
+  image?: string;
+  images?: string[];
+};
+
+export type BlogPost = {
+  tag: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  read: string;
+  gradient: [string, string];
+};
+
+export type Value = {
+  num: string;
+  title: string;
+  desc: string;
+};
+
+export const NAV: NavItem[] = [
+  { id: "home", label: "Home", href: "/" },
+  { id: "produtos", label: "Produtos", href: "/produtos" },
+  { id: "vendemos", label: "Para quem vendemos", href: "/para-quem-vendemos" },
+  { id: "sobre", label: "Sobre", href: "/sobre" },
+  { id: "revendedor", label: "Seja Revendedor", href: "/seja-revendedor" },
+  { id: "blog", label: "Blog", href: "/blog" },
+];
+
+export const CATEGORIES: Category[] = [
+  {
+    id: "andadores",
+    label: "Andadores",
+    count: 12,
+    desc: "Articulados, fixos e com rodas. Para uso clínico e domiciliar.",
+  },
+  {
+    id: "banquetas",
+    label: "Banquetas de banho",
+    count: 6,
+    desc: "Com e sem encosto, apoio de braço e abertura frontal.",
+  },
+  {
+    id: "cadeiras-banho",
+    label: "Cadeiras de banho",
+    count: 3,
+    desc: "Dobráveis e desmontáveis, até 150kg, estrutura em aço.",
+  },
+  {
+    id: "cadeiras-transf",
+    label: "Cadeiras de transferência",
+    count: 2,
+    desc: "Modelos hidráulicos e multifuncionais para transporte seguro.",
+  },
+  {
+    id: "muletas",
+    label: "Muletas",
+    count: 2,
+    desc: "Axilar universal e canadense, alumínio leve desmontável.",
+  },
+  {
+    id: "barras",
+    label: "Barras de apoio",
+    count: 1,
+    desc: "Barra sanitária com ajuste de altura, alumínio 150kg.",
+  },
+];
+
+const med190Images = [
+  "/images/med-190.png",
+  "/images/med-190-02.png",
+  "/images/med-190-03.png",
+  "/images/med-190-04.png",
+];
+
+const med3040Images = [
+  "/images/med-3040.png",
+  "/images/med-3040-02.png",
+  "/images/med-3040-03.png",
+  "/images/med-3040-04.png",
+  "/images/med-3040-05.png",
+];
+
+export const PRODUCTS: Product[] = [
+  // Andadores (12)
+  {
+    code: "MED 120",
+    cat: "andadores",
+    name: "Andador 2 barras articulado aço",
+    desc: "Estrutura em aço com articulação central, ideal para marcha alternada.",
+    specs: ["Aço", "Articulado", "100kg"],
+  },
+  {
+    code: "MED 130",
+    cat: "andadores",
+    name: "Andador 2 barras clique duplo alumínio prata",
+    desc: "Alumínio prata leve, sistema de clique duplo para segurança na marcha.",
+    specs: ["Alumínio", "Clique duplo", "100kg"],
+  },
+  {
+    code: "MED 140",
+    cat: "andadores",
+    name: "Andador 2 barras clique duplo alumínio acetinado",
+    desc: "Acabamento acetinado premium, mesma estrutura robusta do MED 130.",
+    specs: ["Alumínio", "Acetinado", "100kg"],
+  },
+  {
+    code: "MED 150",
+    cat: "andadores",
+    name: "Andador 3 barras articulado alumínio prata",
+    desc: "Três barras para estabilidade extra, articulado para marcha alternada.",
+    specs: ["Alumínio", "3 barras", "100kg"],
+  },
+  {
+    code: "MED 160",
+    cat: "andadores",
+    name: "Andador 3 barras articulado alumínio bronze",
+    desc: "Versão bronze do MED 150, estrutura em alumínio leve e resistente.",
+    specs: ["Alumínio", "Bronze", "100kg"],
+  },
+  {
+    code: "MED 170-C",
+    cat: "andadores",
+    name: "Andador 1 barra desmontável c/ rodas 150kg",
+    desc: "Uma barra frontal desmontável, com rodas dianteiras. Suporta 150kg.",
+    specs: ["Desmontável", "Com rodas", "150kg"],
+  },
+  {
+    code: "MED 170-S",
+    cat: "andadores",
+    name: "Andador 1 barra desmontável s/ rodas 150kg",
+    desc: "Uma barra frontal desmontável, sem rodas. Suporta 150kg.",
+    specs: ["Desmontável", "Sem rodas", "150kg"],
+  },
+  {
+    code: "MED 180",
+    cat: "andadores",
+    name: "Andador 2 barras triangular infantil dobrável c/ rodas",
+    desc: "Andador infantil triangular, dobrável, com rodas para crianças.",
+    specs: ["Infantil", "Triangular", "Dobrável"],
+  },
+  {
+    code: "MED 190",
+    cat: "andadores",
+    name: "Andador 3 barras articulado desmontável",
+    desc: "Três barras articulado e desmontável para transporte prático.",
+    specs: ["Desmontável", "Articulado", "100kg"],
+    image: med190Images[0],
+    images: med190Images,
+  },
+  {
+    code: "MED 520",
+    cat: "andadores",
+    name: "Andador c/ rodas dobrável aço 135kg",
+    desc: "Andador com 4 rodas, estrutura em aço dobrável. Suporta 135kg.",
+    specs: ["Aço", "4 rodas", "135kg"],
+  },
+  {
+    code: "MED 530",
+    cat: "andadores",
+    name: "Andador c/ rodas dobrável alumínio 135kg",
+    desc: "Versão em alumínio mais leve do MED 520, mesma capacidade.",
+    specs: ["Alumínio", "4 rodas", "135kg"],
+  },
+  {
+    code: "MED 550",
+    cat: "andadores",
+    name: "Andador c/ rodas e assento 135kg",
+    desc: "Andador rollator com assento para descanso durante o uso.",
+    specs: ["Com assento", "4 rodas", "135kg"],
+  },
+
+  // Banquetas (6)
+  {
+    code: "MED 310",
+    cat: "banquetas",
+    name: "Banqueta de banho sem encosto",
+    desc: "Banqueta de banho simples, assento antiderrapante, sem encosto.",
+    specs: ["Sem encosto", "Antiderrapante", "100kg"],
+  },
+  {
+    code: "MED 320",
+    cat: "banquetas",
+    name: "Banqueta de banho com encosto",
+    desc: "Com encosto em polietileno, maior conforto e segurança no banho.",
+    specs: ["Com encosto", "Antiderrapante", "100kg"],
+  },
+  {
+    code: "MED 330",
+    cat: "banquetas",
+    name: "Banqueta com encosto e apoio de braço",
+    desc: "Encosto + apoios de braço laterais para maior estabilidade.",
+    specs: ["Encosto", "Apoio braço", "100kg"],
+  },
+  {
+    code: "MED 360",
+    cat: "banquetas",
+    name: "Banqueta encosto, apoio de braço e abertura frontal",
+    desc: "Abertura frontal no assento facilita a higienização durante o banho.",
+    specs: ["Abertura frontal", "Apoio braço", "100kg"],
+  },
+  {
+    code: "MED 370",
+    cat: "banquetas",
+    name: "Banqueta de banho sem encosto 135kg",
+    desc: "Reforçada, suporta 135kg. Ideal para usuários de maior porte.",
+    specs: ["Reforçada", "Sem encosto", "135kg"],
+  },
+  {
+    code: "MED 390",
+    cat: "banquetas",
+    name: "Banqueta com encosto e apoio de braço 135kg",
+    desc: "Encosto e apoio de braço, capacidade reforçada de 135kg.",
+    specs: ["Reforçada", "Apoio braço", "135kg"],
+  },
+
+  // Cadeiras de banho (3)
+  {
+    code: "MED 410",
+    cat: "cadeiras-banho",
+    name: "Cadeira de banho com encosto revestido desmontável aço 150kg",
+    desc: "Cadeira em aço pintado, encosto revestido, desmontável. Suporta 150kg.",
+    specs: ["Aço", "Desmontável", "150kg"],
+  },
+  {
+    code: "MED 420",
+    cat: "cadeiras-banho",
+    name: "Cadeira de banho dobrável desmontável 100kg",
+    desc: "Dobrável e desmontável para transporte fácil. Estrutura leve 100kg.",
+    specs: ["Dobrável", "Desmontável", "100kg"],
+  },
+  {
+    code: "MED 440",
+    cat: "cadeiras-banho",
+    name: "Cadeira com encosto revestido desmontável aço 100kg",
+    desc: "Versão leve do MED 410, estrutura em aço com encosto revestido.",
+    specs: ["Aço", "Revestido", "100kg"],
+  },
+
+  // Cadeiras de transferência (2)
+  {
+    code: "MED 3030",
+    cat: "cadeiras-transf",
+    name: "Cadeira de transferência hidráulica 135kg",
+    desc: "Sistema hidráulico para transferência suave de paciente. 135kg.",
+    specs: ["Hidráulica", "Multiposição", "135kg"],
+  },
+  {
+    code: "MED 3040",
+    cat: "cadeiras-transf",
+    name: "Cadeira de transferência multifuncional 120kg",
+    desc: "Transferências seguras entre cama, cadeira de rodas e sofá, com mínimo esforço. A MED 3040 é a cadeira multifuncional com tudo que o cuidador precisa, elevação manual, cinto duplo e almofada removível.",
+    specs: ["Multifuncional", "3 em 1", "120kg"],
+    image: med3040Images[0],
+    images: med3040Images,
+  },
+
+  // Muletas (2)
+  {
+    code: "MED 210",
+    cat: "muletas",
+    name: "Muleta axilar universal desmontável alumínio 65kg",
+    desc: "Muleta axilar em alumínio, regulagem de altura universal. Par.",
+    specs: ["Axilar", "Alumínio", "65kg"],
+  },
+  {
+    code: "MED 220",
+    cat: "muletas",
+    name: "Muleta canadense alumínio 65kg",
+    desc: "Muleta canadense com apoio de antebraço e empunhadura ergonômica.",
+    specs: ["Canadense", "Alumínio", "65kg"],
+  },
+
+  // Barras de apoio (1)
+  {
+    code: "MED 1010",
+    cat: "barras",
+    name: "Barra de apoio sanitária c/ ajuste de altura alumínio 150kg",
+    desc: "Barra sanitária com altura ajustável, fixação ao piso. Até 150kg.",
+    specs: ["Ajustável", "Alumínio", "150kg"],
+  },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    tag: "Mercado",
+    title: "Por que a demanda por produtos de reabilitação cresce 12% ao ano no Brasil",
+    excerpt: "Envelhecimento populacional e home care impulsionam o setor. Entenda a oportunidade.",
+    date: "18 Abr 2026",
+    read: "6 min",
+    gradient: ["#4FB0D4", "#0F3A7A"],
+  },
+  {
+    tag: "Para revendedores",
+    title: "Como montar um mix de produtos de reabilitação em sua loja",
+    excerpt: "Guia prático para farmácias e ortopedias que querem entrar no segmento.",
+    date: "04 Abr 2026",
+    read: "8 min",
+    gradient: ["#F08A2B", "#d9741a"],
+  },
+  {
+    tag: "Produto",
+    title: "Andador ou muleta? Como orientar o cliente na escolha certa",
+    excerpt: "Critérios técnicos que seu vendedor precisa saber para indicar o equipamento adequado.",
+    date: "22 Mar 2026",
+    read: "5 min",
+    gradient: ["#0F3A7A", "#4FB0D4"],
+  },
+];
+
+export const VALUES: Value[] = [
+  {
+    num: "01",
+    title: "Segurança em primeiro lugar",
+    desc: "Todos os produtos seguem normas técnicas e passam por rigoroso controle de qualidade.",
+  },
+  {
+    num: "02",
+    title: "Profissionalismo",
+    desc: "Atendimento B2B especializado, com foco em relacionamento de longo prazo.",
+  },
+  {
+    num: "03",
+    title: "Qualidade e inovação",
+    desc: "Desenvolvimento constante de produtos com materiais e designs atualizados.",
+  },
+  {
+    num: "04",
+    title: "Valorização da autonomia",
+    desc: "Acreditamos que cada pessoa merece independência para viver com dignidade.",
+  },
+  {
+    num: "05",
+    title: "Confiança e transparência",
+    desc: "Preços claros, prazos cumpridos e comunicação direta em todas as etapas.",
+  },
+  {
+    num: "06",
+    title: "Excelência no atendimento",
+    desc: "Resposta em até 24h úteis e suporte técnico dedicado ao revendedor.",
+  },
+];
+
+export function productSlug(code: string): string {
+  return code.toLowerCase().replace(/\s+/g, "-");
+}
+
+export function findProductBySlug(slug: string): Product | undefined {
+  return PRODUCTS.find((p) => productSlug(p.code) === slug);
+}
+
+export function productCapacity(p: Product): string | null {
+  const kgSpec = p.specs.find((s) => /\d+\s*kg/i.test(s));
+  if (kgSpec) return kgSpec;
+  const m = `${p.name} ${p.desc}`.match(/(\d+)\s*kg/i);
+  return m ? `${m[1]}kg` : null;
+}
