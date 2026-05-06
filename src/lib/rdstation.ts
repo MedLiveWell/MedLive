@@ -9,8 +9,18 @@
 
 const CONVERSIONS_URL = "https://www.rdstation.com.br/api/1.3/conversions";
 
+// Maps internal conversion_identifier (used as a stable whitelist key in the
+// API route) to the human-readable origin shown on the RD Station lead
+// profile. Sent both as `identificador` and `traffic_source` so it appears
+// regardless of which field RD's UI displays as "Origem" for a given account.
+const ORIGIN_BY_IDENTIFIER: Record<string, string> = {
+  "newsletter-medlive": "newsletter",
+  "catalogo-medlive-2026": "formulário de catálogo",
+  "seja-revendedor": "formulário revendedor",
+};
+
 export type LeadConversion = {
-  /** Identifier of the form/origin in RD Station (e.g. "newsletter-medlive"). */
+  /** Internal identifier; mapped to a friendly origin before submission. */
   conversion_identifier: string;
   email: string;
   name?: string;
@@ -35,9 +45,12 @@ export async function sendConversion(payload: LeadConversion): Promise<SendLeadR
 
   // v1.3 uses Portuguese keys at the root of the body. Custom fields are
   // arbitrary additional keys.
+  const origin =
+    ORIGIN_BY_IDENTIFIER[payload.conversion_identifier] ?? payload.conversion_identifier;
   const body: Record<string, string> = {
     token_rdstation: token,
-    identificador: payload.conversion_identifier,
+    identificador: origin,
+    traffic_source: origin,
     email: payload.email,
   };
   if (payload.name) body.nome = payload.name;
