@@ -134,6 +134,12 @@ const med170rImages = [
   "/images/med-170r-3.png",
 ];
 
+const med180Images = [
+  "/images/med-180-1.png",
+  "/images/med-180-2.png",
+  "/images/med-180-3.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -295,9 +301,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 180",
     cat: "andadores",
-    name: "Andador 2 barras triangular infantil dobrável c/ rodas",
-    desc: "Andador infantil triangular, dobrável, com rodas para crianças.",
-    specs: ["Infantil", "Triangular", "Dobrável"],
+    name: "Andador 2 Barras Triangular Infantil Dobrável com Rodas Alumínio",
+    desc: "Segurança e autonomia para cada fase do crescimento. O MED 180 foi desenvolvido especialmente para crianças que precisam de apoio na locomoção — leve, ajustável e pronto para acompanhar o desenvolvimento.",
+    specs: ["Infantil", "Triangular", "100kg"],
+    image: med180Images[0],
+    images: med180Images,
+    dimensions: [
+      ["Largura", "48 cm"],
+      ["Altura", "55 – 65 cm"],
+      ["Profundidade", "41 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "100 kg"],
+      ["Peso líquido", "2,0 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 190",
