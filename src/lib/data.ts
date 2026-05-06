@@ -121,6 +121,13 @@ const med160Images = [
   "/images/med-160-2.png",
 ];
 
+const med170Images = [
+  "/images/med-170-1.png",
+  "/images/med-170-2.png",
+  "/images/med-170-3.png",
+  "/images/med-170-4.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -242,9 +249,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 170",
     cat: "andadores",
-    name: "Andador 1 barra desmontável s/ rodas 150kg",
-    desc: "Uma barra frontal desmontável, sem rodas. Suporta 150kg.",
+    name: "Andador 1 Barra Desmontável e Dobrável Alumínio",
+    desc: "Liberdade de movimento no menor espaço possível. O MED 170 é compacto, ultra leve e desmontável — perfeito para quem precisa de apoio confiável em casa, no trabalho ou em viagem.",
     specs: ["Desmontável", "Sem rodas", "150kg"],
+    image: med170Images[0],
+    images: med170Images,
+    dimensions: [
+      ["Largura", "48 cm"],
+      ["Altura", "81 – 98 cm"],
+      ["Profundidade", "43 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "150 kg"],
+      ["Peso líquido", "2,85 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 170R",
