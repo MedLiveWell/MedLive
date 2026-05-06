@@ -135,8 +135,8 @@ const med170rImages = [
 ];
 
 const med180Images = [
-  "/images/med-180-1.png",
   "/images/med-180-2.png",
+  "/images/med-180-1.png",
   "/images/med-180-3.png",
 ];
 
