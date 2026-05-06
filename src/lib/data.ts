@@ -93,6 +93,13 @@ const med120Images = [
   "/images/med-120-3.jpg",
 ];
 
+const med130Images = [
+  "/images/med-130-1.png",
+  "/images/med-130-2.png",
+  "/images/med-130-3.png",
+  "/images/med-130-4.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -133,9 +140,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 130",
     cat: "andadores",
-    name: "Andador 2 barras clique duplo alumínio prata",
-    desc: "Alumínio prata leve, sistema de clique duplo para segurança na marcha.",
-    specs: ["Alumínio", "Clique duplo", "100kg"],
+    name: "Andador 2 Barras Clique Duplo Alumínio Prata",
+    desc: "Mais leveza sem abrir mão da resistência. O MED 130 é o andador ideal para quem quer se mover com mais liberdade e segurança — leve, desmontável e pronto para acompanhar sua rotina.",
+    specs: ["Alumínio", "Clique duplo", "135kg"],
+    image: med130Images[0],
+    images: med130Images,
+    dimensions: [
+      ["Largura", "43,5 cm"],
+      ["Altura", "82 – 100 cm"],
+      ["Profundidade", "50 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "2,5 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 140",
