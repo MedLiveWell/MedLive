@@ -6,16 +6,6 @@ import { Icon } from "./Icon";
 const CATALOG_PDF_URL = "/catalogo-2026.pdf";
 const CATALOG_FILENAME = "catalogo-medlive-2026.pdf";
 
-function triggerCatalogDownload() {
-  const a = document.createElement("a");
-  a.href = CATALOG_PDF_URL;
-  a.download = CATALOG_FILENAME;
-  a.rel = "noopener";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
-
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
@@ -117,7 +107,6 @@ export function CatalogGate() {
       // ignore
     }
     setSent(true);
-    triggerCatalogDownload();
   };
 
   return (
@@ -312,19 +301,17 @@ export function CatalogGate() {
             </span>
             <h2>Seu catálogo está pronto.</h2>
             <p>
-              O download começou automaticamente. Se nada aconteceu, clique em{" "}
-              <strong>Baixar agora</strong>. Nosso time comercial também entrará em contato pelo
-              WhatsApp em até 1 dia útil com a tabela de preços de distribuidor.
+              Clique em <strong>Baixar agora</strong> para receber o PDF. Nosso time comercial
+              também entrará em contato pelo WhatsApp em até 1 dia útil com a tabela de preços de
+              distribuidor.
             </p>
             <div className="cg-success-actions">
               <a
                 href={CATALOG_PDF_URL}
                 download={CATALOG_FILENAME}
+                target="_blank"
+                rel="noopener"
                 className="btn btn-primary btn-lg"
-                onClick={() => {
-                  triggerCatalogDownload();
-                  setOpen(false);
-                }}
               >
                 <Icon.download /> Baixar agora
               </a>
