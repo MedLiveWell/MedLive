@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
+import { sendLead } from "@/lib/sendLead";
 
 type FormState = {
   nome: string;
@@ -38,6 +39,16 @@ export default function RevendedorPage() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
+    void sendLead({
+      conversion_identifier: "seja-revendedor",
+      email: form.email,
+      name: form.nome,
+      company_name: form.empresa,
+      cf_telefone: form.telefone,
+      cf_cnpj: form.cnpj,
+      cf_canal: form.tipo,
+      cf_mensagem: form.mensagem,
+    });
     setSent(true);
     setTimeout(() => setSent(false), 5000);
   };

@@ -2,10 +2,21 @@
 
 import { useState } from "react";
 import { Icon } from "./Icon";
+import { sendLead } from "@/lib/sendLead";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    void sendLead({
+      conversion_identifier: "newsletter-medlive",
+      email,
+    });
+    setSent(true);
+  };
 
   return (
     <section className="newsletter">
@@ -20,12 +31,7 @@ export function Newsletter() {
             importa.
           </p>
         </div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            if (email) setSent(true);
-          }}
-        >
+        <form onSubmit={onSubmit}>
           <input
             type="email"
             required

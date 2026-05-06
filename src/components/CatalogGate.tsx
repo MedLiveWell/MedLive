@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
+import { sendLead } from "@/lib/sendLead";
 
 const CATALOG_PDF_URL = "/catalogo-2026.pdf";
 const CATALOG_FILENAME = "catalogo-medlive-2026.pdf";
@@ -118,6 +119,17 @@ export function CatalogGate() {
     } catch {
       // ignore
     }
+    void sendLead({
+      conversion_identifier: "catalogo-medlive-2026",
+      email: form.email,
+      name: form.nome,
+      company_name: form.empresa,
+      cf_telefone: form.telefone,
+      cf_cnpj: form.cnpj,
+      cf_canal: form.canal,
+      cf_uf: form.uf,
+      cf_volume: form.volume,
+    });
     triggerCatalogDownload();
     setSent(true);
   };
