@@ -3,6 +3,21 @@
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 
+const CATALOG_PDF_URL = "/catalogo-2026.pdf";
+const CATALOG_FILENAME = "catalogo-medlive-2026.pdf";
+
+function triggerCatalogDownload() {
+  const a = document.createElement("a");
+  a.href = CATALOG_PDF_URL;
+  a.download = CATALOG_FILENAME;
+  a.rel = "noopener";
+  a.target = "_blank";
+  a.style.display = "none";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => document.body.removeChild(a), 0);
+}
+
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
@@ -103,6 +118,7 @@ export function CatalogGate() {
     } catch {
       // ignore
     }
+    triggerCatalogDownload();
     setSent(true);
   };
 
@@ -296,20 +312,19 @@ export function CatalogGate() {
             <span className="eyebrow" style={{ color: "var(--tangerina)" }}>
               Pronto
             </span>
-            <h2>Seu catálogo está a caminho.</h2>
+            <h2>Seu catálogo está pronto.</h2>
             <p>
-              Enviamos o PDF para <strong>{form.email}</strong>. Em paralelo, nosso time comercial
-              entrará em contato pelo WhatsApp em até 1 dia útil com a tabela de preços de
+              Clique em <strong>Baixar agora</strong> para receber o PDF. Nosso time comercial
+              também entrará em contato pelo WhatsApp em até 1 dia útil com a tabela de preços de
               distribuidor.
             </p>
             <div className="cg-success-actions">
               <a
-                href="#"
+                href={CATALOG_PDF_URL}
+                download={CATALOG_FILENAME}
+                target="_blank"
+                rel="noopener"
                 className="btn btn-primary btn-lg"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpen(false);
-                }}
               >
                 <Icon.download /> Baixar agora
               </a>
