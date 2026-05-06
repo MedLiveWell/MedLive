@@ -134,11 +134,13 @@ p { margin: 0; color: var(--ink-2); }
   padding: 7px 14px; border-radius: 999px;
 }
 .pd-main-art {
-  width: 72%; height: 72%;
+  width: 100%; height: 100%;
+  padding: 7%;
   display: grid; place-items: center;
   color: var(--cobalto);
+  box-sizing: border-box;
 }
-.pd-main-art > * { width: 100%; height: 100%; }
+.pd-main-art > * { width: 100%; height: 100%; max-width: 100%; max-height: 100%; }
 
 .pd-thumbs { display: flex; gap: 12px; margin-top: 16px; }
 .pd-thumb {
@@ -1314,7 +1316,7 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   display: none;
 }
 .prod-thumb { width: 100%; height: 100%; object-fit: contain; display: block; padding: 24px; }
-.pd-main-img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 0; box-sizing: border-box; }
+.pd-main-img { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; display: block; padding: 0; box-sizing: border-box; }
 .pd-thumb-img { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; display: block; padding: 8px; transition: transform .3s ease; }
 .pd-related-img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 10px; }
 
