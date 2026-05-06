@@ -321,11 +321,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 190",
     cat: "andadores",
-    name: "Andador 3 barras articulado desmontável",
-    desc: "Três barras articulado e desmontável para transporte prático.",
-    specs: ["Desmontável", "Articulado", "100kg"],
+    name: "Andador 3 Barras Articulado Alumínio Prata Desmontável",
+    desc: "O melhor dos dois mundos: máxima estabilidade e praticidade para guardar. O MED 190 combina 3 barras articuladas com estrutura desmontável — para quem não abre mão de desempenho nem de conveniência.",
+    specs: ["Desmontável", "Articulado", "150kg"],
     image: med190Images[0],
     images: med190Images,
+    dimensions: [
+      ["Largura", "53 cm"],
+      ["Altura", "81 – 98,5 cm"],
+      ["Profundidade", "47 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "150 kg"],
+      ["Peso líquido", "2,7 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 520",
