@@ -116,6 +116,11 @@ const med150Images = [
   "/images/med-150-4.png",
 ];
 
+const med160Images = [
+  "/images/med-160-1.png",
+  "/images/med-160-2.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -217,9 +222,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 160",
     cat: "andadores",
-    name: "Andador 3 barras articulado alumínio bronze",
-    desc: "Versão bronze do MED 150, estrutura em alumínio leve e resistente.",
-    specs: ["Alumínio", "Bronze", "100kg"],
+    name: "Andador 3 Barras Articulado Alumínio Bronze",
+    desc: "Estabilidade máxima com identidade própria. O MED 160 entrega a mesma performance das 3 barras articuladas com o diferencial do acabamento bronze — para quem quer segurança sem abrir mão do estilo.",
+    specs: ["Alumínio", "Bronze", "150kg"],
+    image: med160Images[0],
+    images: med160Images,
+    dimensions: [
+      ["Largura", "53 cm"],
+      ["Altura", "81 – 98,5 cm"],
+      ["Profundidade", "47 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "150 kg"],
+      ["Peso líquido", "2,7 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 170-C",
