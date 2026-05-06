@@ -115,7 +115,7 @@ export const PRODUCTS: Product[] = [
     cat: "andadores",
     name: "MED 120 - Andador 2 Barras Articulado Aço",
     desc: "Recupere sua mobilidade com segurança e independência. O MED 120 é o andador articulado ideal para quem precisa de apoio confiável no dia a dia — resistente, ajustável e fácil de levar a qualquer lugar.",
-    specs: ["Aço", "Articulado", "100kg"],
+    specs: ["Aço", "Articulado", "120kg"],
     image: med120Images[0],
     images: med120Images,
     dimensions: [
@@ -124,7 +124,7 @@ export const PRODUCTS: Product[] = [
       ["Profundidade", "44 cm"],
     ],
     characteristics: [
-      ["Capacidade", "100 kg"],
+      ["Capacidade", "120 kg"],
       ["Peso líquido", "2,55 kg"],
       ["Acabamento", "Aço Inoxidável"],
       ["Função articulada", "Sim"],
