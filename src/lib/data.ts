@@ -100,6 +100,13 @@ const med130Images = [
   "/images/med-130-4.png",
 ];
 
+const med140Images = [
+  "/images/med-140-1.png",
+  "/images/med-140-2.png",
+  "/images/med-140-3.png",
+  "/images/med-140-4.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -160,9 +167,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 140",
     cat: "andadores",
-    name: "Andador 2 barras clique duplo alumínio acetinado",
-    desc: "Acabamento acetinado premium, mesma estrutura robusta do MED 130.",
-    specs: ["Alumínio", "Acetinado", "100kg"],
+    name: "Andador 2 Barras Clique Duplo Alumínio Prata Acetinado",
+    desc: "Autonomia com um toque de sofisticação. O MED 140 une resistência e acabamento prata acetinado exclusivo para quem quer se locomover com segurança, estilo e praticidade no dia a dia.",
+    specs: ["Alumínio", "Acetinado", "135kg"],
+    image: med140Images[0],
+    images: med140Images,
+    dimensions: [
+      ["Largura", "43,5 cm"],
+      ["Altura", "82 – 100 cm"],
+      ["Profundidade", "50 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "2,5 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 150",
