@@ -3,6 +3,19 @@
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 
+const CATALOG_PDF_URL = "/catalogo-2026.pdf";
+const CATALOG_FILENAME = "catalogo-medlive-2026.pdf";
+
+function triggerCatalogDownload() {
+  const a = document.createElement("a");
+  a.href = CATALOG_PDF_URL;
+  a.download = CATALOG_FILENAME;
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
@@ -104,6 +117,7 @@ export function CatalogGate() {
       // ignore
     }
     setSent(true);
+    triggerCatalogDownload();
   };
 
   return (
@@ -296,18 +310,19 @@ export function CatalogGate() {
             <span className="eyebrow" style={{ color: "var(--tangerina)" }}>
               Pronto
             </span>
-            <h2>Seu catálogo está a caminho.</h2>
+            <h2>Seu catálogo está pronto.</h2>
             <p>
-              Enviamos o PDF para <strong>{form.email}</strong>. Em paralelo, nosso time comercial
-              entrará em contato pelo WhatsApp em até 1 dia útil com a tabela de preços de
-              distribuidor.
+              O download começou automaticamente. Se nada aconteceu, clique em{" "}
+              <strong>Baixar agora</strong>. Nosso time comercial também entrará em contato pelo
+              WhatsApp em até 1 dia útil com a tabela de preços de distribuidor.
             </p>
             <div className="cg-success-actions">
               <a
-                href="#"
+                href={CATALOG_PDF_URL}
+                download={CATALOG_FILENAME}
                 className="btn btn-primary btn-lg"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
+                  triggerCatalogDownload();
                   setOpen(false);
                 }}
               >
