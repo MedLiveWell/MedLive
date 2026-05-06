@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
-import { sendConversion, type LeadConversion } from "@/lib/rdstation";
+import { envDiagnostic, sendConversion, type LeadConversion } from "@/lib/rdstation";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const ALLOWED_IDENTIFIERS = new Set([
   "newsletter-medlive",
@@ -7,10 +10,28 @@ const ALLOWED_IDENTIFIERS = new Set([
   "seja-revendedor",
 ]);
 
-type Body = Partial<LeadConversion>;
+type Body = Partial<LeadConversion> & { diagnostic?: boolean };
 
 function isEmail(value: unknown): value is string {
   return typeof value === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+// GET /api/leads — diagnostic check. Returns whether the env vars are loaded.
+// Token values are NEVER returned, only their lengths so you can confirm a
+// non-empty value is set on the deployed environment.
+export async function GET(req: Request) {
+  const url = new URL(req.url);
+  const probe = url.searchParams.get("probe");
+  const env = envDiagnostic();
+  if (probe === "1" && env.hasPublicToken) {
+    const result = await sendConversion({
+      conversion_identifier: "newsletter-medlive",
+      email: `probe+${Date.now()}@medlivewell.com.br`,
+      name: "RD Station diagnostic probe",
+    });
+    return NextResponse.json({ env, probe: result });
+  }
+  return NextResponse.json({ env });
 }
 
 export async function POST(req: Request) {
@@ -22,7 +43,10 @@ export async function POST(req: Request) {
   }
 
   if (!body.conversion_identifier || !ALLOWED_IDENTIFIERS.has(body.conversion_identifier)) {
-    return NextResponse.json({ ok: false, error: "Invalid conversion_identifier" }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: "Invalid conversion_identifier" },
+      { status: 400 },
+    );
   }
   if (!isEmail(body.email)) {
     return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
@@ -43,8 +67,23 @@ export async function POST(req: Request) {
 
   const result = await sendConversion(payload);
   if (!result.ok) {
-    console.error("[rdstation] conversion failed", result);
-    return NextResponse.json({ ok: false }, { status: 502 });
+    console.error(
+      "[rdstation] conversion FAILED",
+      JSON.stringify({
+        identifier: payload.conversion_identifier,
+        email: payload.email,
+        status: result.status,
+        body: result.body,
+      }),
+    );
+    return NextResponse.json(
+      { ok: false, status: result.status, detail: result.body },
+      { status: 502 },
+    );
   }
+  console.log(
+    "[rdstation] conversion OK",
+    JSON.stringify({ identifier: payload.conversion_identifier, email: payload.email }),
+  );
   return NextResponse.json({ ok: true });
 }
