@@ -240,18 +240,18 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    code: "MED 170-C",
-    cat: "andadores",
-    name: "Andador 1 barra desmontável c/ rodas 150kg",
-    desc: "Uma barra frontal desmontável, com rodas dianteiras. Suporta 150kg.",
-    specs: ["Desmontável", "Com rodas", "150kg"],
-  },
-  {
-    code: "MED 170-S",
+    code: "MED 170",
     cat: "andadores",
     name: "Andador 1 barra desmontável s/ rodas 150kg",
     desc: "Uma barra frontal desmontável, sem rodas. Suporta 150kg.",
     specs: ["Desmontável", "Sem rodas", "150kg"],
+  },
+  {
+    code: "MED 170R",
+    cat: "andadores",
+    name: "Andador 1 barra desmontável c/ rodas 150kg",
+    desc: "Uma barra frontal desmontável, com rodas dianteiras. Suporta 150kg.",
+    specs: ["Desmontável", "Com rodas", "150kg"],
   },
   {
     code: "MED 180",
