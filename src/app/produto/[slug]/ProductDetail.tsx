@@ -73,7 +73,12 @@ function buildLongDesc(p: Product) {
 }
 
 function buildSpecTables(p: Product, capacity: string | null) {
-  const dims = DIMS_BY_CAT[p.cat] || DIMS_BY_CAT.andadores;
+  // Per-product overrides win over the category-level defaults.
+  const dims = p.dimensions ?? DIMS_BY_CAT[p.cat] ?? DIMS_BY_CAT.andadores;
+  if (p.characteristics) {
+    return { dimensions: dims, characteristics: p.characteristics };
+  }
+
   const hasAlu = p.specs.some((s) => /alumínio/i.test(s));
   const hasAco = p.specs.some((s) => /aço|inox/i.test(s));
   const material = hasAco

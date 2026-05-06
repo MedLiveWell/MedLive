@@ -19,6 +19,9 @@ export type Product = {
   specs: string[];
   image?: string;
   images?: string[];
+  /** Optional per-product overrides for the spec tables on the detail page. */
+  dimensions?: [string, string][];
+  characteristics?: [string, string][];
 };
 
 export type BlogPost = {
@@ -84,6 +87,12 @@ export const CATEGORIES: Category[] = [
   },
 ];
 
+const med120Images = [
+  "/images/med-120-1.jpg",
+  "/images/med-120-2.jpg",
+  "/images/med-120-3.jpg",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -104,9 +113,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 120",
     cat: "andadores",
-    name: "Andador 2 barras articulado aço",
-    desc: "Estrutura em aço com articulação central, ideal para marcha alternada.",
+    name: "MED 120 - Andador 2 Barras Articulado Aço",
+    desc: "Recupere sua mobilidade com segurança e independência. O MED 120 é o andador articulado ideal para quem precisa de apoio confiável no dia a dia — resistente, ajustável e fácil de levar a qualquer lugar.",
     specs: ["Aço", "Articulado", "100kg"],
+    image: med120Images[0],
+    images: med120Images,
+    dimensions: [
+      ["Largura", "53 cm"],
+      ["Altura", "73 – 90 cm"],
+      ["Profundidade", "44 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "100 kg"],
+      ["Peso líquido", "2,55 kg"],
+      ["Acabamento", "Aço Inoxidável"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 130",
