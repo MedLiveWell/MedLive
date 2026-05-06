@@ -22,6 +22,8 @@ export type Product = {
   /** Optional per-product overrides for the spec tables on the detail page. */
   dimensions?: [string, string][];
   characteristics?: [string, string][];
+  /** Optional CSS transform per image index (sparse). Used e.g. to mirror a photo. */
+  imageTransforms?: (string | undefined)[];
 };
 
 export type BlogPost = {
@@ -107,6 +109,13 @@ const med140Images = [
   "/images/med-140-4.png",
 ];
 
+const med150Images = [
+  "/images/med-150-1.png",
+  "/images/med-150-2.png",
+  "/images/med-150-3.png",
+  "/images/med-150-4.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -187,9 +196,23 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 150",
     cat: "andadores",
-    name: "Andador 3 barras articulado alumínio prata",
-    desc: "Três barras para estabilidade extra, articulado para marcha alternada.",
-    specs: ["Alumínio", "3 barras", "100kg"],
+    name: "Andador 3 Barras Articulado Alumínio Prata",
+    desc: "Quando estabilidade faz toda a diferença. O MED 150 oferece base de apoio extra com 3 barras e função articulada — a escolha certa para quem precisa de mais firmeza e segurança em cada passo.",
+    specs: ["Alumínio", "3 barras", "150kg"],
+    image: med150Images[0],
+    images: med150Images,
+    imageTransforms: ["scaleX(-1)"],
+    dimensions: [
+      ["Largura", "53 cm"],
+      ["Altura", "81 – 98,5 cm"],
+      ["Profundidade", "47 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "150 kg"],
+      ["Peso líquido", "2,7 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "Sim"],
+    ],
   },
   {
     code: "MED 160",

@@ -165,6 +165,8 @@ export function ProductDetail({ product }: { product: Product }) {
   const longDesc = buildLongDesc(product);
 
   const currentImage = hasImages ? galleryImages[activeThumb] || galleryImages[0] : null;
+  const transformAt = (i: number) => product.imageTransforms?.[i];
+  const currentTransform = transformAt(activeThumb);
 
   return (
     <>
@@ -223,6 +225,7 @@ export function ProductDetail({ product }: { product: Product }) {
                       width={800}
                       height={800}
                       priority
+                      style={currentTransform ? { transform: currentTransform } : undefined}
                     />
                   ) : (
                     <CategoryGlyph id={product.cat} />
@@ -255,7 +258,14 @@ export function ProductDetail({ product }: { product: Product }) {
                         onClick={() => setActiveThumb(i)}
                         aria-label={`Vista ${i + 1}`}
                       >
-                        <Image src={thumb} alt="" className="pd-thumb-img" width={84} height={84} />
+                        <Image
+                          src={thumb}
+                          alt=""
+                          className="pd-thumb-img"
+                          width={84}
+                          height={84}
+                          style={transformAt(i) ? { transform: transformAt(i) } : undefined}
+                        />
                       </button>
                     ))
                   : Array.from({ length: placeholderCount }).map((_, i) => (
@@ -377,6 +387,11 @@ export function ProductDetail({ product }: { product: Product }) {
                         className="pd-related-img"
                         width={300}
                         height={188}
+                        style={
+                          p.imageTransforms?.[0]
+                            ? { transform: p.imageTransforms[0] }
+                            : undefined
+                        }
                       />
                     ) : (
                       <CategoryGlyph id={p.cat} />
@@ -466,10 +481,12 @@ export function ProductDetail({ product }: { product: Product }) {
                 style={
                   zoomed
                     ? {
-                        transform: "scale(2.4)",
+                        transform: `${currentTransform ? currentTransform + " " : ""}scale(2.4)`,
                         transformOrigin: `${pan.x}% ${pan.y}%`,
                         cursor: "zoom-out",
                       }
+                    : currentTransform
+                    ? { transform: currentTransform, cursor: "zoom-in" }
                     : { cursor: "zoom-in" }
                 }
               />

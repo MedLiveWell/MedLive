@@ -72,6 +72,11 @@ function ProdutosContent() {
                         className="prod-thumb"
                         width={400}
                         height={300}
+                        style={
+                          p.imageTransforms?.[0]
+                            ? { transform: p.imageTransforms[0] }
+                            : undefined
+                        }
                       />
                     ) : (
                       <CategoryGlyph id={p.cat} />
