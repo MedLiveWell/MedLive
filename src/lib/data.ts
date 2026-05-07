@@ -197,6 +197,8 @@ const med410Images = [
   "/images/med-410-5.png",
 ];
 
+const med420Images = ["/images/med-420-1.png"];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -605,9 +607,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 420",
     cat: "cadeiras-banho",
-    name: "Cadeira de banho dobrável desmontável 100kg",
-    desc: "Dobrável e desmontável para transporte fácil. Estrutura leve 100kg.",
+    name: "Cadeira de Banho Dobrável e Desmontável Aço",
+    desc: "Prática, resistente e fácil de usar. A MED 420 é a cadeira de banho dobrável ideal para quem precisa de uma solução acessível e confortável para o banho assistido no dia a dia.",
     specs: ["Dobrável", "Desmontável", "100kg"],
+    image: med420Images[0],
+    images: med420Images,
+    dimensions: [
+      ["Largura", "50 cm"],
+      ["Altura", "76 – 86 cm"],
+      ["Profundidade", "54 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "100 kg"],
+      ["Peso líquido", "5,5 kg"],
+      ["Acabamento", "Aço"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 440",
