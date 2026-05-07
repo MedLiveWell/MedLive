@@ -134,6 +134,7 @@ export function ProductDetail({ product }: { product: Product }) {
     ? [product.image]
     : [];
   const activeTransforms = colors ? activeColor?.imageTransforms : product.imageTransforms;
+  const activeStyles = colors ? activeColor?.imageStyles : product.imageStyles;
 
   const hasImages = galleryImages.length > 0;
   // When a color variant has no photos yet, mirror the largest sibling's count
@@ -186,7 +187,14 @@ export function ProductDetail({ product }: { product: Product }) {
 
   const currentImage = hasImages ? galleryImages[activeThumb] || galleryImages[0] : null;
   const transformAt = (i: number) => activeTransforms?.[i];
+  const styleAt = (i: number) => {
+    const t = activeTransforms?.[i];
+    const s = activeStyles?.[i];
+    if (!t && !s) return undefined;
+    return { ...(s ?? {}), ...(t ? { transform: t } : {}) };
+  };
   const currentTransform = transformAt(activeThumb);
+  const currentStyle = styleAt(activeThumb);
 
   return (
     <>
@@ -247,7 +255,7 @@ export function ProductDetail({ product }: { product: Product }) {
                       width={800}
                       height={800}
                       priority
-                      style={currentTransform ? { transform: currentTransform } : undefined}
+                      style={currentStyle}
                     />
                   ) : awaitingPhotos ? (
                     <div className="pd-photo-pending">Foto em breve</div>
@@ -288,7 +296,7 @@ export function ProductDetail({ product }: { product: Product }) {
                           className="pd-thumb-img"
                           width={84}
                           height={84}
-                          style={transformAt(i) ? { transform: transformAt(i) } : undefined}
+                          style={styleAt(i)}
                         />
                       </button>
                     ))

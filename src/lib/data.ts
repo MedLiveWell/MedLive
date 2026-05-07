@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export type NavItem = {
   id: string;
   label: string;
@@ -19,6 +21,8 @@ export type ProductColor = {
   /** Gallery images for this color. Empty means placeholder (photos pending). */
   images: string[];
   imageTransforms?: (string | undefined)[];
+  /** Per-image inline style override (object-fit, object-position, etc). */
+  imageStyles?: (CSSProperties | undefined)[];
 };
 
 export type Product = {
@@ -34,6 +38,8 @@ export type Product = {
   characteristics?: [string, string][];
   /** Optional CSS transform per image index (sparse). Used e.g. to mirror a photo. */
   imageTransforms?: (string | undefined)[];
+  /** Per-image inline style override (object-fit, object-position, etc). */
+  imageStyles?: (CSSProperties | undefined)[];
   /** Optional color variants. When present, the gallery uses the active color's images. */
   colors?: ProductColor[];
 };
@@ -697,7 +703,15 @@ export const PRODUCTS: Product[] = [
       ["Função articulada", "—"],
     ],
     colors: [
-      { id: "amarelo", label: "Amarelo", swatch: "#e9c441", images: med3040AmareloImages },
+      {
+        id: "amarelo",
+        label: "Amarelo",
+        swatch: "#e9c441",
+        images: med3040AmareloImages,
+        imageStyles: [
+          { objectFit: "cover", objectPosition: "center" },
+        ],
+      },
       { id: "azul", label: "Azul", swatch: "#1e4f99", images: [] },
     ],
   },
