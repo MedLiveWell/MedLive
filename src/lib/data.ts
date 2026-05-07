@@ -171,6 +171,13 @@ const med550Images = [
   "/images/med-550-2.png",
 ];
 
+const med330Images = [
+  "/images/med-330-1.png",
+  "/images/med-330-2.png",
+  "/images/med-330-3.png",
+  "/images/med-330-4.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -454,9 +461,23 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 330",
     cat: "banquetas",
-    name: "Banqueta com encosto e apoio de braço",
-    desc: "Encosto + apoios de braço laterais para maior estabilidade.",
-    specs: ["Encosto", "Apoio braço", "100kg"],
+    name: "Banqueta para Banho com Encosto e Apoio de Braço",
+    desc: "Sentar e levantar com muito mais segurança. A MED 330 tem encosto e apoios de braço laterais para quem precisa de suporte completo — transformando o momento do banho em uma experiência mais segura e confortável.",
+    specs: ["Encosto", "Apoio braço", "135kg"],
+    image: med330Images[0],
+    images: med330Images,
+    imageTransforms: ["scaleX(-1)"],
+    dimensions: [
+      ["Largura", "53 cm"],
+      ["Altura", "74 – 88 cm"],
+      ["Profundidade", "43 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "3,4 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 360",
