@@ -166,6 +166,11 @@ const med530Images = [
   "/images/med-530-4.jpg",
 ];
 
+const med550Images = [
+  "/images/med-550-1.png",
+  "/images/med-550-2.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -413,9 +418,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 550",
     cat: "andadores",
-    name: "Andador c/ rodas e assento 135kg",
-    desc: "Andador rollator com assento para descanso durante o uso.",
+    name: "Andador com Rodas e Assento Alumínio",
+    desc: "Controle total em cada curva. O MED 550 tem rodas dianteiras com giro 360° para manobras precisas e assento confortável — a solução para quem quer autonomia e segurança em qualquer ambiente.",
     specs: ["Com assento", "4 rodas", "135kg"],
+    image: med550Images[0],
+    images: med550Images,
+    dimensions: [
+      ["Largura", "52 cm"],
+      ["Altura", "90 – 105 cm"],
+      ["Profundidade", "44 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "7,7 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "—"],
+    ],
   },
 
   // Banquetas (6)
