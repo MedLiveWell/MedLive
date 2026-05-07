@@ -187,6 +187,8 @@ const med370Images = ["/images/med-370-1.png"];
 
 const med380Images = ["/images/med-380-1.png"];
 
+const med390Images = ["/images/med-390-1.png"];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -552,9 +554,23 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 390",
     cat: "banquetas",
-    name: "Banqueta com encosto e apoio de braço 135kg",
-    desc: "Encosto e apoio de braço, capacidade reforçada de 135kg.",
-    specs: ["Reforçada", "Apoio braço", "135kg"],
+    name: "Banqueta para Banho com Encosto e Apoio de Braço",
+    desc: "Base mais larga, mais segurança em cada banho. A MED 390 combina encosto, apoios de braço e estrutura mais ampla — para quem precisa do máximo em estabilidade e suporte durante o banho.",
+    specs: ["Encosto", "Apoio braço", "135kg"],
+    image: med390Images[0],
+    images: med390Images,
+    imageTransforms: ["scaleX(-1)"],
+    dimensions: [
+      ["Largura", "53 cm"],
+      ["Altura", "70,5 – 80,5 cm"],
+      ["Profundidade", "51 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "3,1 kg"],
+      ["Acabamento", "HDPE"],
+      ["Função articulada", "—"],
+    ],
   },
 
   // Cadeiras de banho (3)
