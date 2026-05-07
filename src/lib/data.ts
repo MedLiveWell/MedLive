@@ -183,6 +183,8 @@ const med360Images = [
   "/images/med-360-2.png",
 ];
 
+const med370Images = ["/images/med-370-1.png"];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -507,9 +509,23 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 370",
     cat: "banquetas",
-    name: "Banqueta de banho sem encosto 135kg",
-    desc: "Reforçada, suporta 135kg. Ideal para usuários de maior porte.",
-    specs: ["Reforçada", "Sem encosto", "135kg"],
+    name: "Banqueta para Banho sem Encosto com Suporte para Chuveiro",
+    desc: "A banqueta mais leve da linha, com suporte para chuveiro integrado. A MED 370 é ideal para quem quer praticidade e independência no banho sem abrir mão de estabilidade e segurança.",
+    specs: ["Sem encosto", "Suporte chuveiro", "135kg"],
+    image: med370Images[0],
+    images: med370Images,
+    imageTransforms: ["scaleX(-1)"],
+    dimensions: [
+      ["Largura", "50 cm"],
+      ["Altura", "37,5 – 50 cm"],
+      ["Profundidade", "30,5 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "1,8 kg"],
+      ["Acabamento", "HDPE"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 390",
