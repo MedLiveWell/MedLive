@@ -42,6 +42,8 @@ export type Product = {
   imageStyles?: (CSSProperties | undefined)[];
   /** Optional color variants. When present, the gallery uses the active color's images. */
   colors?: ProductColor[];
+  /** When true, render the gallery as a clean blank placeholder instead of the category glyph. */
+  awaitingPhotos?: boolean;
 };
 
 export type BlogPost = {
@@ -773,9 +775,21 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 1010",
     cat: "barras",
-    name: "Barra de apoio sanitária c/ ajuste de altura alumínio 150kg",
-    desc: "Barra sanitária com altura ajustável, fixação ao piso. Até 150kg.",
-    specs: ["Ajustável", "Alumínio", "150kg"],
+    name: "Barra de Apoio Sanitário com Ajuste de Altura",
+    desc: "Mais segurança e independência no banheiro, sem obras e sem ferramentas. A MED 1010 instala em segundos no vaso sanitário e oferece o apoio que faz toda a diferença na hora de sentar e levantar.",
+    specs: ["Ajustável", "Alumínio", "1kg"],
+    awaitingPhotos: true,
+    dimensions: [
+      ["Largura", "46,5 cm"],
+      ["Altura", "65,3 – 75,5 cm"],
+      ["Profundidade", "54,8 – 65 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "1 kg"],
+      ["Peso líquido", "0,492 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "—"],
+    ],
   },
 ];
 

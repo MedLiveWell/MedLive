@@ -142,7 +142,7 @@ export function ProductDetail({ product }: { product: Product }) {
   const referenceCount = colors
     ? Math.max(0, ...colors.map((c) => c.images.length))
     : 0;
-  const awaitingPhotos = Boolean(colors) && !hasImages;
+  const awaitingPhotos = !hasImages && (Boolean(colors) || Boolean(product.awaitingPhotos));
   const placeholderCount = hasImages
     ? 0
     : awaitingPhotos
