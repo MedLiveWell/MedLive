@@ -126,6 +126,7 @@ export default function HomePage() {
                       className="cat-card-img"
                       fill
                       sizes="(max-width: 960px) 100vw, 33vw"
+                      style={c.imageTransform ? { transform: c.imageTransform } : undefined}
                     />
                   ) : (
                     <CategoryGlyph id={c.id} />

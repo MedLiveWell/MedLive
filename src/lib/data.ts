@@ -13,6 +13,8 @@ export type Category = {
   desc: string;
   /** Optional cover image used on the home category cards. */
   image?: string;
+  /** Optional CSS transform applied to the cover image (e.g. "scaleX(-1)"). */
+  imageTransform?: string;
 };
 
 export type ProductColor = {
@@ -86,6 +88,7 @@ export const CATEGORIES: Category[] = [
     count: 7,
     desc: "Com e sem encosto, apoio de braço e abertura frontal.",
     image: "/images/med-390-1.png",
+    imageTransform: "scaleX(-1)",
   },
   {
     id: "cadeiras-banho",
