@@ -120,13 +120,33 @@ export function ProductDetail({ product }: { product: Product }) {
   const capacity = productCapacity(product);
   const related = PRODUCTS.filter((p) => p.cat === product.cat && p.code !== product.code).slice(0, 3);
 
-  const galleryImages: string[] = product.images && product.images.length
+  const colors = product.colors;
+  const [activeColorId, setActiveColorId] = useState<string | undefined>(colors?.[0]?.id);
+  const activeColor = colors?.find((c) => c.id === activeColorId) ?? colors?.[0];
+
+  // Gallery is driven by the active color when colors are defined; otherwise
+  // it falls back to product.images / product.image.
+  const galleryImages: string[] = colors
+    ? activeColor?.images ?? []
+    : product.images && product.images.length
     ? product.images
     : product.image
     ? [product.image]
     : [];
+  const activeTransforms = colors ? activeColor?.imageTransforms : product.imageTransforms;
+
   const hasImages = galleryImages.length > 0;
-  const placeholderCount = hasImages ? 0 : 3;
+  // When a color variant has no photos yet, mirror the largest sibling's count
+  // so the gallery layout doesn't shift between colors.
+  const referenceCount = colors
+    ? Math.max(0, ...colors.map((c) => c.images.length))
+    : 0;
+  const awaitingPhotos = Boolean(colors) && !hasImages;
+  const placeholderCount = hasImages
+    ? 0
+    : awaitingPhotos
+    ? Math.max(referenceCount, 3)
+    : 3;
   const galleryLen = hasImages ? galleryImages.length : placeholderCount;
 
   const [activeThumb, setActiveThumb] = useState(0);
@@ -134,7 +154,7 @@ export function ProductDetail({ product }: { product: Product }) {
   const [zoomed, setZoomed] = useState(false);
   const [pan, setPan] = useState({ x: 50, y: 50 });
 
-  useEffect(() => setActiveThumb(0), [product.code]);
+  useEffect(() => setActiveThumb(0), [product.code, activeColorId]);
 
   useEffect(() => {
     if (!lightbox) {
@@ -165,7 +185,7 @@ export function ProductDetail({ product }: { product: Product }) {
   const longDesc = buildLongDesc(product);
 
   const currentImage = hasImages ? galleryImages[activeThumb] || galleryImages[0] : null;
-  const transformAt = (i: number) => product.imageTransforms?.[i];
+  const transformAt = (i: number) => activeTransforms?.[i];
   const currentTransform = transformAt(activeThumb);
 
   return (
@@ -189,13 +209,14 @@ export function ProductDetail({ product }: { product: Product }) {
             <div className="pd-gallery">
               <div className="pd-main-visual">
                 <span className="pd-code-pill">{product.code}</span>
-                <button
-                  type="button"
-                  className="pd-zoom-btn"
-                  onClick={() => setLightbox(true)}
-                  aria-label="Ampliar imagem"
-                  title="Clique para ampliar"
-                >
+                {currentImage && (
+                  <button
+                    type="button"
+                    className="pd-zoom-btn"
+                    onClick={() => setLightbox(true)}
+                    aria-label="Ampliar imagem"
+                    title="Clique para ampliar"
+                  >
                   <svg
                     width="18"
                     height="18"
@@ -212,10 +233,11 @@ export function ProductDetail({ product }: { product: Product }) {
                     <line x1="8" y1="11" x2="14" y2="11" />
                   </svg>
                 </button>
+                )}
                 <div
                   className="pd-main-art"
-                  onClick={() => setLightbox(true)}
-                  style={{ cursor: "zoom-in" }}
+                  onClick={() => (currentImage ? setLightbox(true) : undefined)}
+                  style={{ cursor: currentImage ? "zoom-in" : "default" }}
                 >
                   {currentImage ? (
                     <Image
@@ -227,6 +249,8 @@ export function ProductDetail({ product }: { product: Product }) {
                       priority
                       style={currentTransform ? { transform: currentTransform } : undefined}
                     />
+                  ) : awaitingPhotos ? (
+                    <div className="pd-photo-pending">Foto em breve</div>
                   ) : (
                     <CategoryGlyph id={product.cat} />
                   )}
@@ -275,12 +299,18 @@ export function ProductDetail({ product }: { product: Product }) {
                         onClick={() => setActiveThumb(i)}
                         aria-label={`Vista ${i + 1}`}
                       >
-                        <div
-                          className="pd-thumb-art"
-                          style={{ transform: `scale(${0.7 + i * 0.05}) rotate(${i * 6 - 6}deg)` }}
-                        >
-                          <CategoryGlyph id={product.cat} />
-                        </div>
+                        {awaitingPhotos ? (
+                          <div className="pd-thumb-pending" aria-hidden="true" />
+                        ) : (
+                          <div
+                            className="pd-thumb-art"
+                            style={{
+                              transform: `scale(${0.7 + i * 0.05}) rotate(${i * 6 - 6}deg)`,
+                            }}
+                          >
+                            <CategoryGlyph id={product.cat} />
+                          </div>
+                        )}
                       </button>
                     ))}
               </div>
@@ -292,6 +322,29 @@ export function ProductDetail({ product }: { product: Product }) {
               {capacity && (
                 <div className="pd-capacity-pill">
                   <Icon.shield size={14} /> Capacidade: {capacity}
+                </div>
+              )}
+              {colors && colors.length > 0 && (
+                <div className="pd-colors">
+                  <div className="pd-colors-label">
+                    Cor: <strong>{activeColor?.label}</strong>
+                  </div>
+                  <div className="pd-colors-row">
+                    {colors.map((c) => (
+                      <button
+                        key={c.id}
+                        type="button"
+                        className={
+                          "pd-color-swatch " + (c.id === activeColor?.id ? "active" : "")
+                        }
+                        style={{ background: c.swatch }}
+                        onClick={() => setActiveColorId(c.id)}
+                        aria-label={c.label}
+                        aria-pressed={c.id === activeColor?.id}
+                        title={c.label}
+                      />
+                    ))}
+                  </div>
                 </div>
               )}
               <p className="pd-desc" style={{ fontWeight: 400 }}>

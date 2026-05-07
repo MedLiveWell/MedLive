@@ -11,6 +11,16 @@ export type Category = {
   desc: string;
 };
 
+export type ProductColor = {
+  id: string;
+  label: string;
+  /** Hex color used for the swatch dot. */
+  swatch: string;
+  /** Gallery images for this color. Empty means placeholder (photos pending). */
+  images: string[];
+  imageTransforms?: (string | undefined)[];
+};
+
 export type Product = {
   code: string;
   cat: string;
@@ -24,6 +34,8 @@ export type Product = {
   characteristics?: [string, string][];
   /** Optional CSS transform per image index (sparse). Used e.g. to mirror a photo. */
   imageTransforms?: (string | undefined)[];
+  /** Optional color variants. When present, the gallery uses the active color's images. */
+  colors?: ProductColor[];
 };
 
 export type BlogPost = {
@@ -138,6 +150,13 @@ const med180Images = [
   "/images/med-180-2.png",
   "/images/med-180-1.png",
   "/images/med-180-3.png",
+];
+
+const med520PretoImages = [
+  "/images/med-520-preto-1.png",
+  "/images/med-520-preto-2.png",
+  "/images/med-520-preto-3.png",
+  "/images/med-520-preto-4.png",
 ];
 
 const med190Images = [
@@ -341,9 +360,28 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 520",
     cat: "andadores",
-    name: "Andador c/ rodas dobrável aço 135kg",
-    desc: "Andador com 4 rodas, estrutura em aço dobrável. Suporta 135kg.",
+    name: "Andador com Rodas Dobrável Aço",
+    desc: "Vá mais longe com mais conforto e segurança. O MED 520 é o andador completo com assento, freios e bolsa — ideal para quem quer autonomia total para caminhar, descansar e se mover com confiança.",
     specs: ["Aço", "4 rodas", "135kg"],
+    image: med520PretoImages[0],
+    images: med520PretoImages,
+    dimensions: [
+      ["Largura", "48 cm"],
+      ["Altura", "77 – 87 cm"],
+      ["Profundidade", "44,5 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "7,75 kg"],
+      ["Acabamento", "Aço"],
+      ["Função articulada", "—"],
+    ],
+    colors: [
+      { id: "preto", label: "Preto", swatch: "#1c1c1c", images: med520PretoImages },
+      { id: "vinho", label: "Vinho", swatch: "#7a1e2a", images: [] },
+      { id: "azul", label: "Azul", swatch: "#1e4f99", images: [] },
+      { id: "dourado", label: "Dourado", swatch: "#c79a3a", images: [] },
+    ],
   },
   {
     code: "MED 530",

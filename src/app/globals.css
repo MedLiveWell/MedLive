@@ -1461,3 +1461,48 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
 /* Tighten breadcrumb header on product detail pages */
 .page-head.pd-head { padding-top: 20px; padding-bottom: 12px; }
 
+/* ----- Color selector on product detail ----- */
+.pd-colors {
+  display: flex; flex-direction: column; gap: 10px;
+  margin: 0 0 22px;
+}
+.pd-colors-label {
+  font-size: 13px; color: var(--ink-2);
+}
+.pd-colors-label strong {
+  color: var(--cobalto); font-weight: 700;
+}
+.pd-colors-row {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.pd-color-swatch {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1.5px var(--line);
+  cursor: pointer;
+  padding: 0;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.pd-color-swatch:hover { transform: translateY(-1px); }
+.pd-color-swatch.active {
+  box-shadow: 0 0 0 2px var(--cobalto);
+}
+
+/* Awaiting-photos placeholder (color variants without images yet) */
+.pd-photo-pending {
+  width: 100%; height: 100%;
+  display: grid; place-items: center;
+  font-size: 13px; font-weight: 600;
+  color: var(--ink-4); letter-spacing: .04em;
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px dashed var(--line);
+}
+.pd-thumb-pending {
+  width: 100%; height: 100%;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px dashed var(--line);
+}
+
