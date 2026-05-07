@@ -213,6 +213,11 @@ const med210Images = [
   "/images/med-210-3.png",
 ];
 
+const med220Images = [
+  "/images/med-220-1.png",
+  "/images/med-220-2.png",
+];
+
 const med3030Images = [
   "/images/med-3030-1.png",
   "/images/med-3030-2.png",
@@ -746,9 +751,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 220",
     cat: "muletas",
-    name: "Muleta canadense alumínio 65kg",
-    desc: "Muleta canadense com apoio de antebraço e empunhadura ergonômica.",
+    name: "Muleta Canadense Desmontável Alumínio",
+    desc: "Locomoção leve, silenciosa e confortável. A MED 220 é a muleta canadense com sistema anti-ruído ideal para quem quer se mover com discrição e menos impacto nos ombros no dia a dia.",
     specs: ["Canadense", "Alumínio", "65kg"],
+    image: med220Images[0],
+    images: med220Images,
+    dimensions: [
+      ["Largura", "21 cm"],
+      ["Altura", "95,5 – 155,2 cm"],
+      ["Profundidade", "10 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "65 kg"],
+      ["Peso líquido", "0,492 kg"],
+      ["Acabamento", "—"],
+      ["Função articulada", "—"],
+    ],
   },
 
   // Barras de apoio (1)
