@@ -159,6 +159,13 @@ const med520PretoImages = [
   "/images/med-520-preto-4.png",
 ];
 
+const med530Images = [
+  "/images/med-530-1.jpg",
+  "/images/med-530-2.jpg",
+  "/images/med-530-3.jpg",
+  "/images/med-530-4.jpg",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -386,9 +393,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 530",
     cat: "andadores",
-    name: "Andador c/ rodas dobrável alumínio 135kg",
-    desc: "Versão em alumínio mais leve do MED 520, mesma capacidade.",
+    name: "Andador com Rodas Dobrável Alumínio",
+    desc: "Leveza e rodas maiores para um deslocamento mais fluido. O MED 530 é o andador com rodas em alumínio ideal para quem quer se mover com mais facilidade e conforto no dia a dia.",
     specs: ["Alumínio", "4 rodas", "135kg"],
+    image: med530Images[0],
+    images: med530Images,
+    dimensions: [
+      ["Largura", "47 cm"],
+      ["Altura", "81 – 94 cm"],
+      ["Profundidade", "44,5 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "7,7 kg"],
+      ["Acabamento", "Alumínio"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 550",
