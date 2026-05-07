@@ -199,6 +199,8 @@ const med410Images = [
 
 const med420Images = ["/images/med-420-1.png"];
 
+const med440Images = ["/images/med-440-1.png"];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -627,9 +629,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 440",
     cat: "cadeiras-banho",
-    name: "Cadeira com encosto revestido desmontável aço 100kg",
-    desc: "Versão leve do MED 410, estrutura em aço com encosto revestido.",
+    name: "Cadeira de Banho com Encosto Revestido Desmontável Aço",
+    desc: "Resistência e higiene fácil para quem cuida todo dia. A MED 440 tem encosto em poliuretano de limpeza rápida e estrutura em aço com pintura eletrostática — a cadeira de banho certa para uso residencial e institucional intensivo.",
     specs: ["Aço", "Revestido", "100kg"],
+    image: med440Images[0],
+    images: med440Images,
+    dimensions: [
+      ["Largura", "58 cm"],
+      ["Altura", "86 cm"],
+      ["Profundidade", "49 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "100 kg"],
+      ["Peso líquido", "6,6 kg"],
+      ["Acabamento", "Aço"],
+      ["Função articulada", "—"],
+    ],
   },
 
   // Cadeiras de transferência (2)
