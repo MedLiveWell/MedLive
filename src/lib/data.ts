@@ -207,6 +207,12 @@ const med420Images = ["/images/med-420-1.png"];
 
 const med440Images = ["/images/med-440-1.png"];
 
+const med210Images = [
+  "/images/med-210-1.png",
+  "/images/med-210-2.png",
+  "/images/med-210-3.png",
+];
+
 const med3030Images = [
   "/images/med-3030-1.png",
   "/images/med-3030-2.png",
@@ -720,9 +726,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 210",
     cat: "muletas",
-    name: "Muleta axilar universal desmontável alumínio 65kg",
-    desc: "Muleta axilar em alumínio, regulagem de altura universal. Par.",
+    name: "Muleta Axilar Universal Desmontável Alumínio",
+    desc: "Cada passo com mais firmeza e confiança. A MED 210 é a muleta axilar universal com ajuste preciso em 3 zonas para quem quer máximo conforto e personalização ergonômica durante a reabilitação.",
     specs: ["Axilar", "Alumínio", "65kg"],
+    image: med210Images[0],
+    images: med210Images,
+    dimensions: [
+      ["Largura", "21 cm"],
+      ["Altura", "95,5 – 155,2 cm"],
+      ["Profundidade", "10 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "65 kg"],
+      ["Peso líquido", "0,85 kg"],
+      ["Acabamento", "—"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 220",
