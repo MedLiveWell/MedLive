@@ -11,6 +11,8 @@ export type Category = {
   label: string;
   count: number;
   desc: string;
+  /** Optional cover image used on the home category cards. */
+  image?: string;
 };
 
 export type ProductColor = {
@@ -76,30 +78,35 @@ export const CATEGORIES: Category[] = [
     label: "Andadores",
     count: 12,
     desc: "Articulados, fixos e com rodas. Para uso clínico e domiciliar.",
+    image: "/images/med-520-preto-1.png",
   },
   {
     id: "banquetas",
     label: "Banquetas de banho",
     count: 7,
     desc: "Com e sem encosto, apoio de braço e abertura frontal.",
+    image: "/images/med-390-1.png",
   },
   {
     id: "cadeiras-banho",
     label: "Cadeiras de banho",
     count: 3,
     desc: "Dobráveis e desmontáveis, até 150kg, estrutura em aço.",
+    image: "/images/med-410-1.png",
   },
   {
     id: "cadeiras-transf",
     label: "Cadeiras de transferência",
     count: 2,
     desc: "Modelos hidráulicos e multifuncionais para transporte seguro.",
+    image: "/images/med-3030-1.png",
   },
   {
     id: "muletas",
     label: "Muletas",
     count: 2,
     desc: "Axilar universal e canadense, alumínio leve desmontável.",
+    image: "/images/med-220-1.png",
   },
   {
     id: "barras",

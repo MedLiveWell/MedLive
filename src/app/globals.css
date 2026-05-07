@@ -482,6 +482,18 @@ p { margin: 0; color: var(--ink-2); }
   content: ""; position: absolute; inset: 0;
   background: repeating-linear-gradient(45deg, transparent 0 14px, rgba(79,176,212,.08) 14px 15px);
 }
+/* When the visual contains a real photo, drop the diagonal pattern and the
+   tinted gradient so the image reads cleanly. */
+.cat-card .visual:has(.cat-card-img) {
+  background: #fff;
+}
+.cat-card .visual:has(.cat-card-img)::after {
+  display: none;
+}
+.cat-card-img {
+  object-fit: contain;
+  padding: 6%;
+}
 .cat-card .go {
   position: absolute; top: 24px; right: 24px;
   width: 38px; height: 38px; border-radius: 50%;

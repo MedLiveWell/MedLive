@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
@@ -118,7 +119,17 @@ export default function HomePage() {
                 <h3>{c.label}</h3>
                 <p>{c.desc}</p>
                 <div className="visual">
-                  <CategoryGlyph id={c.id} />
+                  {c.image ? (
+                    <Image
+                      src={c.image}
+                      alt={c.label}
+                      className="cat-card-img"
+                      fill
+                      sizes="(max-width: 960px) 100vw, 33vw"
+                    />
+                  ) : (
+                    <CategoryGlyph id={c.id} />
+                  )}
                 </div>
                 <span className="cat-card-btn">
                   Ver categoria <Icon.arrow />
