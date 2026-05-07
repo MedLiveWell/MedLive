@@ -42,37 +42,13 @@ export default function HomePage() {
           </div>
 
           <div className="hero-visual">
-            <div className="hero-floating-stat s1">
-              <div
-                className="icon"
-                style={{ background: "var(--celeste-soft)", color: "var(--cobalto)" }}
-              >
-                <Icon.truck />
-              </div>
-              <div>
-                <div className="t1">Entregamos em</div>
-                <div className="t2">27 estados</div>
-              </div>
-            </div>
-            <div className="hero-floating-stat s2">
-              <div
-                className="icon"
-                style={{ background: "var(--tangerina-soft)", color: "var(--tangerina)" }}
-              >
-                <Icon.chat />
-              </div>
-              <div>
-                <div className="t1">Resposta em</div>
-                <div className="t2">até 24h úteis</div>
-              </div>
-            </div>
             <Image
               src="/images/hero-banner.png"
               alt="Med Live Well — distribuidora B2B de produtos de reabilitação"
               className="hero-photo"
               fill
               priority
-              sizes="(max-width: 960px) 100vw, 50vw"
+              sizes="(max-width: 960px) 100vw, 60vw"
             />
           </div>
         </div>
