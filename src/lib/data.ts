@@ -72,7 +72,7 @@ export const CATEGORIES: Category[] = [
   {
     id: "banquetas",
     label: "Banquetas de banho",
-    count: 6,
+    count: 7,
     desc: "Com e sem encosto, apoio de braço e abertura frontal.",
   },
   {
@@ -184,6 +184,8 @@ const med360Images = [
 ];
 
 const med370Images = ["/images/med-370-1.png"];
+
+const med380Images = ["/images/med-380-1.png"];
 
 const med190Images = [
   "/images/med-190.png",
@@ -523,6 +525,26 @@ export const PRODUCTS: Product[] = [
     characteristics: [
       ["Capacidade", "135 kg"],
       ["Peso líquido", "1,8 kg"],
+      ["Acabamento", "HDPE"],
+      ["Função articulada", "—"],
+    ],
+  },
+  {
+    code: "MED 380",
+    cat: "banquetas",
+    name: "Banqueta para Banho com Encosto",
+    desc: "Mais espaço, mais conforto e mais estabilidade no banho. A MED 380 tem encosto e assento mais amplo — para quem precisa de mais espaço e apoio para se sentir seguro e à vontade na hora do banho.",
+    specs: ["Com encosto", "Assento amplo", "135kg"],
+    image: med380Images[0],
+    images: med380Images,
+    dimensions: [
+      ["Largura", "50 cm"],
+      ["Altura", "71,5 – 84 cm"],
+      ["Profundidade", "46,5 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "2,6 kg"],
       ["Acabamento", "HDPE"],
       ["Função articulada", "—"],
     ],
