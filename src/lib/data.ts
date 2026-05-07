@@ -201,6 +201,15 @@ const med420Images = ["/images/med-420-1.png"];
 
 const med440Images = ["/images/med-440-1.png"];
 
+const med3030Images = [
+  "/images/med-3030-1.png",
+  "/images/med-3030-2.png",
+  "/images/med-3030-3.png",
+  "/images/med-3030-4.png",
+  "/images/med-3030-5.png",
+  "/images/med-3030-6.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -651,9 +660,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 3030",
     cat: "cadeiras-transf",
-    name: "Cadeira de transferência hidráulica 135kg",
-    desc: "Sistema hidráulico para transferência suave de paciente. 135kg.",
+    name: "Cadeira de Transferência Hidráulica",
+    desc: "Transfira com segurança, sem esforço e sem risco. A MED 3030 tem elevação hidráulica e abertura lateral de 180° para encaixe direto ao leito — a solução profissional que protege o cuidador e garante dignidade ao paciente.",
     specs: ["Hidráulica", "Multiposição", "135kg"],
+    image: med3030Images[0],
+    images: med3030Images,
+    dimensions: [
+      ["Largura", "89 cm"],
+      ["Altura", "94 – 109 cm"],
+      ["Profundidade", "55,5 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "29 kg"],
+      ["Acabamento", "—"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 3040",
