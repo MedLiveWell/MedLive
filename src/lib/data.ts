@@ -217,7 +217,7 @@ const med190Images = [
   "/images/med-190-04.png",
 ];
 
-const med3040Images = [
+const med3040AmareloImages = [
   "/images/med-3040.png",
   "/images/med-3040-02.png",
   "/images/med-3040-03.png",
@@ -680,11 +680,26 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 3040",
     cat: "cadeiras-transf",
-    name: "Cadeira de transferência multifuncional 120kg",
-    desc: "Transferências seguras entre cama, cadeira de rodas e sofá, com mínimo esforço. A MED 3040 é a cadeira multifuncional com tudo que o cuidador precisa, elevação manual, cinto duplo e almofada removível.",
+    name: "Cadeira de Transferência Multifuncional",
+    desc: "Transferências seguras entre cama, cadeira de rodas e sofá, com mínimo esforço. A MED 3040 é a cadeira multifuncional com tudo que o cuidador precisa — elevação manual, cinto duplo e almofada removível.",
     specs: ["Multifuncional", "3 em 1", "120kg"],
-    image: med3040Images[0],
-    images: med3040Images,
+    image: med3040AmareloImages[0],
+    images: med3040AmareloImages,
+    dimensions: [
+      ["Largura", "65 cm"],
+      ["Altura", "79 – 99 cm"],
+      ["Profundidade", "60 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "120 kg"],
+      ["Peso líquido", "23,65 kg"],
+      ["Acabamento", "—"],
+      ["Função articulada", "—"],
+    ],
+    colors: [
+      { id: "amarelo", label: "Amarelo", swatch: "#e9c441", images: med3040AmareloImages },
+      { id: "azul", label: "Azul", swatch: "#1e4f99", images: [] },
+    ],
   },
 
   // Muletas (2)
