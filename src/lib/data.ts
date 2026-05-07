@@ -189,6 +189,14 @@ const med380Images = ["/images/med-380-1.png"];
 
 const med390Images = ["/images/med-390-1.png"];
 
+const med410Images = [
+  "/images/med-410-1.png",
+  "/images/med-410-2.png",
+  "/images/med-410-3.png",
+  "/images/med-410-4.png",
+  "/images/med-410-5.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -577,9 +585,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 410",
     cat: "cadeiras-banho",
-    name: "Cadeira de banho com encosto revestido desmontável aço 150kg",
-    desc: "Cadeira em aço pintado, encosto revestido, desmontável. Suporta 150kg.",
+    name: "Cadeira de Banho com Encosto Revestido Desmontável Aço",
+    desc: "Banho assistido com segurança, conforto e dignidade. A MED 410 é a cadeira de banho completa com encosto acolchoado, suporte para comadre e rodas com freio para facilitar o cuidado e preservar a autonomia do usuário.",
     specs: ["Aço", "Desmontável", "150kg"],
+    image: med410Images[0],
+    images: med410Images,
+    dimensions: [
+      ["Largura", "45 cm"],
+      ["Altura", "93 cm"],
+      ["Profundidade", "43 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "150 kg"],
+      ["Peso líquido", "7,55 kg"],
+      ["Acabamento", "Aço"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 420",
