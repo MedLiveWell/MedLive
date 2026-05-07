@@ -178,6 +178,11 @@ const med330Images = [
   "/images/med-330-4.png",
 ];
 
+const med360Images = [
+  "/images/med-360-1.png",
+  "/images/med-360-2.png",
+];
+
 const med190Images = [
   "/images/med-190.png",
   "/images/med-190-02.png",
@@ -482,9 +487,22 @@ export const PRODUCTS: Product[] = [
   {
     code: "MED 360",
     cat: "banquetas",
-    name: "Banqueta encosto, apoio de braço e abertura frontal",
-    desc: "Abertura frontal no assento facilita a higienização durante o banho.",
-    specs: ["Abertura frontal", "Apoio braço", "100kg"],
+    name: "Banqueta para Banho com Encosto, Apoio de Braço e Abertura Frontal",
+    desc: "Suporte completo e higiene facilitada para um banho com mais dignidade. A MED 360 tem encosto, apoios de braço e abertura frontal — a solução mais completa para o banho assistido com conforto e praticidade.",
+    specs: ["Abertura frontal", "Apoio braço", "135kg"],
+    image: med360Images[0],
+    images: med360Images,
+    dimensions: [
+      ["Largura", "47 cm"],
+      ["Altura", "73 – 86 cm"],
+      ["Profundidade", "40,5 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "135 kg"],
+      ["Peso líquido", "3,25 kg"],
+      ["Acabamento", "HDPE"],
+      ["Função articulada", "—"],
+    ],
   },
   {
     code: "MED 370",
