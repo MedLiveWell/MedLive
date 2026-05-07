@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
-import { WalkerIllustration } from "@/components/WalkerIllustration";
 import { CategoryGlyph } from "@/components/CategoryGlyph";
 import { BlogGlyph } from "@/components/BlogGlyph";
 import { FAQ } from "@/components/FAQ";
@@ -67,9 +66,14 @@ export default function HomePage() {
                 <div className="t2">até 24h úteis</div>
               </div>
             </div>
-            <div className="placeholder">
-              <WalkerIllustration />
-            </div>
+            <Image
+              src="/images/hero-banner.png"
+              alt="Med Live Well — distribuidora B2B de produtos de reabilitação"
+              className="hero-photo"
+              fill
+              priority
+              sizes="(max-width: 960px) 100vw, 50vw"
+            />
           </div>
         </div>
       </section>
