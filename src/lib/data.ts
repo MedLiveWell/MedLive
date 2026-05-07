@@ -160,8 +160,8 @@ const med520PretoImages = [
 ];
 
 const med530Images = [
-  "/images/med-530-1.jpg",
-  "/images/med-530-2.jpg",
+  "/images/med-530-1.png",
+  "/images/med-530-2.png",
   "/images/med-530-3.jpg",
   "/images/med-530-4.jpg",
 ];
