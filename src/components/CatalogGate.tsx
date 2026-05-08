@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 import { sendLead } from "@/lib/sendLead";
+import { formatCNPJ, formatPhoneBR } from "@/lib/format";
 
 const CATALOG_PDF_URL = "/catalogo-2026.pdf";
 const CATALOG_FILENAME = "catalogo-medlive-2026.pdf";
@@ -108,6 +109,12 @@ export function CatalogGate() {
           ? target.checked
           : target.value;
       setForm((f) => ({ ...f, [k]: value as FormState[K] }));
+    };
+
+  const updateMasked =
+    (k: "cnpj" | "telefone", mask: (v: string) => string) =>
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setForm((f) => ({ ...f, [k]: mask(e.target.value) }));
     };
 
   const onSubmit = (e: React.FormEvent) => {
@@ -228,9 +235,12 @@ export function CatalogGate() {
                   <label>CNPJ *</label>
                   <input
                     type="text"
+                    inputMode="numeric"
+                    autoComplete="off"
+                    maxLength={18}
                     required
                     value={form.cnpj}
-                    onChange={update("cnpj")}
+                    onChange={updateMasked("cnpj", formatCNPJ)}
                     placeholder="00.000.000/0000-00"
                   />
                 </div>
@@ -251,9 +261,12 @@ export function CatalogGate() {
                   <label>WhatsApp / Telefone *</label>
                   <input
                     type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
+                    maxLength={15}
                     required
                     value={form.telefone}
-                    onChange={update("telefone")}
+                    onChange={updateMasked("telefone", formatPhoneBR)}
                     placeholder="(00) 00000-0000"
                   />
                 </div>
