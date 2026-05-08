@@ -8,6 +8,11 @@ import { formatCNPJ, formatPhoneBR } from "@/lib/format";
 const CATALOG_PDF_URL = "/catalogo-2026.pdf";
 const CATALOG_FILENAME = "catalogo-medlive-2026.pdf";
 
+/** Toggle to enable/disable the actual PDF download. The form still submits
+ *  to RD Station and the success modal still appears either way; only the
+ *  auto-download and the "Baixar agora" button are gated by this flag. */
+const DOWNLOAD_ENABLED = false;
+
 function triggerCatalogDownload() {
   const a = document.createElement("a");
   a.href = CATALOG_PDF_URL;
@@ -137,7 +142,7 @@ export function CatalogGate() {
       cf_uf: form.uf,
       cf_volume: form.volume,
     });
-    triggerCatalogDownload();
+    if (DOWNLOAD_ENABLED) triggerCatalogDownload();
     setSent(true);
   };
 
@@ -339,20 +344,31 @@ export function CatalogGate() {
             </span>
             <h2>Seu catálogo está pronto.</h2>
             <p>
-              Clique em <strong>Baixar agora</strong> para receber o PDF. Nosso time comercial
-              também entrará em contato pelo WhatsApp em até 1 dia útil com a tabela de preços de
-              distribuidor.
+              {DOWNLOAD_ENABLED ? (
+                <>
+                  Clique em <strong>Baixar agora</strong> para receber o PDF. Nosso time comercial
+                  também entrará em contato pelo WhatsApp em até 1 dia útil com a tabela de preços
+                  de distribuidor.
+                </>
+              ) : (
+                <>
+                  Recebemos seus dados. Nosso time comercial entrará em contato pelo WhatsApp em
+                  até 1 dia útil e enviará o catálogo junto com a tabela de preços de distribuidor.
+                </>
+              )}
             </p>
             <div className="cg-success-actions">
-              <a
-                href={CATALOG_PDF_URL}
-                download={CATALOG_FILENAME}
-                target="_blank"
-                rel="noopener"
-                className="btn btn-primary btn-lg"
-              >
-                <Icon.download /> Baixar agora
-              </a>
+              {DOWNLOAD_ENABLED && (
+                <a
+                  href={CATALOG_PDF_URL}
+                  download={CATALOG_FILENAME}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-primary btn-lg"
+                >
+                  <Icon.download /> Baixar agora
+                </a>
+              )}
               <button
                 type="button"
                 className="btn btn-ghost"
