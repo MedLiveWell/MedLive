@@ -19,7 +19,8 @@ export default function HomePage() {
               Importadora B2B de produtos de saúde
             </span>
             <h1 style={{ marginTop: 14 }}>
-              Produtos de reabilitação que seus clientes <span className="accent">precisam</span>,
+              Produtos de reabilitação <br />
+              que seus clientes <span className="accent">precisam</span>, <br />
               entregues em todo o Brasil.
             </h1>
             <p className="lead">
