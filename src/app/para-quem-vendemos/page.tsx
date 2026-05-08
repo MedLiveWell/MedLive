@@ -45,7 +45,7 @@ export default function VendemosPage() {
                 <Icon.cart /> E-commerces
               </div>
             </div>
-            <Button variant="primary" href="/seja-revendedor">
+            <Button variant="primary" href="/lojas-revendedoras">
               Quero ser loja parceira
             </Button>
           </div>
@@ -86,7 +86,7 @@ export default function VendemosPage() {
                 Outros
               </div>
             </div>
-            <Button variant="accent" href="/seja-revendedor">
+            <Button variant="accent" href="/marketplaces">
               Quero fornecedor p/ marketplace
             </Button>
           </div>
