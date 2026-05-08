@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="container hero-grid">
-          <div>
+        <div className="hero-grid">
+          <div className="hero-text">
             <span className="eyebrow no-dash" style={{ fontWeight: 900 }}>
               Importadora B2B de produtos de saúde
             </span>
