@@ -31,6 +31,7 @@ export type LeadConversion = {
   cf_uf?: string;
   cf_volume?: string;
   cf_mensagem?: string;
+  cf_origem_pagina?: string;
 };
 
 export type SendLeadResult =
@@ -61,6 +62,7 @@ export async function sendConversion(payload: LeadConversion): Promise<SendLeadR
   if (payload.cf_uf) body.estado = payload.cf_uf;
   if (payload.cf_volume) body.volume_estimado = payload.cf_volume;
   if (payload.cf_mensagem) body.mensagem = payload.cf_mensagem;
+  if (payload.cf_origem_pagina) body.origem_pagina = payload.cf_origem_pagina;
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);

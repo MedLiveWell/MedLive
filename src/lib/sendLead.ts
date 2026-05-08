@@ -17,6 +17,7 @@ export type LeadInput = {
   cf_uf?: string;
   cf_volume?: string;
   cf_mensagem?: string;
+  cf_origem_pagina?: string;
 };
 
 export async function sendLead(input: LeadInput): Promise<boolean> {

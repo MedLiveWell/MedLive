@@ -147,7 +147,7 @@ export default function HomePage() {
               </p>
               <div className="cta-row">
                 <Link
-                  href="/para-quem-vendemos"
+                  href="/marketplaces"
                   className="btn btn-primary"
                   style={{ backgroundColor: "rgb(240, 138, 43)" }}
                 >
@@ -166,7 +166,7 @@ export default function HomePage() {
               </p>
               <div className="cta-row">
                 <Link
-                  href="/seja-revendedor"
+                  href="/lojas-revendedoras"
                   className="btn btn-accent"
                   style={{ backgroundColor: "rgb(251, 250, 247)", color: "var(--cobalto)" }}
                 >
