@@ -378,11 +378,13 @@ p { margin: 0; color: var(--ink-2); }
   font-size: 13px; color: var(--ink-2);
 }
 .hero-visual {
-  position: relative; aspect-ratio: 3/2; max-height: 360px; width: 100%;
-  /* Mirror the text column's left-side container alignment plus an extra
-     buffer so the image visibly clears the viewport's right edge even on
-     mid-size laptops where the container is already at its max-width. */
-  margin-right: max(48px, calc((100vw - var(--container)) / 2 + 24px));
+  /* Native 3/2 frame matches the hero-banner.png aspect ratio so the
+     photo fills it without cropping. max-width caps the height
+     indirectly (height = width * 2/3), keeping the hero compact on
+     wide viewports without letterboxing. */
+  position: relative; aspect-ratio: 3/2; width: 100%; max-width: 540px;
+  margin-left: auto;
+  margin-right: max(64px, calc((100vw - var(--container)) / 2 + 40px));
   border-radius: var(--radius-xl);
   background: linear-gradient(145deg, var(--celeste-soft), #f0f8fc);
   overflow: hidden;
@@ -402,7 +404,10 @@ p { margin: 0; color: var(--ink-2); }
 .hero-visual:has(.hero-photo) { padding: 0; }
 .hero-visual:has(.hero-photo)::before { display: none; }
 .hero-photo {
-  object-fit: cover;
+  /* contain keeps the photo whole — no head/wheels crop. The .hero-visual
+     frame is sized to the photo's native 3:2 ratio, so contain behaves
+     identically to cover here but stays safe if the frame ever drifts. */
+  object-fit: contain;
   object-position: center;
   z-index: 1;
 }
@@ -1059,8 +1064,8 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   .for-who-grid, .channels-grid, .mv-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero-text { padding: 0 28px; }
   .hero-visual {
-    aspect-ratio: 4 / 3;
-    max-height: none;
+    aspect-ratio: 3 / 2;
+    max-width: none;
     border-radius: var(--radius-xl);
     margin: 0 28px;
   }
