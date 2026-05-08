@@ -349,7 +349,7 @@ p { margin: 0; color: var(--ink-2); }
 /* ----- Hero ----- */
 .hero {
   position: relative; overflow: hidden;
-  padding: 72px 0 96px;
+  padding: 48px 0 56px;
   background:
     radial-gradient(ellipse 900px 500px at 90% -10%, rgba(79,176,212,.18), transparent 60%),
     radial-gradient(ellipse 700px 400px at 10% 100%, rgba(240,138,43,.08), transparent 60%),
@@ -358,7 +358,7 @@ p { margin: 0; color: var(--ink-2); }
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: 48px;
+  gap: 40px;
   align-items: center;
 }
 .hero-text {
@@ -367,9 +367,10 @@ p { margin: 0; color: var(--ink-2); }
   padding-left: max(28px, calc((100vw - var(--container)) / 2));
   padding-right: 8px;
 }
+.hero h1 { font-size: clamp(30px, 3.6vw, 50px); }
 .hero h1 .accent { color: var(--tangerina); }
-.hero .lead { margin: 22px 0 32px; font-size: 20px; }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero .lead { margin: 14px 0 22px; font-size: 16.5px; max-width: 560px; }
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
 .hero-trust {
   display: flex; gap: 10px; align-items: center;
   padding: 10px 16px; background: rgba(255,255,255,.6);
@@ -377,7 +378,8 @@ p { margin: 0; color: var(--ink-2); }
   font-size: 13px; color: var(--ink-2);
 }
 .hero-visual {
-  position: relative; aspect-ratio: 3/2; border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  position: relative; aspect-ratio: 3/2; max-height: 460px; width: 100%;
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
   background: linear-gradient(145deg, var(--celeste-soft), #f0f8fc);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -1054,6 +1056,7 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   .hero-text { padding: 0 28px; }
   .hero-visual {
     aspect-ratio: 4 / 3;
+    max-height: none;
     border-radius: var(--radius-xl);
     margin: 0 28px;
   }

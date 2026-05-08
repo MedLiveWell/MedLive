@@ -15,10 +15,10 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-text">
-            <span className="eyebrow no-dash" style={{ fontWeight: 900 }}>
+            <span className="eyebrow no-dash" style={{ fontWeight: 900, fontSize: 11.5 }}>
               Importadora B2B de produtos de saúde
             </span>
-            <h1 style={{ marginTop: 18 }}>
+            <h1 style={{ marginTop: 14 }}>
               Produtos de reabilitação que seus clientes <span className="accent">precisam</span>,
               entregues em todo o Brasil.
             </h1>
@@ -28,10 +28,10 @@ export default function HomePage() {
               próximo em cada pedido.
             </p>
             <div className="hero-actions">
-              <Button variant="primary" size="lg" href="/seja-revendedor">
+              <Button variant="primary" href="/seja-revendedor">
                 Quero ser revendedor
               </Button>
-              <Button variant="ghost" size="lg" href="/produtos">
+              <Button variant="ghost" href="/produtos">
                 Ver catálogo
               </Button>
             </div>
