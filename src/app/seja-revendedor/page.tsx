@@ -5,6 +5,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
 import { sendLead } from "@/lib/sendLead";
+import { formatCNPJ, formatPhoneBR } from "@/lib/format";
 
 type FormState = {
   nome: string;
@@ -36,6 +37,11 @@ export default function RevendedorPage() {
     <K extends keyof FormState>(k: K) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
       setForm({ ...form, [k]: e.target.value });
+
+  const updateMasked =
+    (k: "cnpj" | "telefone", mask: (v: string) => string) =>
+    (e: React.ChangeEvent<HTMLInputElement>) =>
+      setForm((f) => ({ ...f, [k]: mask(e.target.value) }));
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -145,18 +151,26 @@ export default function RevendedorPage() {
               <div className="field">
                 <label style={labelStyle}>CNPJ *</label>
                 <input
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="off"
+                  maxLength={18}
                   required
                   value={form.cnpj}
-                  onChange={update("cnpj")}
+                  onChange={updateMasked("cnpj", formatCNPJ)}
                   placeholder="00.000.000/0000-00"
                 />
               </div>
               <div className="field">
                 <label style={labelStyle}>WhatsApp / telefone *</label>
                 <input
+                  type="tel"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  maxLength={15}
                   required
                   value={form.telefone}
-                  onChange={update("telefone")}
+                  onChange={updateMasked("telefone", formatPhoneBR)}
                   placeholder="(11) 99999-0000"
                 />
               </div>
