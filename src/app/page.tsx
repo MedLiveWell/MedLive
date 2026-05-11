@@ -50,7 +50,7 @@ export default function HomePage() {
           <div className="hero-visual">
             <Image
               src="/images/hero-banner.png"
-              alt="Med Live Well — distribuidora B2B de produtos de reabilitação"
+              alt="Senhora idosa caminhando com andador Med Live em um shopping"
               className="hero-photo"
               fill
               priority
@@ -108,7 +108,7 @@ export default function HomePage() {
                   {c.image ? (
                     <Image
                       src={c.image}
-                      alt={c.label}
+                      alt={`Categoria ${c.label}`}
                       className="cat-card-img"
                       fill
                       sizes="(max-width: 960px) 100vw, 33vw"
