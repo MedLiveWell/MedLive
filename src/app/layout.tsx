@@ -3,6 +3,7 @@ import { Catamaran } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CatalogGate } from "@/components/CatalogGate";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const catamaran = Catamaran({
@@ -12,7 +13,6 @@ const catamaran = Catamaran({
   display: "swap",
 });
 
-const SITE_URL = "https://med-live.vercel.app";
 const SITE_NAME = "Med Live Well";
 const DEFAULT_TITLE = "Med Live Well | Produtos de mobilidade e reabilitação";
 const DEFAULT_DESCRIPTION =

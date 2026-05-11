@@ -1,6 +1,7 @@
 import type { Product, Category } from "./data";
+import { SITE_URL } from "./site";
 
-const BASE_URL = "https://med-live.vercel.app";
+const BASE_URL = SITE_URL;
 
 function asAbsolute(path: string): string {
   if (path.startsWith("http://") || path.startsWith("https://")) return path;

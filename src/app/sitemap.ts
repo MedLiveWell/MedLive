@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { PRODUCTS, productSlug } from "@/lib/data";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://med-live.vercel.app";
+const BASE_URL = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
