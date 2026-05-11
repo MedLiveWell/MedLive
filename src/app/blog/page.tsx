@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
 import { BLOG_POSTS } from "@/lib/data";
+
+const TITLE = "Blog | Med Live Well";
+const DESCRIPTION =
+  "Conteúdo sobre mobilidade, reabilitação, autonomia e qualidade de vida. Dicas e novidades do mercado de produtos de saúde.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/blog" },
+  openGraph: { url: "/blog", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 export default function BlogPage() {
   const items = [...BLOG_POSTS, ...BLOG_POSTS];

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
@@ -11,6 +12,11 @@ import { FAQ } from "@/components/FAQ";
 import { BigCTA } from "@/components/BigCTA";
 import { Newsletter } from "@/components/Newsletter";
 import { CATEGORIES, BLOG_POSTS } from "@/lib/data";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 export default function HomePage() {
   return (

@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
 import { VALUES } from "@/lib/data";
+
+const TITLE = "Sobre a Med Live Well | Distribuidora de produtos de reabilitação";
+const DESCRIPTION =
+  "Conheça a Med Live Well, distribuidora B2B com centro de distribuição próprio e linha completa de produtos de mobilidade e reabilitação.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/sobre" },
+  openGraph: { url: "/sobre", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 export default function SobrePage() {
   return (
