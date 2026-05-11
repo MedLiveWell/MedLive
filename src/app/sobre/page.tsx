@@ -33,7 +33,7 @@ export default function SobrePage() {
             <div className="sobre-intro-visual sobre-intro-visual--photo">
               <Image
                 src="/images/centro-distribuicao.png"
-                alt="Centro de Distribuição Med Live"
+                alt="Interior do centro de distribuição Med Live Well com prateleiras altas, pallets e produtos empilhados, com banner da marca ao fundo"
                 width={1200}
                 height={675}
               />

@@ -50,7 +50,7 @@ export default function HomePage() {
           <div className="hero-visual">
             <Image
               src="/images/hero-banner.png"
-              alt="Senhora idosa caminhando com andador Med Live em um shopping"
+              alt="Senhora idosa caminhando em shopping com andador MED 520 preto brilhante da Med Live Well"
               className="hero-photo"
               fill
               priority
