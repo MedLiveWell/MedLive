@@ -1,7 +1,20 @@
+import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
 import { RevendedorForm } from "@/components/RevendedorForm";
+
+const TITLE = "Seja revendedor Med Live Well | Cadastro de parceiros";
+const DESCRIPTION =
+  "Torne-se revendedor Med Live Well. Tenha acesso a uma linha completa de produtos de mobilidade e reabilitação com condições especiais.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/seja-revendedor" },
+  openGraph: { url: "/seja-revendedor", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 export default function RevendedorPage() {
   return (

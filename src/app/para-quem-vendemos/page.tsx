@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { ChannelGlyph } from "@/components/ChannelGlyph";
 import { Newsletter } from "@/components/Newsletter";
+
+const TITLE = "Para quem vendemos | Med Live Well";
+const DESCRIPTION =
+  "Atendemos lojas de produtos ortopédicos, clínicas, hospitais e revendedores em todo o Brasil com produtos de mobilidade e reabilitação.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/para-quem-vendemos" },
+  openGraph: { url: "/para-quem-vendemos", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
 export default function VendemosPage() {
   return (
