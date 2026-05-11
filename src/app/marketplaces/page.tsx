@@ -9,10 +9,16 @@ import { ProductCard } from "@/components/ProductCard";
 import { RevendedorForm } from "@/components/RevendedorForm";
 import { PRODUCTS } from "@/lib/data";
 
+const TITLE = "Marketplaces | Med Live Well";
+const DESCRIPTION =
+  "Encontre os produtos Med Live Well nos principais marketplaces do Brasil. Mobilidade e reabilitação com a praticidade da compra online.";
+
 export const metadata: Metadata = {
-  title: "Fornecedor B2B para Marketplaces — Med Live Well",
-  description:
-    "Fornecemos para sellers de Mercado Livre, Amazon e Shopee. Catálogo pronto, fotos em alta resolução e descrições otimizadas para listagem imediata. Despacho em até 48h para todo o Brasil.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/marketplaces" },
+  openGraph: { url: "/marketplaces", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const HIGHLIGHT_CODES = [

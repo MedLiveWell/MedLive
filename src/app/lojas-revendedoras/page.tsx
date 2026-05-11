@@ -9,10 +9,16 @@ import { ProductCard } from "@/components/ProductCard";
 import { RevendedorForm } from "@/components/RevendedorForm";
 import { PRODUCTS } from "@/lib/data";
 
+const TITLE = "Lojas revendedoras | Med Live Well";
+const DESCRIPTION =
+  "Encontre uma loja revendedora Med Live Well perto de você. Produtos de mobilidade e reabilitação disponíveis em todo o Brasil.";
+
 export const metadata: Metadata = {
-  title: "Distribuidor de Produtos de Saúde para Lojas — Med Live Well",
-  description:
-    "Tabela de distribuidor com margem saudável para farmácias, ortopedias, clínicas e e-commerces próprios. Catálogo completo de reabilitação certificado ANVISA/INMETRO, com atendimento próximo e suporte comercial dedicado.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/lojas-revendedoras" },
+  openGraph: { url: "/lojas-revendedoras", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 const HIGHLIGHT_CODES = [
