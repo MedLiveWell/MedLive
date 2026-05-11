@@ -250,7 +250,7 @@ export function ProductDetail({ product }: { product: Product }) {
                   {currentImage ? (
                     <Image
                       src={currentImage}
-                      alt={product.name}
+                      alt={`${product.name} — Med Live Well`}
                       className="pd-main-img"
                       width={800}
                       height={800}
@@ -292,7 +292,7 @@ export function ProductDetail({ product }: { product: Product }) {
                       >
                         <Image
                           src={thumb}
-                          alt=""
+                          alt={`${product.name} — vista ${i + 1}`}
                           className="pd-thumb-img"
                           width={84}
                           height={84}
@@ -444,7 +444,7 @@ export function ProductDetail({ product }: { product: Product }) {
                     {p.image ? (
                       <Image
                         src={p.image}
-                        alt={p.name}
+                        alt={`${p.name} — Med Live Well`}
                         className="pd-related-img"
                         width={300}
                         height={188}
@@ -537,7 +537,7 @@ export function ProductDetail({ product }: { product: Product }) {
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={currentImage}
-                alt={product.name}
+                alt={`${product.name} — Med Live Well`}
                 className="pd-lb-img"
                 style={
                   zoomed
