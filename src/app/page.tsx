@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { CategoryGlyph } from "@/components/CategoryGlyph";
+import { JsonLd } from "@/components/JsonLd";
+import { faqSchema, organizationSchema } from "@/lib/schema";
+import { FAQ_ITEMS } from "@/lib/faq";
 import { BlogGlyph } from "@/components/BlogGlyph";
 import { FAQ } from "@/components/FAQ";
 import { BigCTA } from "@/components/BigCTA";
@@ -12,6 +15,8 @@ import { CATEGORIES, BLOG_POSTS } from "@/lib/data";
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={organizationSchema()} />
+      <JsonLd data={faqSchema(FAQ_ITEMS)} />
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-text">
