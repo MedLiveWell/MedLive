@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CATEGORIES, PRODUCTS, productSlug } from "@/lib/data";
-import { JsonLd } from "@/components/JsonLd";
-import { productSchema } from "@/lib/schema";
+import { PRODUCTS, productSlug } from "@/lib/data";
 import { ProductDetail } from "./ProductDetail";
 
 export function generateStaticParams() {
@@ -34,14 +32,7 @@ export default async function ProdutoPage({
     );
   }
 
-  const category = CATEGORIES.find((c) => c.id === product.cat);
-
-  return (
-    <>
-      <JsonLd data={productSchema(product, category)} />
-      <ProductDetail product={product} />
-    </>
-  );
+  return <ProductDetail product={product} />;
 }
 
 // Avoid unused warning
