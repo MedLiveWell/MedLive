@@ -12,10 +12,42 @@ const catamaran = Catamaran({
   display: "swap",
 });
 
+const SITE_URL = "https://med-live.vercel.app";
+const SITE_NAME = "Med Live Well";
+const DEFAULT_TITLE = "Med Live Well | Produtos de mobilidade e reabilitação";
+const DEFAULT_DESCRIPTION =
+  "Distribuidora B2B de produtos de mobilidade e reabilitação. Andadores, cadeiras de rodas e soluções completas para lojas, clínicas e revendedores.";
+
 export const metadata: Metadata = {
-  title: "Med Live Well — Distribuidora B2B de produtos de reabilitação",
-  description:
-    "Importadora B2B de produtos de saúde: andadores, cadeiras de banho, muletas, barras de apoio. Entregamos em todo o Brasil para lojas, clínicas e marketplaces.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s",
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    images: [
+      {
+        url: "/images/medlive-logo.png",
+        width: 500,
+        height: 500,
+        alt: "Logo Med Live Well",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/images/medlive-logo.png"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
