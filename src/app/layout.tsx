@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Catamaran } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CatalogGate } from "@/components/CatalogGate";
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html lang="pt-BR" className={catamaran.variable}>
       <body>
@@ -61,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <CatalogGate />
+        {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   );
