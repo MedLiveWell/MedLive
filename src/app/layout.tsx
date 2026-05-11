@@ -48,6 +48,9 @@ export const metadata: Metadata = {
     description: DEFAULT_DESCRIPTION,
     images: ["/images/medlive-logo.png"],
   },
+  verification: {
+    google: "uMHMs5nBiYx98syaI0UMG2m6gNNuXL_xAhTerYJ_kjU",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
