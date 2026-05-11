@@ -11,7 +11,7 @@ export function ProductCard({ product: p }: { product: Product }) {
         {p.image ? (
           <Image
             src={p.image}
-            alt={p.name}
+            alt={`${p.name} — Med Live Well`}
             className="prod-thumb"
             width={400}
             height={300}

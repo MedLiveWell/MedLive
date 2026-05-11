@@ -11,7 +11,7 @@ export function Logo({ light = false, size = 38 }: LogoProps) {
     <Link href="/" className={"logo logo-img-wrap " + (light ? "is-light" : "")}>
       <Image
         src="/images/medlive-logo.png"
-        alt="Med Live"
+        alt="Logo Med Live Well"
         className={"logo-img " + (light ? "is-light" : "")}
         width={size * 4}
         height={size}
@@ -26,7 +26,7 @@ export function LogoMark({ light = false, size = 32 }: LogoProps) {
   return (
     <Image
       src="/images/medlive-logo.png"
-      alt="Med Live"
+      alt="Logo Med Live Well"
       className={"logo-img " + (light ? "is-light" : "")}
       width={size * 4}
       height={size}
