@@ -647,7 +647,8 @@ p { margin: 0; color: var(--ink-2); }
   gap: 56px;
   align-items: stretch;
 }
-.for-who-grid .who-card {
+.for-who-grid .who-card,
+.for-who-grid .channel-card {
   max-width: 560px;
   justify-self: start;
 }
@@ -1137,7 +1138,8 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
 @media (max-width: 960px) {
   .hero-grid, .newsletter-inner, .revende-grid, .big-cta,
   .for-who-grid, .channels-grid, .mv-grid { grid-template-columns: 1fr; gap: 32px; }
-  .for-who-grid .who-card { max-width: none; justify-self: stretch; }
+  .for-who-grid .who-card,
+  .for-who-grid .channel-card { max-width: none; justify-self: stretch; }
   .channels-grid .channel-card { max-width: none; justify-self: stretch; }
   .hero-text { padding: 0 28px; }
   .hero-visual {
