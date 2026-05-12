@@ -39,10 +39,9 @@ export default function ParaQuemVendemosPage() {
 
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ paddingTop: 16 }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Para quem vendemos" }]} />
-          <span className="eyebrow">Para lojas revendedoras</span>
           <h1 style={{ marginTop: 18 }}>
             Tabela de distribuidor com{" "}
             <span style={{ color: "var(--tangerina)" }}>margem saudável</span> para sua loja.
