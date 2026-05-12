@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/Button";
-import { Icon } from "@/components/Icon";
 import { ChannelGlyph } from "@/components/ChannelGlyph";
+import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
+import { ProductCard } from "@/components/ProductCard";
+import { RevendedorForm } from "@/components/RevendedorForm";
+import { PRODUCTS } from "@/lib/data";
 
 const TITLE = "Para quem vendemos | Med Live Well";
 const DESCRIPTION =
-  "Atendemos lojas de produtos ortopédicos, clínicas, hospitais e revendedores em todo o Brasil com produtos de mobilidade e reabilitação.";
+  "Tabela de distribuidor com margem saudável para lojas revendedoras. Produtos de mobilidade e reabilitação Med Live Well entregues em todo o Brasil.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -17,91 +21,115 @@ export const metadata: Metadata = {
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
-export default function VendemosPage() {
+const HIGHLIGHT_CODES = [
+  "MED 120",
+  "MED 190",
+  "MED 380",
+  "MED 410",
+  "MED 3030",
+  "MED 220",
+  "MED 530",
+  "MED 1010",
+];
+
+export default function ParaQuemVendemosPage() {
+  const featured = HIGHLIGHT_CODES.map((c) => PRODUCTS.find((p) => p.code === c)).filter(
+    (p): p is NonNullable<typeof p> => Boolean(p),
+  );
+
   return (
     <>
       <section className="page-head">
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Para quem vendemos" }]} />
-          <span className="eyebrow">Importadora B2B</span>
-          <h1 style={{ marginTop: 18 }}>Vendemos para quem revende.</h1>
+          <span className="eyebrow">Para lojas revendedoras</span>
+          <h1 style={{ marginTop: 18 }}>
+            Tabela de distribuidor com{" "}
+            <span style={{ color: "var(--tangerina)" }}>margem saudável</span> para sua loja.
+          </h1>
           <p className="lead">
-            Somos uma distribuidora nacional focada em dois canais: lojas revendedoras e
-            fornecimento para sellers de marketplaces.
+            Atendemos farmácias, lojas de ortopedia e clínicas de fisioterapia. Mix recomendado,
+            atendimento próximo e produtos certificados ANVISA/INMETRO entregues em todo o Brasil.
           </p>
+          <div className="hero-actions" style={{ marginTop: 28 }}>
+            <Button variant="primary" href="#cadastro">
+              Quero ser revendedor
+            </Button>
+            <Button variant="ghost" href="/produtos">
+              Ver catálogo
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="section">
-        <div className="container channels-grid">
-          <div className="channel-card">
-            <div className="hero-visual-ch">
+        <div className="container">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 56,
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <span className="eyebrow">Por que Med Live</span>
+              <h2 style={{ marginTop: 14 }}>Por que abastecer sua loja com a Med Live</h2>
+              <p style={{ marginTop: 14, color: "var(--ink-2)", fontSize: 16 }}>
+                Mais de uma década importando produtos de reabilitação. Tabela transparente,
+                consultor dedicado por conta e mix recomendado por porte de loja — para você
+                montar uma vitrine completa sem dor de cabeça.
+              </p>
+            </div>
+            <div
+              className="hero-visual-ch"
+              style={{ padding: 32, aspectRatio: "16/10", borderRadius: "var(--radius-xl)" }}
+            >
               <ChannelGlyph kind="store" />
             </div>
-            <span className="eyebrow">Canal 01</span>
-            <h3 style={{ marginTop: 12 }}>Lojas revendedoras</h3>
-            <p className="desc">
-              Farmácias, lojas de ortopedia, clínicas de fisioterapia e e-commerces próprios com
-              tabela de distribuidor e margem saudável.
-            </p>
-            <div className="list">
-              <div className="list-item">
-                <Icon.store /> Farmácias
-              </div>
-              <div className="list-item">
-                <Icon.shield /> Ortopedia
-              </div>
-              <div className="list-item">
-                <Icon.users /> Clínicas
-              </div>
-              <div className="list-item">
-                <Icon.cart /> E-commerces
-              </div>
-            </div>
-            <Button variant="primary" href="/lojas-revendedoras">
-              Quero ser loja parceira
-            </Button>
           </div>
 
-          <div className="channel-card">
-            <div className="hero-visual-ch">
-              <ChannelGlyph kind="marketplace" />
+          <div className="why-grid" style={{ marginTop: 56 }}>
+            <div className="why-card">
+              <div className="icon">
+                <Icon.tag />
+              </div>
+              <h4>Preço de distribuidor</h4>
+              <p>
+                Tabela de revenda com margem saudável, descontos progressivos por volume e prazo
+                diferenciado para parceiros recorrentes.
+              </p>
             </div>
-            <span className="eyebrow">Canal 02</span>
-            <h3 style={{ marginTop: 12 }}>Sellers de marketplaces</h3>
-            <p className="desc">
-              Fornecimento para sellers ativos em Mercado Livre, Amazon e Shopee, com catálogo
-              pronto, fotos em alta resolução e descrições otimizadas.
-            </p>
-            <div className="list">
-              <div className="list-item">
-                <span className="mp-logo" style={{ background: "#FFE600", color: "#333" }}>
-                  ML
-                </span>
-                Mercado Livre
+            <div className="why-card">
+              <div className="icon">
+                <Icon.users />
               </div>
-              <div className="list-item">
-                <span className="mp-logo" style={{ background: "#232F3E" }}>
-                  Az
-                </span>
-                Amazon
-              </div>
-              <div className="list-item">
-                <span className="mp-logo" style={{ background: "#EE4D2D" }}>
-                  Sh
-                </span>
-                Shopee
-              </div>
-              <div className="list-item">
-                <span className="mp-logo" style={{ background: "var(--tangerina)" }}>
-                  +
-                </span>
-                Outros
-              </div>
+              <h4>Atendimento próximo</h4>
+              <p>
+                Consultor comercial dedicado por conta. Resposta em até 24h úteis para cotações,
+                trocas, devoluções e suporte técnico ao seu vendedor.
+              </p>
             </div>
-            <Button variant="accent" href="/marketplaces">
-              Quero fornecedor p/ marketplace
-            </Button>
+            <div className="why-card">
+              <div className="icon">
+                <Icon.shield />
+              </div>
+              <h4>Certificações em dia</h4>
+              <p>
+                Toda a linha segue normas ANVISA e INMETRO. Laudos técnicos, fichas de produto e
+                tudo o que sua loja precisa para vender com segurança.
+              </p>
+            </div>
+            <div className="why-card">
+              <div className="icon">
+                <Icon.truck />
+              </div>
+              <h4>Logística para os 27 estados</h4>
+              <p>
+                Despacho em até 48h, rastreio integrado e suporte de frete para parceiros
+                recorrentes — você não fica sem mix.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -110,42 +138,92 @@ export default function VendemosPage() {
         <div className="container">
           <div className="sec-head">
             <div className="left">
-              <span className="eyebrow">Por que Med Live</span>
-              <h2>Por que escolher a Med Live</h2>
+              <span className="eyebrow">Mix sugerido</span>
+              <h2>Para começar a vender hoje</h2>
+              <p>
+                Seleção variada da linha — andadores, cadeiras de banho, cadeiras de
+                transferência, muletas e barras — para uma vitrine completa de reabilitação.
+              </p>
+            </div>
+            <Button variant="ghost" href="/produtos">
+              Ver catálogo completo
+            </Button>
+          </div>
+          <div className="prod-grid">
+            {featured.map((p) => (
+              <ProductCard key={p.code} product={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div
+            style={{
+              display: "flex",
+              gap: 16,
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "32px",
+              background: "var(--paper-2)",
+              borderRadius: "var(--radius-xl)",
+            }}
+          >
+            <div className="hero-trust" style={{ background: "#fff" }}>
+              <Icon.shield />
+              <span>Produtos certificados · ANVISA · INMETRO</span>
+            </div>
+            <div className="hero-trust" style={{ background: "#fff" }}>
+              <Icon.truck />
+              <span>Entrega para todos os 27 estados</span>
+            </div>
+            <div className="hero-trust" style={{ background: "#fff" }}>
+              <Icon.users />
+              <span>Atendimento especializado</span>
             </div>
           </div>
-          <div className="why-grid">
-            <div className="why-card">
-              <div className="icon">
-                <Icon.truck />
-              </div>
-              <h4>Entrega ágil</h4>
-              <p>
-                Despacho em até 48h para todo o Brasil, com rastreio integrado e suporte de frete
-                para parceiros recorrentes.
-              </p>
-            </div>
-            <div className="why-card">
-              <div className="icon">
-                <Icon.chat />
-              </div>
-              <h4>Atendimento próximo</h4>
-              <p>
-                Consultor dedicado por conta, resposta em até 24h úteis e suporte técnico direto
-                com seu vendedor.
-              </p>
-            </div>
-            <div className="why-card">
-              <div className="icon">
-                <Icon.tag />
-              </div>
-              <h4>Preço competitivo</h4>
-              <p>
-                Tabela de distribuidor com margens saudáveis, descontos progressivos por volume e
-                prazos diferenciados.
-              </p>
+        </div>
+      </section>
+
+      <section id="cadastro" className="section" style={{ paddingTop: 24 }}>
+        <div className="container revende-grid">
+          <div>
+            <span className="eyebrow">Cadastro de revendedor</span>
+            <h2 style={{ marginTop: 14, marginBottom: 12 }}>
+              Pronto para abastecer sua loja com produtos de saúde?
+            </h2>
+            <p style={{ color: "var(--ink-2)", fontSize: 16 }}>
+              Preencha o formulário e nosso time comercial entra em contato em até 1 dia útil com
+              tabela de distribuidor, mix recomendado e condições para seu canal.
+            </p>
+            <div className="contact-alt" style={{ marginTop: 24 }}>
+              <a href="#" className="item">
+                <div className="ic">
+                  <Icon.whatsapp />
+                </div>
+                <div>
+                  <div className="lbl">WhatsApp comercial</div>
+                  <div className="val">(11) 4000-0000</div>
+                </div>
+              </a>
+              <Link href="/produtos" className="item">
+                <div className="ic">
+                  <Icon.store />
+                </div>
+                <div>
+                  <div className="lbl">Catálogo</div>
+                  <div className="val">Ver produtos</div>
+                </div>
+              </Link>
             </div>
           </div>
+          <RevendedorForm
+            heading="Quero ser revendedor"
+            subheading="Preencha para receber tabela de distribuidor."
+            origin="para-quem-vendemos"
+          />
         </div>
       </section>
 

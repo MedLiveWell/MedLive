@@ -138,7 +138,7 @@ export default function HomePage() {
 
       <section
         className="section"
-        style={{ background: "var(--paper-2)", paddingTop: 80, paddingBottom: 96 }}
+        style={{ background: "var(--paper-2)", paddingTop: 40, paddingBottom: 96 }}
       >
         <div className="container">
           <div className="sec-head">
@@ -147,43 +147,29 @@ export default function HomePage() {
             </div>
           </div>
           <div className="for-who-grid">
-            <div className="who-card">
-              <span className="tag" style={{ fontWeight: 900 }}>
-                Marketplaces
-              </span>
-              <h3>Mercado Livre, Amazon, Shopee</h3>
-              <p style={{ fontWeight: 400, lineHeight: 1.4 }}>
-                Fornecemos para sellers e operadores de Mercado Livre, Amazon, Shopee e outros.
-                {"\n\n"}Catálogo pronto, fotos e descrições dispóniveis para listagem imediata.
-              </p>
-              <div className="cta-row">
-                <Link
-                  href="/marketplaces"
-                  className="btn btn-primary"
-                  style={{ backgroundColor: "rgb(240, 138, 43)" }}
-                >
-                  Saiba mais <Icon.arrow />
-                </Link>
-              </div>
+            <div className="who-img-placeholder" aria-hidden="true">
+              <span>Imagem aqui</span>
             </div>
-            <div className="who-card dark">
-              <span className="tag" style={{ fontWeight: 900 }}>
-                Lojas revendedoras
-              </span>
-              <h3 style={{ color: "rgb(255, 255, 255)" }}>Lojas revendedoras</h3>
-              <p>
-                Preços de distribuidor com margem saudável para sua loja física ou e-commerce
-                próprio.
+            <div className="channel-card">
+              <h3>Lojas revendedoras</h3>
+              <p className="desc">
+                Farmácias, lojas de ortopedia e clínicas de fisioterapia com tabela de
+                distribuidor e margem saudável.
               </p>
-              <div className="cta-row">
-                <Link
-                  href="/lojas-revendedoras"
-                  className="btn btn-accent"
-                  style={{ backgroundColor: "rgb(251, 250, 247)", color: "var(--cobalto)" }}
-                >
-                  Saiba Mais <Icon.arrow />
-                </Link>
+              <div className="list">
+                <div className="list-item">
+                  <Icon.store /> Farmácias
+                </div>
+                <div className="list-item">
+                  <Icon.shield /> Ortopedia
+                </div>
+                <div className="list-item">
+                  <Icon.users /> Clínicas
+                </div>
               </div>
+              <Button variant="primary" href="/para-quem-vendemos">
+                Quero ser loja parceira
+              </Button>
             </div>
           </div>
         </div>

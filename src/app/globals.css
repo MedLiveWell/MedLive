@@ -42,7 +42,7 @@
   --shadow-lg: 0 20px 40px -12px rgba(15,58,122,.15), 0 8px 16px -8px rgba(15,58,122,.08);
 
   --container: 1240px;
-  --header-h: 128px;
+  --header-h: 76px;
 }
 
 * { box-sizing: border-box; }
@@ -300,18 +300,14 @@ p { margin: 0; color: var(--ink-2); }
   -webkit-backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid var(--line);
 }
-.site-header .row-top {
-  display: flex; align-items: center; justify-content: space-between;
+.site-header .header-row {
+  display: flex; align-items: center;
   gap: 24px;
   height: 76px;
-  border-bottom: 1px solid var(--line);
 }
-.site-header .row-top-actions {
+.site-header .header-actions {
   display: flex; align-items: center; gap: 12px;
-}
-.site-header .row-bottom {
-  display: flex; align-items: center; justify-content: center;
-  height: 52px;
+  flex: 0 0 auto;
 }
 .site-header .hamburger {
   display: none;
@@ -326,7 +322,10 @@ p { margin: 0; color: var(--ink-2); }
 .site-header .hamburger:focus-visible {
   outline: 2px solid var(--cobalto); outline-offset: 2px;
 }
-.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links {
+  display: flex; align-items: center; gap: 30px;
+  flex: 1 1 auto; justify-content: center;
+}
 .nav-link {
   font-size: 14.5px; font-weight: 500; color: var(--ink-2);
   transition: color .15s ease; position: relative; padding: 6px 0;
@@ -363,6 +362,10 @@ p { margin: 0; color: var(--ink-2); }
 /* Drop the underline indicator inside the mobile drawer — the left border
    already signals the active item there. */
 .mobile-panel .nav-link.active::after { display: none; }
+.mobile-panel .mobile-cta {
+  display: inline-flex;
+  margin: 12px 28px 4px;
+}
 
 /* Logo */
 .logo {
@@ -638,7 +641,25 @@ p { margin: 0; color: var(--ink-2); }
 .mv-card p { font-size: 15px; line-height: 1.55; }
 
 /* ----- For Who section ----- */
-.for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.for-who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: stretch;
+}
+.for-who-grid .who-card,
+.for-who-grid .channel-card {
+  max-width: 560px;
+  justify-self: start;
+}
+.who-img-placeholder {
+  background: var(--paper-2);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-2);
+  font-size: 16px; font-weight: 500;
+  min-height: 380px;
+}
 .who-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
   padding: 40px; display: flex; flex-direction: column; gap: 18px;
@@ -883,7 +904,16 @@ p { margin: 0; color: var(--ink-2); }
 .prod-card .cta:hover { background: var(--cobalto); color: #fff; }
 
 /* ----- Para quem vendemos ----- */
-.channels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.channels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: stretch;
+}
+.channels-grid .channel-card {
+  max-width: 560px;
+  justify-self: start;
+}
 .channel-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius-xl);
   padding: 44px; position: relative; overflow: hidden;
@@ -1108,6 +1138,9 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
 @media (max-width: 960px) {
   .hero-grid, .newsletter-inner, .revende-grid, .big-cta,
   .for-who-grid, .channels-grid, .mv-grid { grid-template-columns: 1fr; gap: 32px; }
+  .for-who-grid .who-card,
+  .for-who-grid .channel-card { max-width: none; justify-self: stretch; }
+  .channels-grid .channel-card { max-width: none; justify-self: stretch; }
   .hero-text { padding: 0 28px; }
   .hero-visual {
     aspect-ratio: 3 / 2;
@@ -1120,11 +1153,11 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   .metrics-grid { grid-template-columns: 1fr 1fr; row-gap: 32px; }
   .metric + .metric::before { display: none; }
   .footer-top { grid-template-columns: 1fr 1fr; }
-  /* Two-tier header collapses into a single hamburger row on mobile */
+  /* Header collapses to logo + hamburger on mobile */
   :root { --header-h: 64px; }
-  .site-header .row-top { height: 64px; border-bottom: none; }
-  .site-header .row-bottom { display: none; }
+  .site-header .header-row { height: 64px; }
   .site-header .hamburger { display: inline-flex; }
+  .site-header .header-cta { display: none; }
   .nav-links { display: none; }
   .mobile-panel.open { display: block; }
   .big-cta { padding: 48px 32px; }
