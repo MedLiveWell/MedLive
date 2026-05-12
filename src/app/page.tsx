@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { CategoryGlyph } from "@/components/CategoryGlyph";
-import { ChannelGlyph } from "@/components/ChannelGlyph";
 import { JsonLd } from "@/components/JsonLd";
 import { faqSchema, organizationSchema } from "@/lib/schema";
 import { FAQ_ITEMS } from "@/lib/faq";
@@ -139,7 +138,7 @@ export default function HomePage() {
 
       <section
         className="section"
-        style={{ background: "var(--paper-2)", paddingTop: 80, paddingBottom: 96 }}
+        style={{ background: "var(--paper-2)", paddingTop: 40, paddingBottom: 96 }}
       >
         <div className="container">
           <div className="sec-head">
@@ -152,11 +151,7 @@ export default function HomePage() {
               <span>Imagem aqui</span>
             </div>
             <div className="channel-card">
-              <div className="hero-visual-ch">
-                <ChannelGlyph kind="store" />
-              </div>
-              <span className="eyebrow">Canal 01</span>
-              <h3 style={{ marginTop: 12 }}>Lojas revendedoras</h3>
+              <h3>Lojas revendedoras</h3>
               <p className="desc">
                 Farmácias, lojas de ortopedia e clínicas de fisioterapia com tabela de
                 distribuidor e margem saudável.
