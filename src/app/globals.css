@@ -903,7 +903,16 @@ p { margin: 0; color: var(--ink-2); }
 .prod-card .cta:hover { background: var(--cobalto); color: #fff; }
 
 /* ----- Para quem vendemos ----- */
-.channels-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.channels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: stretch;
+}
+.channels-grid .channel-card {
+  max-width: 560px;
+  justify-self: start;
+}
 .channel-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius-xl);
   padding: 44px; position: relative; overflow: hidden;
@@ -1129,6 +1138,7 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   .hero-grid, .newsletter-inner, .revende-grid, .big-cta,
   .for-who-grid, .channels-grid, .mv-grid { grid-template-columns: 1fr; gap: 32px; }
   .for-who-grid .who-card { max-width: none; justify-self: stretch; }
+  .channels-grid .channel-card { max-width: none; justify-self: stretch; }
   .hero-text { padding: 0 28px; }
   .hero-visual {
     aspect-ratio: 3 / 2;
