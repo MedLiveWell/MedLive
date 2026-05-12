@@ -792,8 +792,11 @@ p { margin: 0; color: var(--ink-2); }
 }
 .site-footer .col a { display: block; padding: 5px 0; font-size: 14px; color: rgba(255,255,255,.6); transition: color .15s ease; }
 .site-footer .col a:hover { color: var(--celeste); }
-.site-footer .brand-col p { font-size: 14px; color: rgba(255,255,255,.5); margin-top: 18px; max-width: 300px; line-height: 1.6; }
-.site-footer .socials { display: flex; gap: 10px; margin-top: 22px; }
+.site-footer .brand-col {
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.site-footer .brand-col p { font-size: 14px; color: rgba(255,255,255,.5); margin-top: 16px; max-width: 300px; line-height: 1.6; }
+.site-footer .socials { display: flex; gap: 10px; margin-top: auto; padding-top: 20px; }
 .site-footer .socials a {
   width: 38px; height: 38px; border-radius: 50%;
   background: rgba(255,255,255,.06); display: grid; place-items: center;
