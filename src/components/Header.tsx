@@ -32,7 +32,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-row">
-        <Logo size={96} />
+        <Logo size={128} />
 
         <nav className="nav-links" aria-label="Navegação principal">
           {NAV.map((item) => (
