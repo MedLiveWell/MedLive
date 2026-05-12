@@ -11,18 +11,25 @@ export function Footer() {
           <div className="col brand-col">
             <Logo light size={160} />
             <p>
-              Importadora e distribuidora B2B de produtos de reabilitação. Entregamos em todo o
-              Brasil para lojas, clínicas e marketplaces.
+              Importadora e distribuidora B2B de produtos de mobilidade e reabilitação.
+              CD em São Paulo com entrega para todo o Brasil.
             </p>
             <div className="socials">
-              <a href="#" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/medlivewell?igsh=MWM3a3J2OG1zZ2RsMg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram da Med Live Well"
+              >
                 <Icon.instagram />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/medicinal-live-well/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn da Med Live Well"
+              >
                 <Icon.linkedin />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <Icon.youtube />
               </a>
             </div>
           </div>
@@ -53,7 +60,7 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <div>© 2026 Med Live Well — Soluções em saúde. CNPJ 00.000.000/0001-00</div>
+          <div>© 2026 Med Live Well. CNPJ 48.596.938/0001-42</div>
           <div>Política de privacidade · Termos de uso</div>
         </div>
       </div>
