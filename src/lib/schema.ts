@@ -13,12 +13,15 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Med Live Well",
-    legalName: "Med Live Well — Soluções em saúde",
+    legalName: "Med Live Well",
     url: BASE_URL,
     logo: `${BASE_URL}/images/medlive-logo.png`,
     description:
-      "Importadora e distribuidora B2B de produtos de reabilitação. Andadores, cadeiras de banho, muletas, barras de apoio e equipamentos para mobilidade entregues em todo o Brasil para lojas, clínicas e marketplaces.",
-    sameAs: [],
+      "Importadora e distribuidora B2B de produtos de mobilidade e reabilitação. Andadores, cadeiras de banho, muletas, barras de apoio e equipamentos para mobilidade entregues em todo o Brasil. CD em São Paulo.",
+    sameAs: [
+      "https://www.instagram.com/medlivewell?igsh=MWM3a3J2OG1zZ2RsMg==",
+      "https://www.linkedin.com/company/medicinal-live-well/?viewAsMember=true",
+    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
