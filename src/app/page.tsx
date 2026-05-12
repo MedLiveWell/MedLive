@@ -91,11 +91,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingTop: 64 }}>
         <div className="container">
           <div className="sec-head">
             <div className="left">
-              <span className="eyebrow">Nosso catálogo</span>
               <h2>Tudo que seu cliente precisa, de um fornecedor só.</h2>
             </div>
             <Button variant="ghost" href="/produtos">
