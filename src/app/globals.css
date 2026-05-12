@@ -641,7 +641,7 @@ p { margin: 0; color: var(--ink-2); }
 .mv-card p { font-size: 15px; line-height: 1.55; }
 
 /* ----- For Who section ----- */
-.for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.for-who-grid { display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; gap: 24px; }
 .who-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
   padding: 40px; display: flex; flex-direction: column; gap: 18px;
