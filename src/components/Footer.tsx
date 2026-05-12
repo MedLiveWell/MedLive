@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="col brand-col">
-            <Logo light size={112} />
+            <Logo light size={80} />
             <p>
               Importadora e distribuidora B2B de produtos de mobilidade e reabilitação.
               CD em São Paulo com entrega para todo o Brasil.
