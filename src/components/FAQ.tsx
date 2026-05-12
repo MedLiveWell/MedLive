@@ -8,13 +8,10 @@ import { FAQ_ITEMS } from "@/lib/faq";
 export function FAQ() {
   const [open, setOpen] = useState(0);
   return (
-    <section className="section faq-section">
+    <section className="section faq-section" style={{ paddingTop: 64 }}>
       <div className="container">
         <div className="faq-wrap">
           <div className="faq-head">
-            <span className="eyebrow" style={{ fontWeight: 800 }}>
-              Perguntas frequentes
-            </span>
             <h2>Dúvidas comuns de quem revende</h2>
             <p className="lead">
               Respostas rápidas para as perguntas que mais recebemos de lojas e sellers. Não achou
