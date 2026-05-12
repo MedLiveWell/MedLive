@@ -19,10 +19,9 @@ export const metadata: Metadata = {
 export default function RevendedorPage() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ paddingTop: 16 }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Seja Revendedor" }]} />
-          <span className="eyebrow">Torne-se parceiro</span>
           <h1 style={{ marginTop: 18 }}>Venda produtos Med Live na sua loja.</h1>
           <p className="lead">
             Preencha o formulário e nosso time comercial entra em contato em até 1 dia útil com
