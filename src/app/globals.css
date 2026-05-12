@@ -641,7 +641,24 @@ p { margin: 0; color: var(--ink-2); }
 .mv-card p { font-size: 15px; line-height: 1.55; }
 
 /* ----- For Who section ----- */
-.for-who-grid { display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; gap: 24px; }
+.for-who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: stretch;
+}
+.for-who-grid .who-card {
+  max-width: 560px;
+  justify-self: start;
+}
+.who-img-placeholder {
+  background: var(--paper-2);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-2);
+  font-size: 16px; font-weight: 500;
+  min-height: 380px;
+}
 .who-card {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
   padding: 40px; display: flex; flex-direction: column; gap: 18px;
@@ -1111,6 +1128,7 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
 @media (max-width: 960px) {
   .hero-grid, .newsletter-inner, .revende-grid, .big-cta,
   .for-who-grid, .channels-grid, .mv-grid { grid-template-columns: 1fr; gap: 32px; }
+  .for-who-grid .who-card { max-width: none; justify-self: stretch; }
   .hero-text { padding: 0 28px; }
   .hero-visual {
     aspect-ratio: 3 / 2;

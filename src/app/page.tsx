@@ -147,6 +147,9 @@ export default function HomePage() {
             </div>
           </div>
           <div className="for-who-grid">
+            <div className="who-img-placeholder" aria-hidden="true">
+              <span>Imagem aqui</span>
+            </div>
             <div className="who-card dark">
               <span className="tag" style={{ fontWeight: 900 }}>
                 Lojas revendedoras
