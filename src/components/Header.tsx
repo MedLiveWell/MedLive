@@ -16,12 +16,10 @@ export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Close drawer whenever the route changes.
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // Close on Escape.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -33,10 +31,23 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div className="container row-top">
+      <div className="container header-row">
         <Logo size={96} />
-        <div className="row-top-actions">
-          <Link href="/seja-revendedor" className="btn btn-accent btn-sm">
+
+        <nav className="nav-links" aria-label="Navegação principal">
+          {NAV.map((item) => (
+            <Link
+              key={item.id}
+              href={item.href}
+              className={"nav-link " + (isActive(pathname, item.href) ? "active" : "")}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="header-actions">
+          <Link href="/seja-revendedor" className="btn btn-accent btn-sm header-cta">
             Seja Revendedor
             <Icon.arrow />
           </Link>
@@ -64,20 +75,6 @@ export function Header() {
         </div>
       </div>
 
-      <div className="container row-bottom">
-        <nav className="nav-links" aria-label="Navegação principal">
-          {NAV.map((item) => (
-            <Link
-              key={item.id}
-              href={item.href}
-              className={"nav-link " + (isActive(pathname, item.href) ? "active" : "")}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      </div>
-
       <nav
         id="mobile-nav"
         className={"mobile-panel " + (open ? "open" : "")}
@@ -94,6 +91,14 @@ export function Header() {
             {item.label}
           </Link>
         ))}
+        <Link
+          href="/seja-revendedor"
+          className="btn btn-accent btn-sm mobile-cta"
+          tabIndex={open ? 0 : -1}
+        >
+          Seja Revendedor
+          <Icon.arrow />
+        </Link>
       </nav>
     </header>
   );
