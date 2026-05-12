@@ -21,12 +21,9 @@ export default function BlogPage() {
   const items = [...BLOG_POSTS, ...BLOG_POSTS];
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ paddingTop: 16 }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Blog" }]} />
-          <span className="eyebrow" style={{ fontWeight: 700 }}>
-            Conteúdo para revendedores
-          </span>
           <h1 style={{ marginTop: 18 }}>Insights de mercado e apoio ao parceiro.</h1>
           <p className="lead">
             Mercado de reabilitação, dicas para seu time de vendas e novidades de produto.

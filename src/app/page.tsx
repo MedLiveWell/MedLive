@@ -176,13 +176,10 @@ export default function HomePage() {
 
       <FAQ />
 
-      <section className="section">
+      <section className="section" style={{ paddingTop: 64 }}>
         <div className="container">
           <div className="sec-head">
             <div className="left">
-              <span className="eyebrow" style={{ fontWeight: 800 }}>
-                Conteúdo Med Live
-              </span>
               <h2>Conteúdo para quem cuida</h2>
             </div>
             <Button variant="ghost" href="/blog">

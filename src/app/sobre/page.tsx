@@ -20,10 +20,9 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ paddingTop: 16 }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Sobre" }]} />
-          <span className="eyebrow">Nossa história</span>
           <h1 style={{ marginTop: 18 }}>Nascemos para facilitar o acesso à saúde.</h1>
         </div>
       </section>

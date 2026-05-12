@@ -39,10 +39,9 @@ export default function MarketplacesPage() {
 
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ paddingTop: 16 }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Marketplaces" }]} />
-          <span className="eyebrow">Para sellers de marketplace</span>
           <h1 style={{ marginTop: 18 }}>
             Catálogo pronto para listar em{" "}
             <span style={{ color: "var(--tangerina)" }}>Mercado Livre, Amazon e Shopee</span>.
@@ -62,7 +61,7 @@ export default function MarketplacesPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingTop: 64 }}>
         <div className="container">
           <div
             style={{
@@ -73,8 +72,7 @@ export default function MarketplacesPage() {
             }}
           >
             <div>
-              <span className="eyebrow">Por que Med Live</span>
-              <h2 style={{ marginTop: 14 }}>Por que vender Med Live no seu marketplace</h2>
+              <h2>Por que vender Med Live no seu marketplace</h2>
               <p style={{ marginTop: 14, color: "var(--ink-2)", fontSize: 16 }}>
                 Trabalhamos com mais de 30 SKUs prontos para anúncio, com kit de mídia completo
                 para você publicar em horas — não em semanas. Margem saudável, frete ágil e
@@ -134,11 +132,10 @@ export default function MarketplacesPage() {
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--paper-2)" }}>
+      <section className="section" style={{ background: "var(--paper-2)", paddingTop: 64 }}>
         <div className="container">
           <div className="sec-head">
             <div className="left">
-              <span className="eyebrow">Para listar</span>
               <h2>Os mais vendidos online</h2>
               <p>
                 Seleção curada para sellers — produtos com alta demanda, fácil envio e descrições
@@ -187,11 +184,10 @@ export default function MarketplacesPage() {
         </div>
       </section>
 
-      <section id="cadastro" className="section" style={{ paddingTop: 24 }}>
+      <section id="cadastro" className="section" style={{ paddingTop: 16 }}>
         <div className="container revende-grid">
           <div>
-            <span className="eyebrow">Cadastro de seller</span>
-            <h2 style={{ marginTop: 14, marginBottom: 12 }}>
+            <h2 style={{ marginBottom: 12 }}>
               Pronto para listar nossos produtos no seu marketplace?
             </h2>
             <p style={{ color: "var(--ink-2)", fontSize: 16 }}>

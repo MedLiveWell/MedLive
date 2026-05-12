@@ -61,7 +61,7 @@ export default function ParaQuemVendemosPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" style={{ paddingTop: 64 }}>
         <div className="container">
           <div
             style={{
@@ -72,8 +72,7 @@ export default function ParaQuemVendemosPage() {
             }}
           >
             <div>
-              <span className="eyebrow">Por que Med Live</span>
-              <h2 style={{ marginTop: 14 }}>Por que abastecer sua loja com a Med Live</h2>
+              <h2>Por que abastecer sua loja com a Med Live</h2>
               <p style={{ marginTop: 14, color: "var(--ink-2)", fontSize: 16 }}>
                 Mais de uma década importando produtos de reabilitação. Tabela transparente,
                 consultor dedicado por conta e mix recomendado por porte de loja — para você
@@ -133,11 +132,10 @@ export default function ParaQuemVendemosPage() {
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--paper-2)" }}>
+      <section className="section" style={{ background: "var(--paper-2)", paddingTop: 64 }}>
         <div className="container">
           <div className="sec-head">
             <div className="left">
-              <span className="eyebrow">Mix sugerido</span>
               <h2>Para começar a vender hoje</h2>
               <p>
                 Seleção variada da linha — andadores, cadeiras de banho, cadeiras de
@@ -186,11 +184,10 @@ export default function ParaQuemVendemosPage() {
         </div>
       </section>
 
-      <section id="cadastro" className="section" style={{ paddingTop: 24 }}>
+      <section id="cadastro" className="section" style={{ paddingTop: 16 }}>
         <div className="container revende-grid">
           <div>
-            <span className="eyebrow">Cadastro de revendedor</span>
-            <h2 style={{ marginTop: 14, marginBottom: 12 }}>
+            <h2 style={{ marginBottom: 12 }}>
               Pronto para abastecer sua loja com produtos de saúde?
             </h2>
             <p style={{ color: "var(--ink-2)", fontSize: 16 }}>
