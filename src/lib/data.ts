@@ -116,6 +116,7 @@ export const CATEGORIES: Category[] = [
     label: "Barras de apoio",
     count: 1,
     desc: "Barra sanitária com ajuste de altura, alumínio 150kg.",
+    image: "/images/med-1010-1.png",
   },
 ];
 
