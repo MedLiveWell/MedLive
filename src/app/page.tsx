@@ -152,7 +152,7 @@ export default function HomePage() {
               <span>Imagem aqui</span>
             </div>
             <div className="channel-card">
-              <h3>Lojas parceiras</h3>
+              <h3 style={{ color: "var(--tangerina)" }}>Lojas parceiras</h3>
               <p className="desc">
                 Mais que fornecimento: parceria de longo prazo com atendimento direto, estoque
                 pronto e preço estável.
