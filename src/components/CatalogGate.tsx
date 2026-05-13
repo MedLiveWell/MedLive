@@ -174,8 +174,8 @@ export function CatalogGate() {
               </div>
               <h2 id="cg-title">Catálogo completo em PDF</h2>
               <p className="cg-intro">
-                Download exclusivo para revendedores. Preencha os dados da sua empresa para receber
-                o catálogo com fichas técnicas e fotos em alta resolução.
+                Download exclusivo para lojas parceiras. Preencha os dados da sua empresa para
+                receber o catálogo completo de produtos de mobilidade e reabilitação.
               </p>
 
               <div className="cg-includes">
@@ -183,22 +183,19 @@ export function CatalogGate() {
                   <Icon.check /> Produtos com fichas técnicas completas
                 </div>
                 <div className="cg-include-item">
-                  <Icon.check /> Fotos em alta resolução para seu e-commerce
+                  <Icon.check /> Fotos em alta resolução para sua loja
                 </div>
                 <div className="cg-include-item">
-                  <Icon.check /> Sugestão de preço de venda por canal
+                  <Icon.check /> Tabela de distribuidor com margem saudável
                 </div>
                 <div className="cg-include-item">
-                  <Icon.check /> Condições comerciais de distribuidor B2B
+                  <Icon.check /> Condições comerciais com a Med Live
                 </div>
               </div>
 
               <div className="cg-file-meta">
                 <div>
                   <span>Formato</span> PDF
-                </div>
-                <div>
-                  <span>Tamanho</span> 8.4 MB
                 </div>
                 <div>
                   <span>Atualizado</span> Abr 2026
