@@ -1258,7 +1258,7 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   background: var(--tangerina); color: #fff;
 }
 .cg-file-meta {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
   margin-top: auto;
 }
 .cg-file-meta > div {
