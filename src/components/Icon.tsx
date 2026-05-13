@@ -220,6 +220,50 @@ export const Icon = {
       <path d="M10 15l5-3-5-3v6z" fill="currentColor" />
     </svg>
   ),
+  hospital: (p: IconProps = {}) => (
+    <svg viewBox="0 0 24 24" fill="none" {...sized(p, 20)}>
+      <path
+        d="M3 6l2-3h14l2 3"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <rect
+        x="3"
+        y="6"
+        width="18"
+        height="15"
+        rx="1"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M12 11v6M9 14h6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
+  homecare: (p: IconProps = {}) => (
+    <svg viewBox="0 0 24 24" fill="none" {...sized(p, 20)}>
+      <path
+        d="M3 11l9-7 9 7v9a2 2 0 01-2 2H5a2 2 0 01-2-2v-9z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 17l-2.5-2.5a1.5 1.5 0 012.5-1.5 1.5 1.5 0 012.5 1.5L12 17z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
 };
 
 export type IconKey = keyof typeof Icon;
