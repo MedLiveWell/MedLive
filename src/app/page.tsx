@@ -148,8 +148,14 @@ export default function HomePage() {
             </div>
           </div>
           <div className="for-who-grid">
-            <div className="who-img-placeholder" aria-hidden="true">
-              <span>Imagem aqui</span>
+            <div className="who-img">
+              <Image
+                src="/images/loja-parceira-home.jpg"
+                alt="Loja parceira da Med Live Well atendendo cliente com produtos de mobilidade e reabilitação"
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
             </div>
             <div className="channel-card">
               <h3 style={{ color: "var(--tangerina)" }}>Lojas parceiras</h3>

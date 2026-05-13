@@ -659,12 +659,11 @@ p { margin: 0; color: var(--ink-2); }
   max-width: 560px;
   justify-self: start;
 }
-.who-img-placeholder {
-  background: var(--paper-2);
+.who-img {
+  position: relative;
   border-radius: var(--radius-lg);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--ink-2);
-  font-size: 16px; font-weight: 500;
+  overflow: hidden;
+  background: var(--paper-2);
   min-height: 380px;
 }
 .who-card {
