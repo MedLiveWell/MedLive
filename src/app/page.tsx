@@ -30,14 +30,14 @@ export default function HomePage() {
               Importadora B2B de produtos de saúde
             </span>
             <h1 style={{ marginTop: 14 }}>
-              Produtos de reabilitação <br />
+              Produtos de mobilidade e reabilitação <br />
               que seus clientes <span className="accent">precisam</span>, <br />
-              entregues em todo o Brasil.
+              com garantia de 5 anos.
             </h1>
             <p className="lead">
               A Med Live fornece andadores, cadeiras de banho, muletas, barras de apoio e muito
-              mais para marketplaces e lojas revendedoras. Qualidade, agilidade e atendimento
-              próximo em cada pedido.
+              mais para lojistas parceiros. Qualidade, agilidade e atendimento próximo em cada
+              pedido.
             </p>
             <div className="hero-actions">
               <Button variant="primary" href="/seja-revendedor">
@@ -49,7 +49,7 @@ export default function HomePage() {
             </div>
             <div className="hero-trust">
               <Icon.shield />
-              <span>Produtos certificados · ANVISA · INMETRO</span>
+              <span>Produtos registrados na ANVISA</span>
             </div>
           </div>
 
