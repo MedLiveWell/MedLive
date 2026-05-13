@@ -747,8 +747,7 @@ p { margin: 0; color: var(--ink-2); }
   border: 1px solid rgba(255,255,255,.14);
   border-radius: var(--radius-lg); padding: 28px;
 }
-.big-cta .catalog-card .label { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--celeste); font-weight: 700; }
-.big-cta .catalog-card h3 { color: #fff; font-size: 22px; margin: 10px 0 8px; }
+.big-cta .catalog-card h3 { color: #fff; font-size: 22px; margin: 0 0 8px; }
 .big-cta .catalog-card p { color: rgba(255,255,255,.7); font-size: 14px; }
 .big-cta .catalog-card .pdf {
   margin-top: 18px;

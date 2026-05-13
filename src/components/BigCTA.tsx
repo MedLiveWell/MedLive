@@ -7,10 +7,9 @@ export function BigCTA() {
       <div className="container">
         <div className="big-cta">
           <div className="content">
-            <h2>Venda Med Live e garanta uma renda extra.</h2>
+            <h2>Amplie o catálogo da sua loja com a Med Live.</h2>
             <p className="sub">
-              Cadastre sua loja e receba em até 1 dia útil o acesso à tabela de preços de
-              distribuidor, mix recomendado e material de apoio para começar a vender.
+              Cadastre sua loja e receba acesso ao catálogo completo e atualizado.
             </p>
             <div className="actions">
               <Button variant="accent" size="lg" href="/seja-revendedor">
@@ -23,7 +22,6 @@ export function BigCTA() {
           </div>
           <div className="side">
             <div className="catalog-card">
-              <div className="label">Material de apoio</div>
               <h3>Catálogo Med Live 2026</h3>
               <a href="#" className="pdf" data-catalog-gate>
                 <span style={{ display: "flex", gap: 10, alignItems: "center" }}>
