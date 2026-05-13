@@ -9,7 +9,8 @@ export function BigCTA() {
           <div className="content">
             <h2>Amplie o catálogo da sua loja com a Med Live.</h2>
             <p className="sub">
-              Cadastre sua loja e receba acesso ao catálogo completo e atualizado.
+              Cadastre sua loja e receba acesso ao catálogo
+              <br className="br-desktop" /> completo e atualizado.
             </p>
             <div className="actions">
               <Button variant="accent" size="lg" href="/seja-revendedor">
