@@ -152,20 +152,23 @@ export default function HomePage() {
               <span>Imagem aqui</span>
             </div>
             <div className="channel-card">
-              <h3>Lojas revendedoras</h3>
+              <h3>Lojas parceiras</h3>
               <p className="desc">
-                Farmácias, lojas de ortopedia e clínicas de fisioterapia com tabela de
-                distribuidor e margem saudável.
+                Mais que fornecimento: parceria de longo prazo com atendimento direto, estoque
+                pronto e preço estável.
               </p>
               <div className="list">
                 <div className="list-item">
                   <Icon.store /> Farmácias
                 </div>
                 <div className="list-item">
-                  <Icon.shield /> Ortopedia
+                  <Icon.shield /> Lojas ortopédicas
                 </div>
                 <div className="list-item">
-                  <Icon.users /> Clínicas
+                  <Icon.hospital /> Hospitais
+                </div>
+                <div className="list-item">
+                  <Icon.homecare /> Homecare
                 </div>
               </div>
               <Button variant="primary" href="/para-quem-vendemos">
