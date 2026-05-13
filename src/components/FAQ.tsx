@@ -14,12 +14,11 @@ export function FAQ() {
           <div className="faq-head">
             <h2>Dúvidas comuns de quem revende</h2>
             <p className="lead">
-              Respostas rápidas para as perguntas que mais recebemos de lojas e sellers. Não achou
-              o que procurava?{" "}
-              <Link href="/seja-revendedor" className="faq-link">
-                fale com nosso time
-              </Link>
-              .
+              Respostas rápidas para as perguntas que mais recebemos. Não achou o que procurava{" "}
+              {/* TODO: substituir href="#" pelo wa.me do WhatsApp comercial quando definido */}
+              <a href="#" className="faq-link">
+                fale com o nosso time
+              </a>
             </p>
             <div className="faq-side-cta">
               <Link href="/seja-revendedor" className="btn btn-primary">
