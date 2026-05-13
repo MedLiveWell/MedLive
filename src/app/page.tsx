@@ -30,15 +30,15 @@ export default function HomePage() {
               Importadora B2B de produtos de saúde
             </span>
             <h1 style={{ marginTop: 14 }}>
-              Produtos de mobilidade e <br className="br-desktop" />
-              reabilitação que seus clientes <br className="br-desktop" />
-              <span className="accent">precisam</span>, com garantia de 5 anos.
+              Produtos de mobilidade <br className="br-desktop" />
+              e reabilitação que seus <br className="br-desktop" />
+              clientes <span className="accent">precisam</span>, com <br className="br-desktop" />
+              garantia de 5 anos.
             </h1>
-            <p className="lead" style={{ marginBottom: 0 }}>
+            <p className="lead">
               A Med Live Well fornece andadores, cadeiras de banho, muletas, barras de apoio e
               muito mais para lojistas parceiros.
-            </p>
-            <p className="lead" style={{ marginTop: 8 }}>
+              <br />
               Qualidade, agilidade e atendimento próximo em cada pedido.
             </p>
             <div className="hero-actions">
