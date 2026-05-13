@@ -394,6 +394,10 @@ p { margin: 0; color: var(--ink-2); }
   width: auto !important;
   align-self: flex-start;
 }
+.site-footer .brand-col .logo.is-light {
+  margin-top: -16px;
+  margin-bottom: -32px;
+}
 
 /* ----- Hero ----- */
 .hero {
@@ -796,8 +800,8 @@ p { margin: 0; color: var(--ink-2); }
 .site-footer .brand-col {
   display: flex; flex-direction: column; align-items: flex-start;
 }
-.site-footer .brand-col p { font-size: 14px; color: rgba(255,255,255,.5); margin-top: 8px; max-width: 300px; line-height: 1.55; }
-.site-footer .socials { display: flex; gap: 10px; margin-top: 10px; }
+.site-footer .brand-col p { font-size: 13.5px; color: rgba(255,255,255,.5); margin-top: 4px; max-width: 300px; line-height: 1.5; }
+.site-footer .socials { display: flex; gap: 10px; margin-top: 8px; }
 .site-footer .socials a {
   width: 34px; height: 34px; border-radius: 50%;
   background: rgba(255,255,255,.06); display: grid; place-items: center;
