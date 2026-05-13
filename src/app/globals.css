@@ -422,6 +422,9 @@ p { margin: 0; color: var(--ink-2); }
 }
 .hero h1 { font-size: clamp(30px, 3.6vw, 50px); }
 .hero h1 .accent { color: var(--tangerina); }
+/* <br> shown only on desktop (>= 768px) to control hero h1 line breaks */
+.br-desktop { display: none; }
+@media (min-width: 768px) { .br-desktop { display: initial; } }
 .hero .lead { margin: 14px 0 22px; font-size: 16.5px; max-width: 560px; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
 .hero-trust {
