@@ -1,26 +1,26 @@
 export const FAQ_ITEMS = [
   {
-    q: "Quem pode comprar na Med Live?",
-    a: "Atendemos exclusivamente o mercado B2B: farmácias, lojas de ortopedia, clínicas, e-commerces e sellers ativos em marketplaces (Mercado Livre, Amazon, Shopee). Para compras pessoais, indicamos uma de nossas lojas parceiras.",
+    q: "Quem pode comprar como distribuidor da Med Live?",
+    a: "A Med Live atende exclusivamente o mercado B2B: farmácias, lojas ortopédicas, clínicas, hospitais e empresas de homecare. Para compras pessoais, indicamos uma das lojas parceiras.",
   },
   {
-    q: "Existe pedido mínimo?",
-    a: "Sim. Trabalhamos com um pedido mínimo de abertura de conta, que é informado pelo consultor comercial na qualificação do parceiro. A partir daí, aplicamos descontos progressivos por volume.",
+    q: "Qual o pedido mínimo e condições comerciais?",
+    a: "Não trabalhamos com pedido mínimo formal por quantidade. As condições comerciais — formas de pagamento, descontos progressivos por volume e demais detalhes — são definidas durante a qualificação da loja parceira pelo consultor comercial.",
   },
   {
     q: "Em quanto tempo o pedido é despachado?",
-    a: "Despachamos em até 48h úteis após a confirmação do pagamento. Entregamos para todos os 27 estados, com rastreio integrado e suporte de frete para parceiros recorrentes.",
+    a: "A Med Live opera com centro de distribuição em São Paulo e logística integrada para os 27 estados do Brasil. Despachamos em até 48 horas úteis após a confirmação de pagamento.",
   },
   {
     q: "Os produtos possuem certificação?",
-    a: "Sim. Toda nossa linha segue as normas da ANVISA e possui certificação INMETRO quando aplicável. Enviamos laudos técnicos e fichas de produto para nossos parceiros.",
+    a: "Sim. Toda a linha Med Live é registrada na ANVISA, com laudos técnicos e fichas de produto disponíveis para as lojas parceiras. A certificação ANVISA garante conformidade regulatória dos produtos de mobilidade e reabilitação.",
   },
   {
-    q: "Vocês fornecem fotos e descrições para anúncios?",
-    a: "Fornecemos. Sellers de marketplace recebem kit completo com fotos em alta resolução, descrições otimizadas e ficha técnica pronta para publicar em Mercado Livre, Amazon e Shopee.",
+    q: "Vocês fornecem fotos de produtos e fichas técnicas?",
+    a: "Sim. As lojas parceiras recebem fotos em alta resolução, descrições otimizadas e fichas técnicas completas dos produtos, prontas para uso em catálogo físico, site ou redes sociais da loja.",
   },
   {
-    q: "Como formalizo a parceria?",
-    a: "Preencha o formulário na página Seja Revendedor com CNPJ ativo e tipo de canal. Nosso time comercial entra em contato em até 1 dia útil com a tabela de distribuidor e os próximos passos.",
+    q: "Como me torno revendedor da Med Live?",
+    a: "Preencha o formulário na página Seja Revendedor com CNPJ ativo e informações da empresa. O time comercial entra em contato e segue com os próximos passos para você se tornar um revendedor Med Live.",
   },
 ];
