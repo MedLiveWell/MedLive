@@ -264,6 +264,27 @@ export const Icon = {
       />
     </svg>
   ),
+  image: (p: IconProps = {}) => (
+    <svg viewBox="0 0 24 24" fill="none" {...sized(p, 32)}>
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="16"
+        rx="2"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <circle cx="9" cy="10" r="1.6" stroke="currentColor" strokeWidth="1.8" />
+      <path
+        d="M21 16l-5-5-9 9"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
   badgeCheck: (p: IconProps = {}) => (
     <svg viewBox="0 0 24 24" fill="none" {...sized(p, 20)}>
       <path
