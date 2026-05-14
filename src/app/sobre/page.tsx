@@ -23,7 +23,7 @@ export default function SobrePage() {
       <section className="page-head" style={{ paddingTop: 16 }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Sobre" }]} />
-          <h1 style={{ marginTop: 18 }}>Nascemos para facilitar o acesso à saúde.</h1>
+          <h1 style={{ marginTop: 18 }}>Conheça a Med Live Well.</h1>
         </div>
       </section>
 
@@ -33,21 +33,21 @@ export default function SobrePage() {
             <div className="sobre-intro-text">
               <p>
                 A Med Live surgiu com um propósito claro: aproximar produtos de reabilitação e
-                mobilidade de quem realmente precisa, através de parceiros que vendem esses
-                produtos todos os dias.
+                mobilidade de quem realmente precisa, através de lojistas parceiros que vendem
+                esses produtos todos os dias.
               </p>
               <p>
-                Em poucos anos de operação, construímos uma carteira sólida de clientes e uma
-                estrutura logística capaz de atender todo o território nacional com agilidade e
-                confiabilidade.
+                Em poucos anos de operação, construímos uma carteira sólida de clientes, um
+                portfólio robusto e uma estrutura logística capaz de atender todos com agilidade
+                e confiabilidade.
               </p>
             </div>
             <div className="sobre-intro-visual sobre-intro-visual--photo">
               <Image
-                src="/images/centro-distribuicao.png"
-                alt="Interior do centro de distribuição Med Live Well com prateleiras altas, pallets e produtos empilhados, com banner da marca ao fundo"
-                width={1200}
-                height={675}
+                src="/images/cd-medlive-sobre.jpg"
+                alt="Centro de distribuição da Med Live Well em São Paulo, com prateleiras altas de produtos de mobilidade e reabilitação organizados em galpão de 4.000 metros quadrados"
+                width={1536}
+                height={1024}
               />
             </div>
           </div>
