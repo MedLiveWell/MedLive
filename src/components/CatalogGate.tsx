@@ -278,13 +278,12 @@ export function CatalogGate() {
                 <div className="cg-field">
                   <label>Tipo de canal *</label>
                   <select required value={form.canal} onChange={update("canal")}>
-                    <option value="">Selecione…</option>
+                    <option value="">Selecione o tipo de canal</option>
                     <option value="farmacia">Farmácia</option>
-                    <option value="ortopedia">Ortopedia / Produtos médicos</option>
-                    <option value="clinica">Clínica / Home care</option>
-                    <option value="ecommerce">E-commerce próprio</option>
-                    <option value="marketplace">Seller de marketplace</option>
-                    <option value="distribuidor">Distribuidor / Atacado</option>
+                    <option value="ortopedia">Loja ortopédica</option>
+                    <option value="clinica">Clínica / consultório</option>
+                    <option value="hospital">Hospital</option>
+                    <option value="homecare">Homecare</option>
                     <option value="outro">Outro</option>
                   </select>
                 </div>

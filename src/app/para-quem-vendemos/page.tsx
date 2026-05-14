@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
@@ -148,11 +147,10 @@ export default function ParaQuemVendemosPage() {
         <div className="container revende-grid">
           <div>
             <h2 style={{ marginBottom: 12 }}>
-              Pronto para abastecer sua loja com produtos de saúde?
+              Pronto para abastecer sua loja com produtos Med Live?
             </h2>
             <p style={{ color: "var(--ink-2)", fontSize: 16 }}>
-              Preencha o formulário e nosso time comercial entra em contato em até 1 dia útil com
-              tabela de distribuidor, mix recomendado e condições para seu canal.
+              Preencha o formulário e nosso time comercial entrará em contato.
             </p>
             <div className="contact-alt" style={{ marginTop: 24 }}>
               <a href="#" className="item">
@@ -160,19 +158,19 @@ export default function ParaQuemVendemosPage() {
                   <Icon.whatsapp />
                 </div>
                 <div>
-                  <div className="lbl">WhatsApp comercial</div>
+                  <div className="lbl">WhatsApp</div>
                   <div className="val">(11) 4000-0000</div>
                 </div>
               </a>
-              <Link href="/produtos" className="item">
+              <a href="mailto:comercial@medlivewell.com.br" className="item">
                 <div className="ic">
-                  <Icon.store />
+                  <Icon.mail />
                 </div>
                 <div>
-                  <div className="lbl">Catálogo</div>
-                  <div className="val">Ver produtos</div>
+                  <div className="lbl">Email</div>
+                  <div className="val">comercial@medlivewell.com.br</div>
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
           <RevendedorForm
