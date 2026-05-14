@@ -73,9 +73,12 @@ export default function ParaQuemVendemosPage() {
             <div>
               <h2>Por que abastecer sua loja com a Med Live</h2>
               <p style={{ marginTop: 14, color: "var(--ink-2)", fontSize: 16 }}>
-                Mais de uma década importando produtos de reabilitação. Tabela transparente,
-                consultor dedicado por conta e mix recomendado por porte de loja — para você
-                montar uma vitrine completa sem dor de cabeça.
+                Importadora e distribuidora B2B comprometida com a operação de nossas lojas
+                parceiras.
+              </p>
+              <p style={{ marginTop: 8, color: "var(--ink-2)", fontSize: 16 }}>
+                Tabela de distribuidor, consultor dedicado e um mix recomendado para sua loja
+                para você montar uma vitrine completa e sem dor de cabeça.
               </p>
             </div>
             <div
@@ -91,20 +94,22 @@ export default function ParaQuemVendemosPage() {
               <div className="icon">
                 <Icon.tag />
               </div>
-              <h4>Preço de distribuidor</h4>
+              <h4>Preço estável</h4>
               <p>
-                Tabela de revenda com margem saudável, descontos progressivos por volume e prazo
-                diferenciado para parceiros recorrentes.
+                Tabela de distribuidor com margem saudável e preço estável há mais de 12 meses.
+                Previsibilidade para a sua loja planejar margem e estoque sem surpresas.
               </p>
             </div>
             <div className="why-card">
               <div className="icon">
-                <Icon.users />
+                <Icon.badgeCheck />
               </div>
-              <h4>Atendimento próximo</h4>
+              <h4>Garantia de 5 anos</h4>
               <p>
-                Consultor comercial dedicado por conta. Resposta em até 24h úteis para cotações,
-                trocas, devoluções e suporte técnico ao seu vendedor.
+                Cobertura de 5 anos em todos os produtos.
+                <br />
+                Tranquilidade para você vender produtos de mobilidade e reabilitação sem se
+                preocupar com pós-venda.
               </p>
             </div>
             <div className="why-card">
@@ -113,18 +118,8 @@ export default function ParaQuemVendemosPage() {
               </div>
               <h4>Certificações em dia</h4>
               <p>
-                Toda a linha segue normas ANVISA e INMETRO. Laudos técnicos, fichas de produto e
+                Todas as linhas seguem normas ANVISA, com laudos técnicos, fichas de produto e
                 tudo o que sua loja precisa para vender com segurança.
-              </p>
-            </div>
-            <div className="why-card">
-              <div className="icon">
-                <Icon.truck />
-              </div>
-              <h4>Logística para os 27 estados</h4>
-              <p>
-                Despacho em até 48h, rastreio integrado e suporte de frete para parceiros
-                recorrentes — você não fica sem mix.
               </p>
             </div>
           </div>
