@@ -62,6 +62,9 @@ export default function SobrePage() {
       >
         <div className="container">
           <div className="sobre-bio">
+            <div className="sobre-bio-img" aria-hidden="true">
+              <Icon.image size={56} />
+            </div>
             <div className="sobre-bio-text">
               <h2 style={{ marginBottom: 24 }}>Sobre a Med Live</h2>
               <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
@@ -90,9 +93,6 @@ export default function SobrePage() {
                 agilidade e o compromisso de estar presente quando o lojista mais precisa, antes,
                 durante e depois da venda.
               </p>
-            </div>
-            <div className="sobre-bio-img" aria-hidden="true">
-              <Icon.image size={56} />
             </div>
           </div>
         </div>
