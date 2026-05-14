@@ -27,8 +27,8 @@ export function Newsletter() {
           </span>
           <h3 style={{ marginTop: 12 }}>Novidades para quem revende saúde</h3>
           <p>
-            Lançamentos, campanhas e material de vendas direto no seu e-mail. Sem spam — só o que
-            importa.
+            Lançamentos, campanhas e material de vendas direto no seu e-mail.
+            <br className="br-desktop" /> Sem spam, só o que importa.
           </p>
         </div>
         <form onSubmit={onSubmit}>
