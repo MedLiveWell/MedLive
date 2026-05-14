@@ -144,36 +144,6 @@ export default function ParaQuemVendemosPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div
-            style={{
-              display: "flex",
-              gap: 16,
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "32px",
-              background: "var(--paper-2)",
-              borderRadius: "var(--radius-xl)",
-            }}
-          >
-            <div className="hero-trust" style={{ background: "#fff" }}>
-              <Icon.shield />
-              <span>Produtos certificados · ANVISA · INMETRO</span>
-            </div>
-            <div className="hero-trust" style={{ background: "#fff" }}>
-              <Icon.truck />
-              <span>Entrega para todos os 27 estados</span>
-            </div>
-            <div className="hero-trust" style={{ background: "#fff" }}>
-              <Icon.users />
-              <span>Atendimento especializado</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="cadastro" className="section" style={{ paddingTop: 16 }}>
         <div className="container revende-grid">
           <div>
