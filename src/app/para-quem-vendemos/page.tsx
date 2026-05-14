@@ -147,7 +147,9 @@ export default function ParaQuemVendemosPage() {
         <div className="container revende-grid">
           <div>
             <h2 style={{ marginBottom: 12 }}>
-              Pronto para abastecer sua loja com produtos Med Live?
+              Pronto para abastecer sua <br className="br-desktop" />
+              loja com produtos <br className="br-desktop" />
+              <span style={{ color: "var(--tangerina)" }}>Med Live</span>?
             </h2>
             <p style={{ color: "var(--ink-2)", fontSize: 16 }}>
               Preencha o formulário e nosso time comercial entrará em contato.
