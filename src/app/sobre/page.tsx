@@ -20,7 +20,10 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <section className="page-head" style={{ paddingTop: 16, borderBottom: "none" }}>
+      <section
+        className="page-head"
+        style={{ paddingTop: 16, borderBottom: "none", background: "#fff" }}
+      >
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Sobre" }]} />
           <h1 style={{ marginTop: 18 }}>Conheça a Med Live Well</h1>
@@ -29,7 +32,7 @@ export default function SobrePage() {
 
       <section className="section" style={{ paddingTop: 24, paddingBottom: 56 }}>
         <div className="container">
-          <div className="sobre-intro">
+          <div className="sobre-intro" style={{ alignItems: "flex-start" }}>
             <div className="sobre-intro-text">
               <p>
                 A Med Live surgiu com um propósito claro: aproximar produtos de reabilitação e
