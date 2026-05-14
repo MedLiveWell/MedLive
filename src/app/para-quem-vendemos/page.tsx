@@ -43,16 +43,16 @@ export default function ParaQuemVendemosPage() {
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Para quem vendemos" }]} />
           <h1 style={{ marginTop: 18 }}>
-            Tabela de distribuidor com{" "}
+            Tabela de distribuidor B2B com{" "}
             <span style={{ color: "var(--tangerina)" }}>margem saudável</span> para sua loja.
           </h1>
           <p className="lead">
-            Atendemos farmácias, lojas de ortopedia e clínicas de fisioterapia. Mix recomendado,
-            atendimento próximo e produtos certificados ANVISA/INMETRO entregues em todo o Brasil.
+            Atendemos farmácias, lojas ortopédicas, clínicas, hospitais e empresas de homecare.
+            Importadora B2B de mobilidade e reabilitação com toda a linha registrada na ANVISA.
           </p>
           <div className="hero-actions" style={{ marginTop: 28 }}>
             <Button variant="primary" href="#cadastro">
-              Quero ser revendedor
+              Quero ser loja parceira
             </Button>
             <Button variant="ghost" href="/produtos">
               Ver catálogo
