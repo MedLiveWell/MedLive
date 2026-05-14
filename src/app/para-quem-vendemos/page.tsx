@@ -179,7 +179,7 @@ export default function ParaQuemVendemosPage() {
           </div>
           <RevendedorForm
             heading="Quero ser revendedor"
-            subheading="Preencha para receber tabela de distribuidor."
+            subheading="Preencha e receba o contato de um executivo."
             origin="para-quem-vendemos"
           />
         </div>
