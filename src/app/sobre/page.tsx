@@ -20,14 +20,14 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <section className="page-head" style={{ paddingTop: 16 }}>
+      <section className="page-head" style={{ paddingTop: 16, borderBottom: "none" }}>
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Sobre" }]} />
-          <h1 style={{ marginTop: 18 }}>Conheça a Med Live Well.</h1>
+          <h1 style={{ marginTop: 18 }}>Conheça a Med Live Well</h1>
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 56, paddingBottom: 56 }}>
+      <section className="section" style={{ paddingTop: 24, paddingBottom: 56 }}>
         <div className="container">
           <div className="sobre-intro">
             <div className="sobre-intro-text">
