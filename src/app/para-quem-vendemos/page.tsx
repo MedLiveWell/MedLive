@@ -73,10 +73,9 @@ export default function ParaQuemVendemosPage() {
             <div>
               <h2>Por que abastecer sua loja com a Med Live</h2>
               <p style={{ marginTop: 14, color: "var(--ink-2)", fontSize: 16 }}>
-                Importadora e distribuidora B2B comprometida com a operação de nossas lojas
-                parceiras.
-              </p>
-              <p style={{ marginTop: 8, color: "var(--ink-2)", fontSize: 16 }}>
+                Importadora e distribuidora B2B comprometida com a operação de nossas
+                <br className="br-desktop" /> lojas parceiras.
+                <br />
                 Tabela de distribuidor, consultor dedicado e um mix recomendado para sua loja
                 para você montar uma vitrine completa e sem dor de cabeça.
               </p>
