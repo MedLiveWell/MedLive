@@ -60,7 +60,7 @@ export default function ParaQuemVendemosPage() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 64 }}>
+      <section className="section" style={{ paddingTop: 32 }}>
         <div className="container">
           <div
             style={{
@@ -88,7 +88,7 @@ export default function ParaQuemVendemosPage() {
             </div>
           </div>
 
-          <div className="why-grid" style={{ marginTop: 56 }}>
+          <div className="why-grid" style={{ marginTop: 28 }}>
             <div className="why-card">
               <div className="icon">
                 <Icon.tag />
