@@ -48,6 +48,8 @@ export type Product = {
   colors?: ProductColor[];
   /** When true, render the gallery as a clean blank placeholder instead of the category glyph. */
   awaitingPhotos?: boolean;
+  /** When true, this product is featured in the /para-quem-vendemos showcase. */
+  vendemosHighlight?: boolean;
 };
 
 export type BlogPost = {
@@ -446,6 +448,7 @@ export const PRODUCTS: Product[] = [
     specs: ["Aço", "4 rodas", "135kg"],
     image: med520PretoImages[0],
     images: med520PretoImages,
+    vendemosHighlight: true,
     dimensions: [
       ["Largura", "48 cm"],
       ["Altura", "77 – 87 cm"],
@@ -633,6 +636,7 @@ export const PRODUCTS: Product[] = [
     specs: ["Aço", "Desmontável", "150kg"],
     image: med410Images[0],
     images: med410Images,
+    vendemosHighlight: true,
     dimensions: [
       ["Largura", "45 cm"],
       ["Altura", "93 cm"],
@@ -715,6 +719,7 @@ export const PRODUCTS: Product[] = [
     specs: ["Multifuncional", "3 em 1", "120kg"],
     image: med3040AmareloImages[0],
     images: med3040AmareloImages,
+    vendemosHighlight: true,
     dimensions: [
       ["Largura", "65 cm"],
       ["Altura", "79 – 99 cm"],
