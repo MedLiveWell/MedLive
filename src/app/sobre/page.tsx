@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
-import { VALUES } from "@/lib/data";
 
 const TITLE = "Sobre a Med Live Well | Distribuidora de produtos de reabilitação";
 const DESCRIPTION =
@@ -57,50 +56,34 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section
-        className="section"
-        style={{ background: "var(--paper-2)", paddingTop: 64, paddingBottom: 64 }}
-      >
-        <div className="container">
-          <div className="mv-grid">
-            <div className="mv-card mission">
-              <div className="icon">
-                <Icon.target />
-              </div>
-              <span className="eyebrow on-dark">Nossa missão</span>
-              <p>
-                Oferecer soluções de reabilitação que vão além da funcionalidade, transformando
-                vidas por meio de autonomia, conforto e segurança, com produtos de alta qualidade e
-                suporte confiável.
-              </p>
-            </div>
-            <div className="mv-card vision">
-              <div className="icon">
-                <Icon.telescope />
-              </div>
-              <span className="eyebrow" style={{ color: "var(--tangerina)" }}>
-                Nossa visão
-              </span>
-              <p>
-                Ser reconhecida globalmente como a primeira escolha em equipamentos de mobilidade e
-                cuidados domiciliares. Tornar o processo de reabilitação mais seguro, acessível e
-                humano.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section" style={{ paddingTop: 64, paddingBottom: 64 }}>
         <div className="container">
-          <h2 style={{ marginBottom: 28 }}>Nossos valores</h2>
-          <div className="values-row-grid">
-            {VALUES.map((v) => (
-              <div key={v.num} className="value-row">
-                <span className="value-dot" />
-                <span className="value-title">{v.title}</span>
-              </div>
-            ))}
+          <div style={{ maxWidth: 760 }}>
+            <h2 style={{ marginBottom: 24 }}>Sobre a Med Live</h2>
+            <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
+              A Med Live Well nasceu em novembro de 2022 a partir de uma oportunidade clara: o
+              mercado brasileiro de mobilidade e reabilitação precisava de um importador presente,
+              que confiasse no seu produto, com preço estável, uma garantia longa e atendimento
+              direto ao lojista. Em poucos anos, a operação cresceu em três frentes complementares:
+              matriz em Itajaí, no estado de Santa Catarina, onde nasceu a marca, o centro de
+              distribuição em São Paulo, de onde despachamos diariamente todos os pedidos e
+              escritório administrativo na Avenida Paulista, coração comercial do país.
+            </p>
+            <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
+              Como importadora e distribuidora B2B com marca própria, trabalhamos com uma linha
+              completa de produtos de mobilidade e reabilitação. Andadores, cadeiras de banho,
+              muletas, barras de apoio, cadeiras de transferência, banquetas de banho e outros
+              itens essenciais para o cuidado de pessoas com necessidades específicas. Toda a
+              linha é registrada na ANVISA, com laudos técnicos e fichas de produto disponíveis
+              para nossos lojistas parceiros.
+            </p>
+            <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7 }}>
+              Atendemos farmácias, lojas ortopédicas, clínicas, hospitais e empresas de homecare.
+              A operação foi desenhada para ser próxima ao lojista: consultor comercial dedicado
+              por conta, tabela de distribuidor com margem saudável e estoque pronto para
+              despacho. Cada parceria é construída com transparência, agilidade e o compromisso
+              de estar presente quando o lojista mais precisa, antes, durante e depois da venda.
+            </p>
           </div>
         </div>
       </section>
@@ -110,25 +93,53 @@ export default function SobrePage() {
         style={{ background: "var(--paper-2)", paddingTop: 64, paddingBottom: 64 }}
       >
         <div className="container">
-          <h2 style={{ marginBottom: 12 }}>Qualidade e certificações</h2>
-          <p style={{ color: "var(--ink-2)", fontSize: 15, marginBottom: 28, maxWidth: 760 }}>
-            Todos os nossos produtos passam por rigoroso controle de qualidade e possuem os
-            registros e certificações exigidos pela legislação brasileira.
+          <h2 style={{ marginBottom: 12 }}>Nossos compromissos</h2>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, marginBottom: 32, maxWidth: 620 }}>
+            O que a loja parceira pode esperar da Med Live Well em toda parceria.
           </p>
-          <div className="certs-row">
-            <div className="cert-small">
-              <div className="cert-small-box">ANVISA</div>
-              <span>ANVISA</span>
-            </div>
-            <div className="cert-small">
-              <div className="cert-small-box">INMETRO</div>
-              <span>INMETRO</span>
-            </div>
-            <div className="cert-small">
-              <div className="cert-small-box cert-small-check">
-                <Icon.check size={28} />
+          <div
+            className="why-grid"
+            style={{ gridTemplateColumns: "repeat(2, 1fr)", marginTop: 0 }}
+          >
+            <div className="why-card">
+              <div className="icon">
+                <Icon.tag />
               </div>
-              <span>Qualidade Certificada</span>
+              <h4>Preço estável</h4>
+              <p>
+                Tabela de distribuidor com margem saudável e preço estável há mais de 12 meses.
+                Previsibilidade para sua loja planejar margem e estoque sem surpresas.
+              </p>
+            </div>
+            <div className="why-card">
+              <div className="icon">
+                <Icon.badgeCheck />
+              </div>
+              <h4>Garantia de 5 anos</h4>
+              <p>
+                Cobertura total por 5 anos em toda a linha. Tranquilidade para você vender
+                produtos de mobilidade e reabilitação sem se preocupar com pós-venda.
+              </p>
+            </div>
+            <div className="why-card">
+              <div className="icon">
+                <Icon.shield />
+              </div>
+              <h4>Registrados na ANVISA</h4>
+              <p>
+                Toda a linha Med Live é registrada na ANVISA, com laudos técnicos e fichas de
+                produto disponíveis para as lojas parceiras.
+              </p>
+            </div>
+            <div className="why-card">
+              <div className="icon">
+                <Icon.users />
+              </div>
+              <h4>Atendimento direto</h4>
+              <p>
+                Consultor comercial dedicado por conta para cotações, trocas, devoluções e
+                suporte técnico. Atendimento próximo e ágil para lojas parceiras.
+              </p>
             </div>
           </div>
         </div>
