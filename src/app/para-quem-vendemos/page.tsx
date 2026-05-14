@@ -126,7 +126,7 @@ export default function ParaQuemVendemosPage() {
           <div className="sec-head">
             <div className="left">
               <h2>Para começar a vender hoje</h2>
-              <p>
+              <p style={{ textWrap: "balance" }}>
                 Uma seleção variada de equipamentos de mobilidade e reabilitação com andadores,
                 cadeiras de banho, cadeiras de transferência, muletas e mais para montar uma
                 vitrine completa.
