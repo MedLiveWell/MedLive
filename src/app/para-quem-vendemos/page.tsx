@@ -20,21 +20,8 @@ export const metadata: Metadata = {
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
-const HIGHLIGHT_CODES = [
-  "MED 120",
-  "MED 190",
-  "MED 380",
-  "MED 410",
-  "MED 3030",
-  "MED 220",
-  "MED 530",
-  "MED 1010",
-];
-
 export default function ParaQuemVendemosPage() {
-  const featured = HIGHLIGHT_CODES.map((c) => PRODUCTS.find((p) => p.code === c)).filter(
-    (p): p is NonNullable<typeof p> => Boolean(p),
-  );
+  const featured = PRODUCTS.filter((p) => p.vendemosHighlight);
 
   return (
     <>
@@ -140,8 +127,9 @@ export default function ParaQuemVendemosPage() {
             <div className="left">
               <h2>Para começar a vender hoje</h2>
               <p>
-                Seleção variada da linha — andadores, cadeiras de banho, cadeiras de
-                transferência, muletas e barras — para uma vitrine completa de reabilitação.
+                Uma seleção variada de equipamentos de mobilidade e reabilitação com andadores,
+                cadeiras de banho, cadeiras de transferência, muletas e mais para montar uma
+                vitrine completa.
               </p>
             </div>
             <Button variant="ghost" href="/produtos">
