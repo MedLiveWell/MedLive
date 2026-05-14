@@ -83,7 +83,10 @@ export default function RevendedorPage() {
             </div>
           </div>
 
-          <RevendedorForm origin="seja-revendedor" />
+          <RevendedorForm
+            origin="seja-revendedor"
+            subheading="Preencha e receba o contato de um executivo."
+          />
         </div>
       </section>
 
