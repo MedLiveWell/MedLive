@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/Button";
-import { ChannelGlyph } from "@/components/ChannelGlyph";
 import { Icon } from "@/components/Icon";
 import { Newsletter } from "@/components/Newsletter";
 import { ProductCard } from "@/components/ProductCard";
@@ -81,10 +80,20 @@ export default function ParaQuemVendemosPage() {
               </p>
             </div>
             <div
-              className="hero-visual-ch"
-              style={{ padding: 32, aspectRatio: "16/10", borderRadius: "var(--radius-xl)" }}
+              style={{
+                background: "var(--paper-2)",
+                borderRadius: "var(--radius-lg)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "var(--ink-2)",
+                fontSize: 16,
+                fontWeight: 500,
+                aspectRatio: "16/10",
+              }}
+              aria-hidden="true"
             >
-              <ChannelGlyph kind="store" />
+              <span>Imagem aqui</span>
             </div>
           </div>
 
