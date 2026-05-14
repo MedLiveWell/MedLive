@@ -965,7 +965,7 @@ p { margin: 0; color: var(--ink-2); }
   background: var(--cobalto-soft); color: var(--cobalto);
 }
 .why-card h4 { font-size: 20px; }
-.why-card p { font-size: 14.5px; color: var(--ink-2); line-height: 1.55; }
+.why-card p { font-size: 14.5px; color: var(--ink-2); line-height: 1.55; text-wrap: balance; }
 
 /* ----- Sobre ----- */
 .about-hero-visual {
