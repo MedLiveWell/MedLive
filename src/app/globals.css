@@ -619,6 +619,26 @@ p { margin: 0; color: var(--ink-2); }
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
 
+/* "Sobre a Med Live" — two-column bio with image placeholder */
+.sobre-bio {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.sobre-bio-img {
+  aspect-ratio: 4/5;
+  background: var(--line);
+  border-radius: var(--radius-lg);
+  display: grid;
+  place-items: center;
+  color: var(--ink-3);
+}
+@media (max-width: 900px) {
+  .sobre-bio { grid-template-columns: 1fr; gap: 28px; }
+  .sobre-bio-img { order: -1; max-width: 360px; margin: 0 auto; width: 100%; }
+}
+
 /* Values — single-line rows */
 .values-row-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 16px; }
 .value-row {

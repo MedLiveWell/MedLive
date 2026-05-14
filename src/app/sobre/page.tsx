@@ -61,32 +61,39 @@ export default function SobrePage() {
         style={{ background: "var(--paper-2)", paddingTop: 64, paddingBottom: 64 }}
       >
         <div className="container">
-          <div style={{ maxWidth: 760 }}>
-            <h2 style={{ marginBottom: 24 }}>Sobre a Med Live</h2>
-            <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
-              A Med Live Well nasceu em novembro de 2022 a partir de uma oportunidade clara: o
-              mercado brasileiro de mobilidade e reabilitação precisava de um importador presente,
-              que confiasse no seu produto, com preço estável, uma garantia longa e atendimento
-              direto ao lojista. Em poucos anos, a operação cresceu em três frentes complementares:
-              matriz em Itajaí, no estado de Santa Catarina, onde nasceu a marca, o centro de
-              distribuição em São Paulo, de onde despachamos diariamente todos os pedidos e
-              escritório administrativo na Avenida Paulista, coração comercial do país.
-            </p>
-            <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
-              Como importadora e distribuidora B2B com marca própria, trabalhamos com uma linha
-              completa de produtos de mobilidade e reabilitação. Andadores, cadeiras de banho,
-              muletas, barras de apoio, cadeiras de transferência, banquetas de banho e outros
-              itens essenciais para o cuidado de pessoas com necessidades específicas. Toda a
-              linha é registrada na ANVISA, com laudos técnicos e fichas de produto disponíveis
-              para nossos lojistas parceiros.
-            </p>
-            <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7 }}>
-              Atendemos farmácias, lojas ortopédicas, clínicas, hospitais e empresas de homecare.
-              A operação foi desenhada para ser próxima ao lojista: consultor comercial dedicado
-              por conta, tabela de distribuidor com margem saudável e estoque pronto para
-              despacho. Cada parceria é construída com transparência, agilidade e o compromisso
-              de estar presente quando o lojista mais precisa, antes, durante e depois da venda.
-            </p>
+          <div className="sobre-bio">
+            <div className="sobre-bio-text">
+              <h2 style={{ marginBottom: 24 }}>Sobre a Med Live</h2>
+              <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
+                A Med Live Well nasceu em novembro de 2022 a partir de uma oportunidade clara: o
+                mercado brasileiro de mobilidade e reabilitação precisava de um importador
+                presente, que confiasse no seu produto, com preço estável, uma garantia longa e
+                atendimento direto ao lojista. Em poucos anos, a operação cresceu em três frentes
+                complementares: matriz em Itajaí, no estado de Santa Catarina, onde nasceu a
+                marca, o centro de distribuição em São Paulo, de onde despachamos diariamente
+                todos os pedidos e escritório administrativo na Avenida Paulista, coração
+                comercial do país.
+              </p>
+              <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7, marginBottom: 18 }}>
+                Como importadora e distribuidora B2B com marca própria, trabalhamos com uma linha
+                completa de produtos de mobilidade e reabilitação. Andadores, cadeiras de banho,
+                muletas, barras de apoio, cadeiras de transferência, banquetas de banho e outros
+                itens essenciais para o cuidado de pessoas com necessidades específicas. Toda a
+                linha é registrada na ANVISA, com laudos técnicos e fichas de produto disponíveis
+                para nossos lojistas parceiros.
+              </p>
+              <p style={{ color: "var(--ink-2)", fontSize: 16, lineHeight: 1.7 }}>
+                Atendemos farmácias, lojas ortopédicas, clínicas, hospitais e empresas de
+                homecare. A operação foi desenhada para ser próxima ao lojista: consultor
+                comercial dedicado por conta, tabela de distribuidor com margem saudável e
+                estoque pronto para despacho. Cada parceria é construída com transparência,
+                agilidade e o compromisso de estar presente quando o lojista mais precisa, antes,
+                durante e depois da venda.
+              </p>
+            </div>
+            <div className="sobre-bio-img" aria-hidden="true">
+              <Icon.image size={56} />
+            </div>
           </div>
         </div>
       </section>
