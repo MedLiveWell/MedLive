@@ -770,7 +770,7 @@ p { margin: 0; color: var(--ink-2); }
   display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
 }
 .newsletter h3 { font-size: 32px; letter-spacing: -.015em; }
-.newsletter p { font-size: 16px; color: var(--ink-2); margin-top: 10px; max-width: 440px; }
+.newsletter p { font-size: 16px; color: var(--ink-2); margin-top: 10px; max-width: 580px; }
 .newsletter form {
   display: flex; gap: 10px; padding: 6px;
   background: #fff; border-radius: 999px; border: 1px solid var(--line);
