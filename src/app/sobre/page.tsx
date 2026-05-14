@@ -56,7 +56,10 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section className="section" style={{ paddingTop: 64, paddingBottom: 64 }}>
+      <section
+        className="section"
+        style={{ background: "var(--paper-2)", paddingTop: 64, paddingBottom: 64 }}
+      >
         <div className="container">
           <div style={{ maxWidth: 760 }}>
             <h2 style={{ marginBottom: 24 }}>Sobre a Med Live</h2>
@@ -88,10 +91,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <section
-        className="section"
-        style={{ background: "var(--paper-2)", paddingTop: 64, paddingBottom: 64 }}
-      >
+      <section className="section" style={{ paddingTop: 64, paddingBottom: 64 }}>
         <div className="container">
           <h2 style={{ marginBottom: 12 }}>Nossos compromissos</h2>
           <p style={{ color: "var(--ink-2)", fontSize: 17, marginBottom: 32, maxWidth: 620 }}>
