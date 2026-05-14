@@ -43,15 +43,14 @@ export default function ParaQuemVendemosPage() {
         <div className="container">
           <Breadcrumb items={[{ label: "Início", href: "/" }, { label: "Para quem vendemos" }]} />
           <h1 style={{ marginTop: 18 }}>
-            Tabela de distribuidor B2B com{" "}
-            <span style={{ color: "var(--tangerina)" }}>margem saudável</span> para sua loja.
+            Sua parceria com{" "}
+            <span style={{ color: "var(--tangerina)" }}>Med Live</span> começa aqui.
           </h1>
           <p className="lead">
-            Atendemos farmácias, lojas ortopédicas, clínicas, hospitais e empresas de homecare.
-            Importadora B2B de mobilidade e reabilitação com toda a linha registrada na ANVISA.
+            Atendemos farmácias, lojas ortopédicas, clínicas e hospitais em todo o Brasil.
           </p>
           <div className="hero-actions" style={{ marginTop: 28 }}>
-            <Button variant="primary" href="#cadastro">
+            <Button variant="primary" href="/seja-revendedor">
               Quero ser loja parceira
             </Button>
             <Button variant="ghost" href="/produtos">
