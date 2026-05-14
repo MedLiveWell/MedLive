@@ -137,10 +137,10 @@ export function RevendedorForm({
           <select required value={form.tipo} onChange={update("tipo")}>
             <option value="">Selecione o tipo de canal</option>
             <option>Farmácia</option>
-            <option>Loja de ortopedia</option>
+            <option>Loja ortopédica</option>
             <option>Clínica / consultório</option>
-            <option>E-commerce próprio</option>
-            <option>Seller de marketplace</option>
+            <option>Hospital</option>
+            <option>Homecare</option>
             <option>Outro</option>
           </select>
         </div>
