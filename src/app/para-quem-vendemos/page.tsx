@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
@@ -67,19 +68,20 @@ export default function ParaQuemVendemosPage() {
             </div>
             <div
               style={{
-                background: "var(--paper-2)",
+                position: "relative",
                 borderRadius: "var(--radius-lg)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "var(--ink-2)",
-                fontSize: 16,
-                fontWeight: 500,
+                overflow: "hidden",
                 aspectRatio: "16/10",
+                background: "var(--paper-2)",
               }}
-              aria-hidden="true"
             >
-              <span>Imagem aqui</span>
+              <Image
+                src="/images/cd-despacho-medlive.jpg"
+                alt="Centro de distribuição da Med Live Well em São Paulo, com funcionário preparando pedido para envio em meio a prateleiras de produtos de mobilidade e reabilitação"
+                fill
+                sizes="(max-width: 900px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </div>
 
