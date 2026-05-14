@@ -144,7 +144,7 @@ export default function ParaQuemVendemosPage() {
         </div>
       </section>
 
-      <section id="cadastro" className="section" style={{ paddingTop: 16 }}>
+      <section id="cadastro" className="section" style={{ paddingTop: 64 }}>
         <div className="container revende-grid">
           <div>
             <h2 style={{ marginBottom: 12 }}>
