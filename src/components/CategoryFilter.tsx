@@ -59,7 +59,12 @@ export function CategoryFilter() {
     (active.kind === "subcategory" && active.categorySlug === slug);
 
   return (
-    <NavigationMenu.Root className="filters" aria-label="Categorias de produtos">
+    <NavigationMenu.Root
+      className="filters"
+      aria-label="Categorias de produtos"
+      delayDuration={0}
+      skipDelayDuration={100}
+    >
       <NavigationMenu.List className="filters-list">
         <NavigationMenu.Item>
           <NavigationMenu.Link asChild active={active.kind === "all"}>
@@ -103,10 +108,6 @@ export function CategoryFilter() {
           );
         })}
       </NavigationMenu.List>
-
-      <div className="nav-viewport-wrapper">
-        <NavigationMenu.Viewport className="nav-viewport" />
-      </div>
     </NavigationMenu.Root>
   );
 }
@@ -122,7 +123,7 @@ function CategoryChipWithSubs({
 }) {
   const subs = getSubcategoriesForCategory(category);
   return (
-    <NavigationMenu.Item>
+    <NavigationMenu.Item className="filter-item">
       <NavigationMenu.Trigger asChild>
         <Link
           href={`/produtos/${category.slug}`}
@@ -132,7 +133,7 @@ function CategoryChipWithSubs({
           <CaretDown />
         </Link>
       </NavigationMenu.Trigger>
-      <NavigationMenu.Content className="nav-content">
+      <NavigationMenu.Content className="nav-content filter-content">
         <ul className="subcat-panel">
           <li>
             <NavigationMenu.Link asChild>
