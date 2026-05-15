@@ -378,10 +378,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 2 Barras Clique Duplo Alumínio Prata Acetinado",
-    desc: "Autonomia com um toque de sofisticação. O MED 140 une resistência e acabamento prata acetinado exclusivo para quem quer se locomover com segurança, estilo e praticidade no dia a dia.",
+    desc: "O MED 140 é um andador fixo em alumínio com barras centrais reforçadas em aço e acabamento prata acetinado, capacidade para 135 kg e estrutura leve para o uso diário.\nO ajuste de altura por pino click em 8 níveis com marcação numérica permite regulagem precisa para diferentes estaturas.\nO sistema de clique duplo, com botões laterais, abre e trava o andador em segundos, pesa 2,5 kg e dobra para facilitar o armazenamento.",
     specs: ["Alumínio", "Acetinado", "135kg"],
     image: med140Images[0],
     images: med140Images,
+    differentials: [
+      { iconKey: "sparkle", title: "Acabamento prata acetinado", desc: "Estrutura em alumínio com acabamento elegante e resistente ao desgaste do uso prolongado." },
+      { iconKey: "check", title: "Ajuste de altura em 8 níveis", desc: "Sistema de pino click com marcação numérica para regulagem precisa." },
+      { iconKey: "truck", title: "Sistema de clique duplo", desc: "Botões laterais que travam e destravam o andador de forma rápida e segura." },
+    ],
     dimensions: [
       ["Largura", "43,5 cm"],
       ["Altura", "82 – 100 cm"],
