@@ -766,7 +766,7 @@ export const PRODUCTS: Product[] = [
     subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto",
-    desc: "Com encosto e assento amplo de 50 cm, a MED 380 oferece mais espaço e apoio dorsal para quem precisa de estabilidade e conforto durante o banho. Leve, resistente à corrosão e com ponteiras antiderrapantes de borracha, se adapta bem a ambientes domiciliares, clínicos e institucionais.\n\nAltura regulável em 6 níveis por pino click, sem ferramentas. Suporta até 135 kg.",
+    desc: "Com encosto e assento amplo de 50 cm, a MED 380 oferece mais espaço e apoio dorsal para quem precisa de estabilidade e conforto durante o banho.\n\nLeve, resistente à corrosão e com ponteiras antiderrapantes de borracha, se adapta bem a ambientes domiciliares, clínicos e institucionais.\n\nAltura regulável em 6 níveis por pino click, sem ferramentas.",
     specs: ["Com encosto", "Assento amplo", "135kg"],
     image: med380Images[0],
     images: med380Images,
