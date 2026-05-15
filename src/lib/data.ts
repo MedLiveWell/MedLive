@@ -258,6 +258,7 @@ const med550Images = [
 ];
 
 const med310Images = ["/images/med-310-1.png"];
+const med320Images = ["/images/med-320-1.jpg"];
 
 const med330Images = [
   "/images/med-330-1.png",
@@ -668,8 +669,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta de banho com encosto",
-    desc: "Com encosto em polietileno, maior conforto e segurança no banho.",
-    specs: ["Com encosto", "Antiderrapante", "100kg"],
+    desc: "A MED 320 é uma banqueta de banho com encosto em alumínio, com assento e encosto em polietileno de alta densidade (HDPE), indicada para usuários que precisam de apoio nas costas durante o banho.\nO assento conta com furos para escoamento da água e o material resiste à corrosão, facilitando a higienização após cada uso.\nSuporta até 135 kg, tem ajuste de altura por pino click em 8 níveis e ponteiras de borracha antiderrapante que dão firmeza ao piso molhado.",
+    specs: ["Com encosto", "Antiderrapante", "135kg"],
+    image: med320Images[0],
+    images: med320Images,
+    differentials: [
+      { iconKey: "users", title: "Encosto em HDPE", desc: "Apoio nas costas para usuários que precisam ficar sentados por mais tempo durante o banho." },
+      { iconKey: "check", title: "Assento com furos para escoamento", desc: "Material resistente à água que escoa o líquido durante o uso e facilita a higienização." },
+      { iconKey: "shield", title: "Ponteiras antiderrapantes", desc: "Borracha que dá firmeza ao piso molhado e reduz o risco de escorregar durante o banho." },
+    ],
   },
   {
     code: "MED 330",
