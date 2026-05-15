@@ -623,10 +623,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador com Rodas e Assento Alumínio",
-    desc: "Controle total em cada curva. O MED 550 tem rodas dianteiras com giro 360° para manobras precisas e assento confortável — a solução para quem quer autonomia e segurança em qualquer ambiente.",
+    desc: "O MED 550 é um andador com 4 rodas em alumínio, com assento em HDPE de fácil higienização, encosto em tecido, freios traseiros com trava e estrutura dobrável.\nAs rodas dianteiras possuem trava seletiva que alterna entre fixas e giro 360°, permitindo desde caminhadas em linha reta até manobras precisas em ambientes apertados.\nSuporta até 135 kg e tem ajuste de altura em 5 níveis por pino click e rodas de 8 polegadas que oferecem deslocamento suave em diferentes superfícies.",
     specs: ["Com assento", "4 rodas", "135kg"],
     image: med550Images[0],
     images: med550Images,
+    differentials: [
+      { iconKey: "truck", title: "Rodas dianteiras com giro 360°", desc: "Trava seletiva alterna entre fixas e giratórias, ideal para manobras em espaços apertados." },
+      { iconKey: "badgeCheck", title: "Assento em HDPE", desc: "Material resistente e de fácil higienização, indicado para uso clínico e domiciliar." },
+      { iconKey: "shield", title: "Freios traseiros com trava", desc: "Sistema de trava fixa que imobiliza o andador durante as pausas para descanso." },
+    ],
     dimensions: [
       ["Largura", "52 cm"],
       ["Altura", "90 – 105 cm"],
