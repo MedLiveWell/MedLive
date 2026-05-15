@@ -107,6 +107,13 @@ export const CATEGORIES: Category[] = [
     image: "/images/med-3030-1.png",
   },
   {
+    id: "cadeiras-de-transporte",
+    label: "Cadeiras de transporte",
+    count: 1,
+    desc: "Cadeiras de transporte para deslocamento de pacientes em ambientes domiciliares, clínicas e hospitais.",
+    image: "/categories/cadeiras-de-transporte.png",
+  },
+  {
     id: "muletas",
     label: "Muletas",
     count: 2,
@@ -742,6 +749,28 @@ export const PRODUCTS: Product[] = [
         ],
       },
       { id: "azul", label: "Azul", swatch: "#1e4f99", images: [] },
+    ],
+  },
+
+  // Cadeiras de transporte (1)
+  {
+    code: "MED 4010",
+    cat: "cadeiras-de-transporte",
+    name: "Lorem ipsum dolor sit amet",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    specs: ["Lorem ipsum", "Dolor sit", "100kg"],
+    image: "/images/med-4010-1.png",
+    images: ["/images/med-4010-1.png"],
+    dimensions: [
+      ["Largura", "00 cm"],
+      ["Altura", "00 cm"],
+      ["Profundidade", "00 cm"],
+    ],
+    characteristics: [
+      ["Capacidade", "000 kg"],
+      ["Peso líquido", "00 kg"],
+      ["Acabamento", "Lorem ipsum"],
+      ["Função articulada", "—"],
     ],
   },
 
