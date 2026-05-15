@@ -977,7 +977,26 @@ p { margin: 0; color: var(--ink-2); }
 }
 .filter-chip:not(.active):not([data-active]) .count { background: var(--paper-3); color: var(--ink-3); }
 
-/* Mega menu — subcategory dropdown under category chips */
+/* Mega menu — subcategory dropdown anchored under each chip */
+.filters .filter-item { position: relative; }
+.filter-content {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 40;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  animation: filterContentIn 120ms ease-out;
+}
+@keyframes filterContentIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Header mega menu viewport (kept for the header NavigationMenu) */
 .nav-viewport-wrapper {
   position: absolute; left: 0; right: 0; top: 100%;
   display: flex; justify-content: flex-start;
@@ -993,7 +1012,7 @@ p { margin: 0; color: var(--ink-2); }
   margin-top: 6px;
   width: var(--radix-navigation-menu-viewport-width);
   height: var(--radix-navigation-menu-viewport-height);
-  transition: width .2s ease, height .2s ease;
+  transition: width .15s ease, height .15s ease;
   overflow: hidden;
 }
 .nav-content { position: absolute; top: 0; left: 0; }
