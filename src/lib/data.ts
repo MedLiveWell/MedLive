@@ -257,7 +257,7 @@ const med550Images = [
   "/images/med-550-2.png",
 ];
 
-const med310Images = ["/images/med-310-1.png"];
+const med310Images = ["/images/med-310-1.jpg"];
 const med320Images = ["/images/med-320-1.jpg"];
 
 const med330Images = [
