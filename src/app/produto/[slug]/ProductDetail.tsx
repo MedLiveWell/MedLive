@@ -369,7 +369,7 @@ export function ProductDetail({ product }: { product: Product }) {
                 <p
                   key={i}
                   className="pd-desc"
-                  style={{ fontWeight: 400, marginTop: 12 }}
+                  style={{ fontWeight: 400, marginTop: 4 }}
                 >
                   {para}
                 </p>
