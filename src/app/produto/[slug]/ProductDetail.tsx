@@ -362,18 +362,23 @@ export function ProductDetail({ product }: { product: Product }) {
                   </div>
                 </div>
               )}
-              <p className="pd-desc" style={{ fontWeight: 400 }}>
-                {longDesc[0]}
-              </p>
-              {longDesc.slice(1).map((para, i) => (
-                <p
-                  key={i}
-                  className="pd-desc"
-                  style={{ fontWeight: 400, marginTop: 4 }}
-                >
-                  {para}
-                </p>
-              ))}
+              {longDesc.map((para, i) => {
+                const isFirst = i === 0;
+                const isLast = i === longDesc.length - 1;
+                return (
+                  <p
+                    key={i}
+                    className="pd-desc"
+                    style={{
+                      fontWeight: 400,
+                      marginTop: isFirst ? undefined : 4,
+                      marginBottom: isLast ? undefined : 0,
+                    }}
+                  >
+                    {para}
+                  </p>
+                );
+              })}
 
               <Link href="/seja-revendedor" className="btn btn-primary btn-lg pd-cta-main">
                 Solicitar cotação B2B <Icon.arrow />
