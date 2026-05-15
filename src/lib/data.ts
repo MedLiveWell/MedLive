@@ -590,8 +590,8 @@ export const PRODUCTS: Product[] = [
     ],
     colors: [
       { id: "preto", label: "Preto", swatch: "#1c1c1c", images: med520PretoImages },
-      { id: "vinho", label: "Vinho", swatch: "#7a1e2a", images: med520VinhoImages },
-      { id: "azul", label: "Azul", swatch: "#1e4f99", images: med520AzulImages },
+      { id: "vinho", label: "Vinho", swatch: "#7a1e2a", images: med520VinhoImages, imageTransforms: ["scale(0.85)"] },
+      { id: "azul", label: "Azul", swatch: "#1e4f99", images: med520AzulImages, imageTransforms: ["scale(0.85)"] },
       { id: "dourado", label: "Dourado", swatch: "#c79a3a", images: [] },
     ],
   },
@@ -658,6 +658,7 @@ export const PRODUCTS: Product[] = [
     specs: ["Sem encosto", "Antiderrapante", "135kg"],
     image: med310Images[0],
     images: med310Images,
+    imageTransforms: ["scale(0.85)"],
     differentials: [
       { iconKey: "check", title: "Assento em HDPE com furos", desc: "Material resistente à água que escoa o líquido durante o uso e facilita a higienização." },
       { iconKey: "shield", title: "Ponteiras antiderrapantes", desc: "Borracha que dá firmeza ao piso molhado e reduz o risco de escorregar durante o banho." },
@@ -673,6 +674,7 @@ export const PRODUCTS: Product[] = [
     specs: ["Com encosto", "Antiderrapante", "135kg"],
     image: med320Images[0],
     images: med320Images,
+    imageTransforms: ["scale(0.85)"],
     differentials: [
       { iconKey: "users", title: "Encosto em HDPE", desc: "Apoio nas costas para usuários que precisam ficar sentados por mais tempo durante o banho." },
       { iconKey: "check", title: "Assento com furos para escoamento", desc: "Material resistente à água que escoa o líquido durante o uso e facilita a higienização." },
