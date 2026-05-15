@@ -684,11 +684,16 @@ export const PRODUCTS: Product[] = [
     subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto e Apoio de Braço",
-    desc: "Sentar e levantar com muito mais segurança. A MED 330 tem encosto e apoios de braço laterais para quem precisa de suporte completo — transformando o momento do banho em uma experiência mais segura e confortável.",
+    desc: "A MED 330 é uma banqueta de banho com encosto e apoios de braço laterais em alumínio, com assento e encosto em polietileno de alta densidade (HDPE), indicada para usuários que precisam de auxílio firme para sentar e levantar.\nOs apoios de braço dão suporte ao sentar e levantar, o assento conta com furos para escoamento da água e o material resiste à corrosão, facilitando a higienização após cada uso.",
     specs: ["Encosto", "Apoio braço", "135kg"],
     image: med330Images[0],
     images: med330Images,
     imageTransforms: ["scaleX(-1)"],
+    differentials: [
+      { iconKey: "users", title: "Apoios de braço laterais", desc: "Suporte firme nos dois lados que auxilia o usuário a sentar e levantar com segurança." },
+      { iconKey: "check", title: "Encosto e assento em HDPE", desc: "Material resistente à água, com furos no assento para escoamento e fácil higienização." },
+      { iconKey: "shield", title: "Ponteiras antiderrapantes", desc: "Borracha que dá firmeza ao piso molhado e reduz o risco de escorregar durante o banho." },
+    ],
     dimensions: [
       ["Largura", "53 cm"],
       ["Altura", "74 – 88 cm"],
