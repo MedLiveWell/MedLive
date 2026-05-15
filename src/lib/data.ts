@@ -242,6 +242,9 @@ const med520PretoImages = [
   "/images/med-520-preto-4.png",
 ];
 
+const med520VinhoImages = ["/images/MED-520-VINHO-1.jpg"];
+const med520AzulImages = ["/images/MED-520-AZUL-1.jpg"];
+
 const med530Images = [
   "/images/med-530-1.png",
   "/images/med-530-2.png",
@@ -561,11 +564,16 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador com Rodas Dobrável Aço",
-    desc: "Vá mais longe com mais conforto e segurança. O MED 520 é o andador completo com assento, freios e bolsa — ideal para quem quer autonomia total para caminhar, descansar e se mover com confiança.",
+    desc: "O MED 520 é um andador com 4 rodas em aço, disponível nas cores preto, vinho, azul e dourado, equipado com assento acolchoado, encosto em espuma, freios traseiros e bolsa removível em tecido para os objetos pessoais do usuário.\nSuporta até 135 kg, tem manoplas com ajuste de altura em 6 níveis por parafuso borboleta e rodas de 6 polegadas que oferecem deslocamento estável em ambientes internos e externos.\nOs freios traseiros possuem trava fixa, que mantém o andador imobilizado durante as pausas para descanso.",
     specs: ["Aço", "4 rodas", "135kg"],
     image: med520PretoImages[0],
     images: med520PretoImages,
     vendemosHighlight: true,
+    differentials: [
+      { iconKey: "users", title: "Assento acolchoado com encosto", desc: "Permite pausas para descanso durante caminhadas mais longas, sem precisar procurar um banco." },
+      { iconKey: "shield", title: "Freios traseiros com trava", desc: "Sistema de trava fixa que imobiliza o andador no apoio durante o uso do assento." },
+      { iconKey: "cart", title: "Bolsa removível para pertences", desc: "Tecido resistente para transportar objetos pessoais com praticidade no dia a dia." },
+    ],
     dimensions: [
       ["Largura", "48 cm"],
       ["Altura", "77 – 87 cm"],
@@ -579,8 +587,8 @@ export const PRODUCTS: Product[] = [
     ],
     colors: [
       { id: "preto", label: "Preto", swatch: "#1c1c1c", images: med520PretoImages },
-      { id: "vinho", label: "Vinho", swatch: "#7a1e2a", images: [] },
-      { id: "azul", label: "Azul", swatch: "#1e4f99", images: [] },
+      { id: "vinho", label: "Vinho", swatch: "#7a1e2a", images: med520VinhoImages },
+      { id: "azul", label: "Azul", swatch: "#1e4f99", images: med520AzulImages },
       { id: "dourado", label: "Dourado", swatch: "#c79a3a", images: [] },
     ],
   },
