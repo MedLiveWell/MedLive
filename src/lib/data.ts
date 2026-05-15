@@ -257,6 +257,8 @@ const med550Images = [
   "/images/med-550-2.png",
 ];
 
+const med310Images = ["/images/med-310-1.png"];
+
 const med330Images = [
   "/images/med-330-1.png",
   "/images/med-330-2.png",
@@ -651,8 +653,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "banqueta-sem-encosto",
     cat: "banquetas",
     name: "Banqueta de banho sem encosto",
-    desc: "Banqueta de banho simples, assento antiderrapante, sem encosto.",
-    specs: ["Sem encosto", "Antiderrapante", "100kg"],
+    desc: "A MED 310 é uma banqueta de banho sem encosto em alumínio com assento em polietileno de alta densidade (HDPE), projetada para uso em ambientes úmidos como banheiros, clínicas e hospitais.\nO assento conta com furos para escoamento da água e o material resiste à corrosão, facilitando a higienização após cada uso.\nSuporta até 135 kg, tem ajuste de altura por pino click em 8 níveis e ponteiras de borracha antiderrapante que dão firmeza ao piso molhado.",
+    specs: ["Sem encosto", "Antiderrapante", "135kg"],
+    image: med310Images[0],
+    images: med310Images,
+    differentials: [
+      { iconKey: "check", title: "Assento em HDPE com furos", desc: "Material resistente à água que escoa o líquido durante o uso e facilita a higienização." },
+      { iconKey: "shield", title: "Ponteiras antiderrapantes", desc: "Borracha que dá firmeza ao piso molhado e reduz o risco de escorregar durante o banho." },
+      { iconKey: "tag", title: "Altura ajustável em 8 níveis", desc: "Sistema de pino click que adapta a banqueta ao usuário sem ferramentas." },
+    ],
   },
   {
     code: "MED 320",
