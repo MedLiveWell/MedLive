@@ -181,7 +181,7 @@ export function ProductDetail({ product }: { product: Product }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [galleryLen, lightbox]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const differentials = DIFFERENTIALS[product.cat] || DIFFERENTIALS.andadores;
+  const differentials = product.differentials || DIFFERENTIALS[product.cat] || DIFFERENTIALS.andadores;
   const { dimensions, characteristics } = buildSpecTables(product, capacity);
   const longDesc = buildLongDesc(product);
 
@@ -384,7 +384,7 @@ export function ProductDetail({ product }: { product: Product }) {
           <div className="pd-eyebrow">Diferenciais do produto</div>
           <div className="pd-diff-grid">
             {differentials.map((d, i) => {
-              const IconCmp = Icon[d.iconKey];
+              const IconCmp = Icon[d.iconKey as keyof typeof Icon];
               return (
                 <div key={i} className="pd-diff-card">
                   <div className="ic">
