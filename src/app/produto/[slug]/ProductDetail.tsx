@@ -362,9 +362,6 @@ export function ProductDetail({ product }: { product: Product }) {
               <Link href="/seja-revendedor" className="btn btn-primary btn-lg pd-cta-main">
                 Solicitar cotação B2B <Icon.arrow />
               </Link>
-              <div className="pd-cta-sub">
-                Atendimento exclusivo para revendedores · Resposta em até 1 dia útil
-              </div>
 
               <div className="pd-cta-row">
                 <a href="#" className="btn pd-contact-btn pd-whatsapp-btn">
