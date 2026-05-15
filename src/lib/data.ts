@@ -713,10 +713,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto, Apoio de Braço e Abertura Frontal",
-    desc: "Suporte completo e higiene facilitada para um banho com mais dignidade. A MED 360 tem encosto, apoios de braço e abertura frontal — a solução mais completa para o banho assistido com conforto e praticidade.",
+    desc: "Banqueta para banho com o conjunto mais completo da linha: encosto, apoios de braço laterais e abertura frontal no assento em HDPE, que facilita a higienização íntima e o trabalho do cuidador.\n\nA estrutura em alumínio com ponteiras de borracha de 28 mm garante leveza e estabilidade em piso molhado. Altura regulável em 6 níveis por pino click, sem necessidade de ferramentas. Suporta até 135 kg.",
     specs: ["Abertura frontal", "Apoio braço", "135kg"],
     image: med360Images[0],
     images: med360Images,
+    differentials: [
+      { iconKey: "arrowUp", title: "Abertura frontal", desc: "Assento com abertura que facilita higienização íntima e transferência assistida." },
+      { iconKey: "users", title: "Apoio de braços", desc: "Barras laterais em HDPE para suporte seguro ao sentar e ao levantar." },
+      { iconKey: "check", title: "6 níveis de ajuste", desc: "Regulagem por pino click, sem ferramentas, adaptável a diferentes usuários." },
+    ],
     dimensions: [
       ["Largura", "47 cm"],
       ["Altura", "73 – 86 cm"],
