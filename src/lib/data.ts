@@ -457,10 +457,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 1 Barra Desmontável e Dobrável Alumínio",
-    desc: "Liberdade de movimento no menor espaço possível. O MED 170 é compacto, ultra leve e desmontável — perfeito para quem precisa de apoio confiável em casa, no trabalho ou em viagem.",
+    desc: "O MED 170 é um andador compacto em alumínio com barra central em aço, projetado para usuários que precisam de mobilidade fácil de levar a qualquer lugar.\nSuporta até 136 kg e tem ajuste de altura por pino click em 8 níveis para adaptação a diferentes estaturas.\nPesa 2,85 kg, é totalmente desmontável e dobrável, com embalagem de apenas 10 cm de espessura que facilita o transporte em viagens e o armazenamento em pouco espaço.",
     specs: ["Desmontável", "Sem rodas", "150kg"],
     image: med170Images[0],
     images: med170Images,
+    differentials: [
+      { iconKey: "truck", title: "Totalmente desmontável", desc: "Estrutura que se separa em partes para transporte em viagens e armazenamento em pouco espaço." },
+      { iconKey: "shield", title: "Estrutura compacta de 1 barra", desc: "Design enxuto em alumínio com barra central em aço, para manuseio leve e firme." },
+      { iconKey: "check", title: "Ajuste de altura em 8 níveis", desc: "Sistema de pino click que adapta o andador ao usuário sem ferramentas." },
+    ],
     dimensions: [
       ["Largura", "48 cm"],
       ["Altura", "81 – 98 cm"],
