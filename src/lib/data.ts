@@ -535,10 +535,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 3 Barras Articulado Alumínio Prata Desmontável",
-    desc: "O melhor dos dois mundos: máxima estabilidade e praticidade para guardar. O MED 190 combina 3 barras articuladas com estrutura desmontável — para quem não abre mão de desempenho nem de conveniência.",
+    desc: "O MED 190 é um andador articulado em alumínio com barras centrais em aço e três barras de apoio, com estrutura totalmente desmontável que se separa em partes para transporte e armazenamento em pouco espaço.\nSuporta até 150 kg e tem ajuste de altura por pino click em 8 níveis para adaptação a diferentes estaturas.\nFunciona na posição fixa ou articulada, pesa 2,7 kg e dobra para facilitar o uso diário.",
     specs: ["Desmontável", "Articulado", "150kg"],
     image: med190Images[0],
     images: med190Images,
+    differentials: [
+      { iconKey: "truck", title: "Totalmente desmontável", desc: "Estrutura que se separa em partes para transporte em viagens e armazenamento em pouco espaço." },
+      { iconKey: "shield", title: "Três barras de apoio", desc: "Barra adicional que reforça a firmeza nas mãos e amplia a estabilidade no apoio." },
+      { iconKey: "check", title: "Fixo e articulado", desc: "Duas funções de uso para diferentes perfis de marcha e ambientes." },
+    ],
     dimensions: [
       ["Largura", "53 cm"],
       ["Altura", "81 – 98,5 cm"],
