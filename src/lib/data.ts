@@ -404,11 +404,16 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 3 Barras Articulado Alumínio Prata",
-    desc: "Quando estabilidade faz toda a diferença. O MED 150 oferece base de apoio extra com 3 barras e função articulada — a escolha certa para quem precisa de mais firmeza e segurança em cada passo.",
+    desc: "O MED 150 é um andador articulado em alumínio com barras centrais em aço e três barras de apoio, indicado para usuários que precisam de estabilidade reforçada no apoio das mãos.\nSuporta até 150 kg e tem ajuste de altura por pino click em 8 níveis para adaptação a diferentes estaturas.\nFunciona na posição fixa ou articulada, pesa 2,7 kg e dobra para facilitar o transporte e o armazenamento.",
     specs: ["Alumínio", "3 barras", "150kg"],
     image: med150Images[0],
     images: med150Images,
     imageTransforms: ["scaleX(-1)"],
+    differentials: [
+      { iconKey: "shield", title: "Três barras de apoio", desc: "Barra adicional que reforça a firmeza nas mãos e amplia a estabilidade no apoio." },
+      { iconKey: "users", title: "Capacidade de 150 kg", desc: "Maior suporte de peso da linha de andadores, indicado para diferentes biotipos." },
+      { iconKey: "check", title: "Fixo e articulado", desc: "Duas funções de uso para diferentes perfis de marcha e ambientes." },
+    ],
     dimensions: [
       ["Largura", "53 cm"],
       ["Altura", "81 – 98,5 cm"],
