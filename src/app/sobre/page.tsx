@@ -114,7 +114,7 @@ export default function SobrePage() {
               </div>
               <h4>Preço estável</h4>
               <p>
-                Tabela de distribuidor com margem saudável e preço estável há mais de 12 meses.
+                Tabela de distribuidor parceiro com margem saudável e preço estável.
                 Previsibilidade para sua loja planejar margem e estoque sem surpresas.
               </p>
             </div>
@@ -124,8 +124,8 @@ export default function SobrePage() {
               </div>
               <h4>Garantia de 5 anos</h4>
               <p>
-                Cobertura total por 5 anos em toda a linha. Tranquilidade para você vender
-                produtos de mobilidade e reabilitação sem se preocupar com pós-venda.
+                Cobertura por 5 anos em toda a linha Med Live. Tranquilidade para você vender e
+                não precisar se preocupar com imprevistos e pós-venda.
               </p>
             </div>
             <div className="why-card">
@@ -134,7 +134,7 @@ export default function SobrePage() {
               </div>
               <h4>Registrados na ANVISA</h4>
               <p>
-                Toda a linha Med Live é registrada na ANVISA, com laudos técnicos e fichas de
+                Toda a linha Med Live é registrada na Anvisa, com laudos técnicos e fichas de
                 produto disponíveis para as lojas parceiras.
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function SobrePage() {
               </div>
               <h4>Atendimento direto</h4>
               <p>
-                Consultor comercial dedicado por conta para cotações, trocas, devoluções e
+                Um consultor comercial dedicado ao lojista para cotações, trocas, devoluções e
                 suporte técnico. Atendimento próximo e ágil para lojas parceiras.
               </p>
             </div>
