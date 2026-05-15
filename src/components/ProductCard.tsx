@@ -25,7 +25,6 @@ export function ProductCard({ product: p }: { product: Product }) {
         {p.code}
       </span>
       <h4>{p.name}</h4>
-      <p className="desc">{p.desc}</p>
       <div className="specs">
         {p.specs.map((s, i) => (
           <span key={i} className="spec">
