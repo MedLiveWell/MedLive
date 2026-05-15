@@ -183,7 +183,7 @@ p { margin: 0; color: var(--ink-2); }
   text-align: center; font-size: 13px; color: var(--ink-2);
   margin: 10px 0 18px;
 }
-.pd-cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pd-cta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 24px; }
 .pd-contact-btn { justify-content: center; }
 .pd-whatsapp-btn {
   background: #25D366;
