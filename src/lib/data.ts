@@ -597,10 +597,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador com Rodas Dobrável Alumínio",
-    desc: "Leveza e rodas maiores para um deslocamento mais fluido. O MED 530 é o andador com rodas em alumínio ideal para quem quer se mover com mais facilidade e conforto no dia a dia.",
+    desc: "O MED 530 é um andador com 4 rodas em alumínio, equipado com assento e encosto em tecido, freios traseiros e bolsa removível em tecido para os objetos pessoais do usuário.\nSuporta até 135 kg e tem manoplas com ajuste de altura em 6 níveis por pino click, sistema que adapta o andador ao usuário sem ferramentas.\nAs rodas de 8 polegadas oferecem deslocamento suave em ambientes internos e externos, inclusive em superfícies menos regulares, e os freios traseiros possuem trava fixa para imobilizar o andador nas pausas.",
     specs: ["Alumínio", "4 rodas", "135kg"],
     image: med530Images[0],
     images: med530Images,
+    differentials: [
+      { iconKey: "truck", title: "Rodas grandes de 8 polegadas", desc: "Deslocamento suave inclusive em superfícies menos regulares, dentro e fora de casa." },
+      { iconKey: "shield", title: "Estrutura em alumínio", desc: "Material leve que facilita o manuseio diário e o transporte sem perder firmeza." },
+      { iconKey: "check", title: "Freios traseiros com trava", desc: "Sistema de trava fixa que imobiliza o andador durante as pausas para descanso." },
+    ],
     dimensions: [
       ["Largura", "47 cm"],
       ["Altura", "81 – 94 cm"],
