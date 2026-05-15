@@ -92,8 +92,8 @@ export default function ParaQuemVendemosPage() {
               </div>
               <h4>Preço estável</h4>
               <p>
-                Tabela de distribuidor com margem saudável e preço estável há mais de 12 meses.
-                Previsibilidade para a sua loja planejar margem e estoque sem surpresas.
+                Tabela de distribuidor parceiro com margem saudável e preço estável.
+                Previsibilidade para sua loja planejar margem e estoque sem surpresas.
               </p>
             </div>
             <div className="why-card">
