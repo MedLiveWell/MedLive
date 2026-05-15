@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { PRODUCTS, productSlug } from "@/lib/data";
+import { CATEGORIES, PRODUCTS, SUBCATEGORIES, productSlug } from "@/lib/data";
 import { SITE_URL } from "@/lib/site";
 
 const BASE_URL = SITE_URL;
@@ -17,6 +17,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
   ];
 
+  const categoryRoutes: MetadataRoute.Sitemap = CATEGORIES.map((c) => ({
+    url: `${BASE_URL}/produtos/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  const subcategoryRoutes: MetadataRoute.Sitemap = SUBCATEGORIES.map((s) => ({
+    url: `${BASE_URL}/produtos/${s.parentCategory}/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
   const productRoutes: MetadataRoute.Sitemap = PRODUCTS.map((p) => ({
     url: `${BASE_URL}/produto/${productSlug(p.code)}`,
     lastModified: now,
@@ -24,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...productRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...subcategoryRoutes, ...productRoutes];
 }

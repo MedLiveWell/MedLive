@@ -8,6 +8,8 @@ export type NavItem = {
 
 export type Category = {
   id: string;
+  /** URL slug for category routes (e.g. "andadores" → /produtos/andadores). */
+  slug: string;
   label: string;
   count: number;
   desc: string;
@@ -15,6 +17,15 @@ export type Category = {
   image?: string;
   /** Optional CSS transform applied to the cover image (e.g. "scaleX(-1)"). */
   imageTransform?: string;
+};
+
+export type Subcategory = {
+  id: string;
+  label: string;
+  /** URL slug nested under parent (e.g. "articulado" → /produtos/andadores/articulado). */
+  slug: string;
+  /** Refers to Category.slug (e.g. "andadores"). */
+  parentCategory: string;
 };
 
 export type ProductColor = {
@@ -50,6 +61,8 @@ export type Product = {
   awaitingPhotos?: boolean;
   /** When true, this product is featured in the /para-quem-vendemos showcase. */
   vendemosHighlight?: boolean;
+  /** Optional subcategory id (refers to Subcategory.id). null/undefined = no subcategory. */
+  subcategory?: string | null;
 };
 
 export type BlogPost = {
@@ -79,6 +92,7 @@ export const NAV: NavItem[] = [
 export const CATEGORIES: Category[] = [
   {
     id: "andadores",
+    slug: "andadores",
     label: "Andadores",
     count: 12,
     desc: "Andadores articulados, fixos e com rodas para apoio diário em uso interno e externo.",
@@ -86,6 +100,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "banquetas",
+    slug: "banquetas-de-banho",
     label: "Banquetas de banho",
     count: 7,
     desc: "Segurança no banho com banquetas com e sem encosto, apoio de braço e abertura frontal.",
@@ -94,6 +109,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "cadeiras-banho",
+    slug: "cadeiras-de-banho",
     label: "Cadeiras de banho",
     count: 3,
     desc: "Cadeiras de banho dobráveis e desmontáveis em aço para banho assistido com conforto e estabilidade.",
@@ -101,6 +117,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "cadeiras-transf",
+    slug: "cadeiras-de-transferencia",
     label: "Cadeiras de transferência",
     count: 2,
     desc: "Cadeiras de transferência hidráulicas e multifuncionais para clínicas, hospitais e cuidado domiciliar.",
@@ -108,6 +125,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "cadeiras-de-transporte",
+    slug: "cadeiras-de-transporte",
     label: "Cadeiras de transporte",
     count: 1,
     desc: "Cadeiras de transporte para deslocamento de pacientes em ambientes domiciliares, clínicas e hospitais.",
@@ -115,6 +133,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "muletas",
+    slug: "muletas",
     label: "Muletas",
     count: 2,
     desc: "Muletas axilares e canadenses em alumínio leve e desmontável.",
@@ -122,10 +141,44 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "barras",
+    slug: "barras-de-apoio",
     label: "Barras de apoio",
     count: 1,
     desc: "Barras de apoio sanitárias com ajuste de altura e com peso suportado de até 150kg.",
     image: "/images/med-1010-1.png",
+  },
+];
+
+export const SUBCATEGORIES: Subcategory[] = [
+  {
+    id: "andador-articulado",
+    label: "Andador articulado",
+    slug: "articulado",
+    parentCategory: "andadores",
+  },
+  {
+    id: "andador-com-roda",
+    label: "Andador com roda",
+    slug: "com-roda",
+    parentCategory: "andadores",
+  },
+  {
+    id: "andador-infantil",
+    label: "Andador infantil",
+    slug: "infantil",
+    parentCategory: "andadores",
+  },
+  {
+    id: "banqueta-com-encosto",
+    label: "Banqueta com encosto",
+    slug: "com-encosto",
+    parentCategory: "banquetas-de-banho",
+  },
+  {
+    id: "banqueta-sem-encosto",
+    label: "Banqueta sem encosto",
+    slug: "sem-encosto",
+    parentCategory: "banquetas-de-banho",
   },
 ];
 
@@ -268,6 +321,7 @@ export const PRODUCTS: Product[] = [
   // Andadores (12)
   {
     code: "MED 120",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 2 Barras Articulado Aço",
     desc: "Recupere sua mobilidade com segurança e independência. O MED 120 é o andador articulado ideal para quem precisa de apoio confiável no dia a dia — resistente, ajustável e fácil de levar a qualquer lugar.",
@@ -288,6 +342,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 130",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 2 Barras Clique Duplo Alumínio Prata",
     desc: "Mais leveza sem abrir mão da resistência. O MED 130 é o andador ideal para quem quer se mover com mais liberdade e segurança — leve, desmontável e pronto para acompanhar sua rotina.",
@@ -308,6 +363,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 140",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 2 Barras Clique Duplo Alumínio Prata Acetinado",
     desc: "Autonomia com um toque de sofisticação. O MED 140 une resistência e acabamento prata acetinado exclusivo para quem quer se locomover com segurança, estilo e praticidade no dia a dia.",
@@ -328,6 +384,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 150",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 3 Barras Articulado Alumínio Prata",
     desc: "Quando estabilidade faz toda a diferença. O MED 150 oferece base de apoio extra com 3 barras e função articulada — a escolha certa para quem precisa de mais firmeza e segurança em cada passo.",
@@ -349,6 +406,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 160",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 3 Barras Articulado Alumínio Bronze",
     desc: "Estabilidade máxima com identidade própria. O MED 160 entrega a mesma performance das 3 barras articuladas com o diferencial do acabamento bronze — para quem quer segurança sem abrir mão do estilo.",
@@ -369,6 +427,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 170",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 1 Barra Desmontável e Dobrável Alumínio",
     desc: "Liberdade de movimento no menor espaço possível. O MED 170 é compacto, ultra leve e desmontável — perfeito para quem precisa de apoio confiável em casa, no trabalho ou em viagem.",
@@ -389,6 +448,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 170R",
+    subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador 1 Barra Desmontável e Dobrável Alumínio com Rodas",
     desc: "Todo o conforto do MED 170, agora com rodas para ir ainda mais longe. Deslocamento suave em qualquer superfície com a praticidade de um andador dobrável e desmontável.",
@@ -409,6 +469,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 180",
+    subcategory: "andador-infantil",
     cat: "andadores",
     name: "Andador 2 Barras Triangular Infantil Dobrável com Rodas Alumínio",
     desc: "Segurança e autonomia para cada fase do crescimento. O MED 180 foi desenvolvido especialmente para crianças que precisam de apoio na locomoção — leve, ajustável e pronto para acompanhar o desenvolvimento.",
@@ -429,6 +490,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 190",
+    subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 3 Barras Articulado Alumínio Prata Desmontável",
     desc: "O melhor dos dois mundos: máxima estabilidade e praticidade para guardar. O MED 190 combina 3 barras articuladas com estrutura desmontável — para quem não abre mão de desempenho nem de conveniência.",
@@ -449,6 +511,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 520",
+    subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador com Rodas Dobrável Aço",
     desc: "Vá mais longe com mais conforto e segurança. O MED 520 é o andador completo com assento, freios e bolsa — ideal para quem quer autonomia total para caminhar, descansar e se mover com confiança.",
@@ -476,6 +539,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 530",
+    subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador com Rodas Dobrável Alumínio",
     desc: "Leveza e rodas maiores para um deslocamento mais fluido. O MED 530 é o andador com rodas em alumínio ideal para quem quer se mover com mais facilidade e conforto no dia a dia.",
@@ -496,6 +560,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 550",
+    subcategory: "andador-com-roda",
     cat: "andadores",
     name: "Andador com Rodas e Assento Alumínio",
     desc: "Controle total em cada curva. O MED 550 tem rodas dianteiras com giro 360° para manobras precisas e assento confortável — a solução para quem quer autonomia e segurança em qualquer ambiente.",
@@ -518,6 +583,7 @@ export const PRODUCTS: Product[] = [
   // Banquetas (6)
   {
     code: "MED 310",
+    subcategory: "banqueta-sem-encosto",
     cat: "banquetas",
     name: "Banqueta de banho sem encosto",
     desc: "Banqueta de banho simples, assento antiderrapante, sem encosto.",
@@ -525,6 +591,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 320",
+    subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta de banho com encosto",
     desc: "Com encosto em polietileno, maior conforto e segurança no banho.",
@@ -532,6 +599,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 330",
+    subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto e Apoio de Braço",
     desc: "Sentar e levantar com muito mais segurança. A MED 330 tem encosto e apoios de braço laterais para quem precisa de suporte completo — transformando o momento do banho em uma experiência mais segura e confortável.",
@@ -553,6 +621,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 360",
+    subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto, Apoio de Braço e Abertura Frontal",
     desc: "Suporte completo e higiene facilitada para um banho com mais dignidade. A MED 360 tem encosto, apoios de braço e abertura frontal — a solução mais completa para o banho assistido com conforto e praticidade.",
@@ -573,6 +642,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 370",
+    subcategory: "banqueta-sem-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho sem Encosto com Suporte para Chuveiro",
     desc: "A banqueta mais leve da linha, com suporte para chuveiro integrado. A MED 370 é ideal para quem quer praticidade e independência no banho sem abrir mão de estabilidade e segurança.",
@@ -594,6 +664,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     code: "MED 380",
+    subcategory: "banqueta-com-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto",
     desc: "Mais espaço, mais conforto e mais estabilidade no banho. A MED 380 tem encosto e assento mais amplo — para quem precisa de mais espaço e apoio para se sentir seguro e à vontade na hora do banho.",
@@ -904,6 +975,36 @@ export function productSlug(code: string): string {
 
 export function findProductBySlug(slug: string): Product | undefined {
   return PRODUCTS.find((p) => productSlug(p.code) === slug);
+}
+
+export function findCategoryBySlug(slug: string): Category | undefined {
+  return CATEGORIES.find((c) => c.slug === slug);
+}
+
+export function findSubcategoryBySlug(
+  categorySlug: string,
+  subSlug: string,
+): Subcategory | undefined {
+  return SUBCATEGORIES.find(
+    (s) => s.parentCategory === categorySlug && s.slug === subSlug,
+  );
+}
+
+export function getSubcategoriesForCategory(category: Category): Subcategory[] {
+  return SUBCATEGORIES.filter((s) => s.parentCategory === category.slug);
+}
+
+export function productsInCategory(category: Category): Product[] {
+  return PRODUCTS.filter((p) => p.cat === category.id);
+}
+
+export function productsInSubcategory(
+  category: Category,
+  subcategory: Subcategory,
+): Product[] {
+  return PRODUCTS.filter(
+    (p) => p.cat === category.id && p.subcategory === subcategory.id,
+  );
 }
 
 export function productCapacity(p: Product): string | null {

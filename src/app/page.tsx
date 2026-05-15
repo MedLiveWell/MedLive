@@ -105,7 +105,7 @@ export default function HomePage() {
           </div>
           <div className="cat-grid">
             {CATEGORIES.map((c) => (
-              <Link key={c.id} href={`/produtos?cat=${c.id}`} className="cat-card">
+              <Link key={c.id} href={`/produtos/${c.slug}`} className="cat-card">
                 <span className="count">
                   {c.count} {c.count === 1 ? "modelo" : "modelos"}
                 </span>
