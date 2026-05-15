@@ -39,21 +39,18 @@ export default function RevendedorPage() {
                   <Icon.truck />
                 </div>
                 <h5>Entrega rápida</h5>
-                <p>Despacho em até 48h para os 27 estados brasileiros.</p>
               </div>
               <div className="icon-feature">
                 <div className="ic">
                   <Icon.tag />
                 </div>
-                <h5>Preço competitivo</h5>
-                <p>Tabela de distribuidor com descontos progressivos por volume.</p>
+                <h5>Preço estável</h5>
               </div>
               <div className="icon-feature">
                 <div className="ic">
                   <Icon.chat />
                 </div>
                 <h5>Suporte dedicado</h5>
-                <p>Consultor comercial por conta, atendimento em 24h úteis.</p>
               </div>
             </div>
 
