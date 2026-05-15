@@ -431,10 +431,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 3 Barras Articulado Alumínio Bronze",
-    desc: "Estabilidade máxima com identidade própria. O MED 160 entrega a mesma performance das 3 barras articuladas com o diferencial do acabamento bronze — para quem quer segurança sem abrir mão do estilo.",
+    desc: "O MED 160 é um andador articulado em alumínio com barras centrais em aço, três barras de apoio e acabamento bronze, que se destaca pelo visual sofisticado dentro da linha de mobilidade.\nSuporta até 150 kg e tem ajuste de altura por pino click em 8 níveis para adaptação a diferentes estaturas.\nFunciona na posição fixa ou articulada, pesa 2,7 kg e dobra para facilitar o transporte e o armazenamento.",
     specs: ["Alumínio", "Bronze", "150kg"],
     image: med160Images[0],
     images: med160Images,
+    differentials: [
+      { iconKey: "sparkle", title: "Acabamento bronze", desc: "Cor diferenciada que une funcionalidade e visual sofisticado para o ambiente do usuário." },
+      { iconKey: "shield", title: "Três barras de apoio", desc: "Barra adicional que reforça a firmeza nas mãos e amplia a estabilidade no apoio." },
+      { iconKey: "check", title: "Fixo e articulado", desc: "Duas funções de uso para diferentes perfis de marcha e ambientes." },
+    ],
     dimensions: [
       ["Largura", "53 cm"],
       ["Altura", "81 – 98,5 cm"],
