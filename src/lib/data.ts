@@ -791,7 +791,7 @@ export const PRODUCTS: Product[] = [
     code: "MED 390",
     cat: "banquetas",
     name: "Banqueta para Banho com Encosto e Apoio de Braço",
-    desc: "Com encosto, apoios de braço laterais e estrutura de 53 cm de largura, a MED 390 entrega estabilidade e suporte completo para quem precisa de segurança máxima no banho. Em alumínio e HDPE com ponteiras antiderrapantes de borracha, é indicada para uso domiciliar, clínico e institucional.\n\nAltura regulável em 5 níveis por pino click, sem ferramentas.",
+    desc: "Com encosto, apoios de braço laterais e estrutura de 53 cm de largura, a MED 390 entrega estabilidade e suporte completo para quem precisa de segurança máxima no banho.\n\nEm alumínio e HDPE com ponteiras antiderrapantes de borracha, é indicada para uso domiciliar, clínico e institucional.\n\nAltura regulável em 5 níveis por pino click, sem ferramentas.",
     specs: ["Encosto", "Apoio braço", "135kg"],
     image: med390Images[0],
     images: med390Images,
