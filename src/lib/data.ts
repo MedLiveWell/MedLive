@@ -739,11 +739,16 @@ export const PRODUCTS: Product[] = [
     subcategory: "banqueta-sem-encosto",
     cat: "banquetas",
     name: "Banqueta para Banho sem Encosto com Suporte para Chuveiro",
-    desc: "A banqueta mais leve da linha, com suporte para chuveiro integrado. A MED 370 é ideal para quem quer praticidade e independência no banho sem abrir mão de estabilidade e segurança.",
+    desc: "A mais leve da linha com apenas 1,8 kg, a MED 370 é uma banqueta para banho em alumínio e HDPE com suporte para chuveiro integrado, recurso exclusivo entre as banquetas da linha que garante mais autonomia e praticidade no dia a dia.\n\nAssento em HDPE com furos para escoamento, altura regulável em 6 níveis por pino click e ponteiras de borracha de 28 mm antiderrapantes. Suporta até 135 kg.",
     specs: ["Sem encosto", "Suporte chuveiro", "135kg"],
     image: med370Images[0],
     images: med370Images,
     imageTransforms: ["scaleX(-1)"],
+    differentials: [
+      { iconKey: "homecare", title: "Suporte para chuveiro", desc: "Corte lateral no assento permite fixar o chuveiro ao alcance do usuário." },
+      { iconKey: "truck", title: "A mais leve da linha", desc: "Apenas 1,8 kg, fácil de transportar e armazenar em qualquer ambiente." },
+      { iconKey: "check", title: "6 níveis de ajuste", desc: "Regulagem por pino click, sem ferramentas, adaptável a diferentes usuários." },
+    ],
     dimensions: [
       ["Largura", "50 cm"],
       ["Altura", "37,5 – 50 cm"],
