@@ -326,7 +326,7 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-articulado",
     cat: "andadores",
     name: "Andador 2 Barras Articulado Aço",
-    desc: "O MED 120 é um andador articulado em aço inoxidável com capacidade para 120 kg, indicado para pessoas em reabilitação ou com dificuldade de locomoção. O ajuste de altura por pino click em 6 níveis adapta o equipamento a diferentes estaturas sem ferramentas. Funciona na posição fixa ou articulada, pesa 2,55 kg e dobra para facilitar o transporte e o armazenamento.",
+    desc: "O MED 120 é um andador articulado em aço inoxidável com capacidade para 120 kg, indicado para pessoas em reabilitação ou com dificuldade de locomoção.\nO ajuste de altura por pino click em 6 níveis adapta o equipamento a diferentes estaturas sem ferramentas.\nFunciona na posição fixa ou articulada, pesa 2,55 kg e dobra para facilitar o transporte e o armazenamento.",
     specs: ["Aço", "Articulado", "120kg"],
     image: med120Images[0],
     images: med120Images,

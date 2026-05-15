@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Icon } from "@/components/Icon";
 import { CategoryGlyph } from "@/components/CategoryGlyph";
@@ -60,16 +60,23 @@ function articleFor(name: string) {
   return fem.some((w) => first.startsWith(w)) ? "uma" : "um";
 }
 
-function buildLongDesc(p: Product) {
+function buildLongDesc(p: Product): ReactNode[] {
   if (p.desc && p.desc.length > 100) {
-    const parts = p.desc.split(new RegExp(`(${p.code})`, "g"));
-    return parts.map((s, i) => (s === p.code ? <strong key={i}>{s}</strong> : s));
+    const codeRe = new RegExp(`(${p.code})`, "g");
+    const wrap = (text: string, baseKey: string): ReactNode => {
+      const parts = text.split(codeRe);
+      return parts.map((s, i) =>
+        s === p.code ? <strong key={`${baseKey}-${i}`}>{s}</strong> : s,
+      );
+    };
+    return p.desc.split("\n").map((para, i) => wrap(para, String(i)));
   }
   const cap = productCapacity(p);
   const capPhrase = cap ? `com capacidade para ${cap}` : "";
-  return `O ${p.code} é ${articleFor(p.name)} ${p.name.toLowerCase()} ${capPhrase}. ${p.desc} Desenvolvido para revendedores B2B que buscam qualidade, durabilidade e suporte técnico completo.`
+  const text = `O ${p.code} é ${articleFor(p.name)} ${p.name.toLowerCase()} ${capPhrase}. ${p.desc} Desenvolvido para revendedores B2B que buscam qualidade, durabilidade e suporte técnico completo.`
     .replace(/\s+/g, " ")
     .trim();
+  return [text];
 }
 
 function buildSpecTables(p: Product, capacity: string | null) {
@@ -356,8 +363,17 @@ export function ProductDetail({ product }: { product: Product }) {
                 </div>
               )}
               <p className="pd-desc" style={{ fontWeight: 400 }}>
-                {longDesc}
+                {longDesc[0]}
               </p>
+              {longDesc.slice(1).map((para, i) => (
+                <p
+                  key={i}
+                  className="pd-desc"
+                  style={{ fontWeight: 400, marginTop: 12 }}
+                >
+                  {para}
+                </p>
+              ))}
 
               <Link href="/seja-revendedor" className="btn btn-primary btn-lg pd-cta-main">
                 Solicitar cotação B2B <Icon.arrow />
