@@ -509,10 +509,15 @@ export const PRODUCTS: Product[] = [
     subcategory: "andador-infantil",
     cat: "andadores",
     name: "Andador 2 Barras Triangular Infantil Dobrável com Rodas Alumínio",
-    desc: "Segurança e autonomia para cada fase do crescimento. O MED 180 foi desenvolvido especialmente para crianças que precisam de apoio na locomoção — leve, ajustável e pronto para acompanhar o desenvolvimento.",
+    desc: "O MED 180 é o andador infantil em alumínio com formato triangular, indicado para crianças entre 1,00 m e 1,25 m que precisam de apoio na locomoção ou em reabilitação.\nSuporta até 100 kg e tem ajuste de altura por pino click em 5 níveis para acompanhar o crescimento da criança.\nAs rodas dianteiras de 5 polegadas facilitam o deslocamento sem esforço e o apoio de mão é livre de látex, evitando reações alérgicas.",
     specs: ["Infantil", "Triangular", "100kg"],
     image: med180Images[0],
     images: med180Images,
+    differentials: [
+      { iconKey: "shield", title: "Formato triangular infantil", desc: "Estrutura compacta em alumínio projetada para crianças entre 1,00 m e 1,25 m de altura." },
+      { iconKey: "badgeCheck", title: "Apoio de mão sem látex", desc: "Material que previne reações alérgicas e oferece conforto no uso prolongado." },
+      { iconKey: "truck", title: "Rodas dianteiras de 5 polegadas", desc: "Deslocamento contínuo e suave, sem necessidade de levantar o andador a cada passo." },
+    ],
     dimensions: [
       ["Largura", "48 cm"],
       ["Altura", "55 – 65 cm"],
