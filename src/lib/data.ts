@@ -198,9 +198,9 @@ const med130Images = [
 ];
 
 const med140Images = [
-  "/images/med-140-1.png",
-  "/images/med-140-2.png",
   "/images/med-140-3.png",
+  "/images/med-140-2.png",
+  "/images/med-140-1.png",
   "/images/med-140-4.png",
 ];
 
