@@ -323,12 +323,20 @@ p { margin: 0; color: var(--ink-2); }
   outline: 2px solid var(--cobalto); outline-offset: 2px;
 }
 .nav-links {
-  display: flex; align-items: center; gap: 30px;
+  display: flex; align-items: center;
   flex: 1 1 auto; justify-content: center;
+  position: relative;
+}
+.nav-links-list {
+  display: flex; align-items: center; gap: 30px;
+  list-style: none; padding: 0; margin: 0;
 }
 .nav-link {
   font-size: 14.5px; font-weight: 500; color: var(--ink-2);
   transition: color .15s ease; position: relative; padding: 6px 0;
+  display: inline-flex; align-items: center;
+  background: none; border: 0; cursor: pointer;
+  font-family: inherit;
 }
 .nav-link:hover { color: var(--cobalto); }
 .nav-link.active { color: var(--cobalto); font-weight: 600; }
@@ -336,6 +344,83 @@ p { margin: 0; color: var(--ink-2); }
   content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
   height: 2px; background: var(--tangerina); border-radius: 2px;
 }
+.nav-link--menu { cursor: pointer; }
+
+/* Header mega menu */
+.nav-viewport-wrapper--header {
+  display: flex; justify-content: center;
+}
+.nav-viewport--header {
+  margin-top: 14px;
+  min-width: 720px;
+  max-width: 960px;
+}
+.mega-menu {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 32px;
+  padding: 24px 28px;
+}
+.mega-menu-col {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.mega-menu-cat {
+  font-size: 14px; font-weight: 700; color: var(--ink);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 6px;
+  transition: color .15s ease;
+}
+.mega-menu-cat:hover { color: var(--cobalto); }
+.mega-menu-subs {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.mega-menu-sub {
+  display: block;
+  padding: 5px 0;
+  font-size: 13.5px; color: var(--ink-2);
+  transition: color .15s ease;
+}
+.mega-menu-sub:hover { color: var(--cobalto); }
+
+/* Mobile drawer — Produtos with subcategories accordion */
+.mobile-products { display: flex; flex-direction: column; }
+.mobile-products-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  padding: 12px 28px;
+  text-align: left;
+}
+.mobile-products-panel {
+  display: flex; flex-direction: column;
+  padding: 4px 0 8px;
+  background: rgba(0,0,0,.02);
+}
+.mobile-products-all {
+  font-weight: 700;
+  padding: 10px 40px;
+  color: var(--cobalto);
+}
+.mobile-products-cat-wrap { display: flex; flex-direction: column; }
+.mobile-products-cat {
+  padding: 10px 40px;
+  font-size: 14.5px;
+}
+.mobile-products-cat--expandable {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; text-align: left;
+}
+.mobile-products-subs {
+  list-style: none; padding: 0; margin: 0 0 4px;
+}
+.mobile-products-sub {
+  display: block;
+  padding: 8px 56px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+}
+.mobile-products-sub:hover { color: var(--cobalto); }
 
 /* Mobile drawer panel — hidden by default; appears as overlay below header */
 .mobile-panel {
@@ -860,27 +945,76 @@ p { margin: 0; color: var(--ink-2); }
 
 /* ----- Produtos page ----- */
 .filters {
-  display: flex; flex-wrap: wrap; gap: 8px;
-  padding: 20px 0 36px;
   position: sticky; top: var(--header-h); z-index: 20;
   background: #fff;
   border-bottom: 1px solid var(--line);
-  padding-top: 24px;
+  padding: 24px 0 36px;
   margin-bottom: 48px;
 }
+.filters-list {
+  display: flex; flex-wrap: nowrap; gap: 6px;
+  list-style: none; padding: 0; margin: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.filters-list::-webkit-scrollbar { display: none; }
 .filter-chip {
-  padding: 9px 16px; border-radius: 999px; font-size: 13.5px; font-weight: 600;
+  padding: 7px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
   background: var(--paper-2); color: var(--ink-2);
   border: 1px solid transparent;
   transition: all .15s ease;
-  display: inline-flex; gap: 8px; align-items: center;
+  display: inline-flex; gap: 6px; align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 .filter-chip:hover { background: var(--paper-3); color: var(--ink); }
-.filter-chip.active { background: var(--cobalto); color: #fff; }
+.filter-chip.active,
+.filter-chip[data-active] { background: var(--cobalto); color: #fff; }
 .filter-chip .count {
-  font-size: 11px; background: rgba(255,255,255,.2); padding: 2px 7px; border-radius: 999px; font-weight: 600;
+  font-size: 10.5px; background: rgba(255,255,255,.2); padding: 1px 6px; border-radius: 999px; font-weight: 600;
 }
-.filter-chip:not(.active) .count { background: var(--paper-3); color: var(--ink-3); }
+.filter-chip:not(.active):not([data-active]) .count { background: var(--paper-3); color: var(--ink-3); }
+
+/* Mega menu — subcategory dropdown under category chips */
+.nav-viewport-wrapper {
+  position: absolute; left: 0; right: 0; top: 100%;
+  display: flex; justify-content: flex-start;
+  perspective: 2000px;
+  z-index: 30;
+}
+.nav-viewport {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-top: 6px;
+  width: var(--radix-navigation-menu-viewport-width);
+  height: var(--radix-navigation-menu-viewport-height);
+  transition: width .2s ease, height .2s ease;
+  overflow: hidden;
+}
+.nav-content { position: absolute; top: 0; left: 0; }
+.subcat-panel {
+  list-style: none; padding: 12px; margin: 0;
+  display: flex; flex-direction: column; gap: 2px;
+  min-width: 220px;
+}
+.subcat-item {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--ink-2);
+  transition: background .15s ease, color .15s ease;
+}
+.subcat-item:hover { background: var(--paper-2); color: var(--cobalto); }
+.subcat-item.active { background: var(--cobalto-soft); color: var(--cobalto); }
+.subcat-item--all {
+  font-weight: 700; color: var(--ink); border-bottom: 1px solid var(--line); border-radius: 8px 8px 0 0; margin-bottom: 4px;
+}
 
 .cat-group { margin-bottom: 64px; }
 .cat-group-head {

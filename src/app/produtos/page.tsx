@@ -1,30 +1,28 @@
-"use client";
-
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { Suspense, useMemo } from "react";
+import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { CategoryFilter } from "@/components/CategoryFilter";
 import { ProductCard } from "@/components/ProductCard";
 import { BigCTA } from "@/components/BigCTA";
 import { Newsletter } from "@/components/Newsletter";
 import { CATEGORIES, PRODUCTS } from "@/lib/data";
 
-function ProdutosContent() {
-  const params = useSearchParams();
-  const filter = params.get("cat") || "all";
+const TITLE = "Catálogo de produtos | Med Live Well";
+const DESCRIPTION =
+  "Catálogo completo Med Live Well: andadores, cadeiras de banho, muletas, barras de apoio, cadeiras de transferência e mais. Distribuidor B2B para lojas parceiras.";
 
-  const groups = useMemo(() => {
-    if (filter === "all") {
-      return CATEGORIES.map((c) => ({
-        cat: c,
-        items: PRODUCTS.filter((p) => p.cat === c.id),
-      })).filter((g) => g.items.length);
-    }
-    const c = CATEGORIES.find((c) => c.id === filter);
-    return c ? [{ cat: c, items: PRODUCTS.filter((p) => p.cat === filter) }] : [];
-  }, [filter]);
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/produtos" },
+  openGraph: { url: "/produtos", title: TITLE, description: DESCRIPTION },
+  twitter: { title: TITLE, description: DESCRIPTION },
+};
 
-  const filterHref = (id: string) => (id === "all" ? "/produtos" : `/produtos?cat=${id}`);
+export default function ProdutosPage() {
+  const groups = CATEGORIES.map((c) => ({
+    cat: c,
+    items: PRODUCTS.filter((p) => p.cat === c.id),
+  })).filter((g) => g.items.length);
 
   return (
     <>
@@ -36,20 +34,7 @@ function ProdutosContent() {
       </section>
 
       <div className="container">
-        <div className="filters">
-          <Link href={filterHref("all")} className={"filter-chip " + (filter === "all" ? "active" : "")}>
-            Todos <span className="count">{PRODUCTS.length}</span>
-          </Link>
-          {CATEGORIES.map((c) => (
-            <Link
-              key={c.id}
-              href={filterHref(c.id)}
-              className={"filter-chip " + (filter === c.id ? "active" : "")}
-            >
-              {c.label} <span className="count">{c.count}</span>
-            </Link>
-          ))}
-        </div>
+        <CategoryFilter />
 
         {groups.map((g) => (
           <div key={g.cat.id} className="cat-group">
@@ -71,13 +56,5 @@ function ProdutosContent() {
       <BigCTA />
       <Newsletter />
     </>
-  );
-}
-
-export default function ProdutosPage() {
-  return (
-    <Suspense fallback={null}>
-      <ProdutosContent />
-    </Suspense>
   );
 }

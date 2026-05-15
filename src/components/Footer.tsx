@@ -44,7 +44,7 @@ export function Footer() {
           <div className="col">
             <h5>Categorias</h5>
             {CATEGORIES.map((c) => (
-              <Link key={c.id} href={`/produtos?cat=${c.id}`}>
+              <Link key={c.id} href={`/produtos/${c.slug}`}>
                 {c.label}
               </Link>
             ))}
