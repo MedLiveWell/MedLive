@@ -176,6 +176,26 @@ export default function ParaQuemVendemosPage() {
                 </div>
               </a>
             </div>
+            <div className="icons-row" style={{ marginTop: 20, marginBottom: 0 }}>
+              <div className="icon-feature">
+                <div className="ic">
+                  <Icon.truck />
+                </div>
+                <h5>Entrega rápida</h5>
+              </div>
+              <div className="icon-feature">
+                <div className="ic">
+                  <Icon.tag />
+                </div>
+                <h5>Preço estável</h5>
+              </div>
+              <div className="icon-feature">
+                <div className="ic">
+                  <Icon.chat />
+                </div>
+                <h5>Suporte dedicado</h5>
+              </div>
+            </div>
           </div>
           <RevendedorForm
             heading="Quero ser revendedor"
