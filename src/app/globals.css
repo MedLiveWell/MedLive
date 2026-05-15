@@ -954,11 +954,7 @@ p { margin: 0; color: var(--ink-2); }
 .filters-list {
   display: flex; flex-wrap: nowrap; gap: 6px;
   list-style: none; padding: 0; margin: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
 }
-.filters-list::-webkit-scrollbar { display: none; }
 .filter-chip {
   padding: 7px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
   background: var(--paper-2); color: var(--ink-2);
@@ -1819,4 +1815,18 @@ body.dens-compact .cat-card { min-height: 240px; padding: 24px; }
   border-radius: 6px;
   background: #fff;
   border: 1px dashed var(--line);
+}
+
+/* Category filter chips: scroll horizontally on tablet/mobile (overflow-x: auto
+   forces overflow-y on the list which would clip the hover dropdown — so we
+   keep it desktop-only and hide the dropdown below the breakpoint where hover
+   is unreliable anyway). */
+@media (max-width: 1023px) {
+  .filters-list {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filters-list::-webkit-scrollbar { display: none; }
+  .filter-content { display: none; }
 }
